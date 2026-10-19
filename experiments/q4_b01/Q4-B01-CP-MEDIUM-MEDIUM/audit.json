@@ -9,7 +9,7 @@
     "tail_budget": "medium"
   },
   "artifact": "candidate.fold",
-  "cp_geometry_sha256": "9f66033892e3b668c3288f62c06f741a53bb870b42650a14012f8bff12921395",
+  "cp_geometry_sha256": "4c0d5c62e02bdf8028905a91c9c84b8f97d5013d08132d1c3f9eaff304b225f0",
   "cp_topology_sha256": "f9d696953f771b1aff9bb234132c70beecd465f5cc2fdfef21c2e59bccd6721f",
   "stable_face_ids": [
     "FACE_Q4_MM_00",
@@ -94,8 +94,8 @@
       180
     ],
     "maekawa": "PASS",
-    "mountain_count": 6,
-    "valley_count": 4,
+    "mountain_count": 5,
+    "valley_count": 3,
     "difference": 2,
     "scope": "single interior branching vertex only; not global physical proof"
   },
