@@ -1,0 +1,23 @@
+name: governance-check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify governance files
+        run: |
+          test -f governance/PROJECT_STATUS.md
+          test -f governance/MASTER_PLAN.md
+          test -f governance/ACCEPTANCE_CRITERIA.md
+          test -f governance/AUTONOMOUS_PROTOCOL.md
+          test -f ops/AUDIT_PACKET_TEMPLATE.md
+          test -f ops/REVIEW_RESULT_TEMPLATE.md
