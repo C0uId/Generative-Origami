@@ -1,6 +1,6 @@
 schema_version: task-1.0
 task_id: Q4-B01-GLOBAL-VALIDATION
-state: READY
+state: READY_FOR_REVIEW
 priority: P0
 title: Global fold/path validation and physical refold package
 objective: >

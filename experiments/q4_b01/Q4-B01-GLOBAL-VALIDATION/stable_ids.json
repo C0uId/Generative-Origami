@@ -1,0 +1,366 @@
+{
+  "edges": {
+    "E_Q4_MM_00": {
+      "assignment": "B",
+      "vertices": [
+        "V_Q4_MM_00",
+        "V_Q4_MM_01"
+      ]
+    },
+    "E_Q4_MM_01": {
+      "assignment": "B",
+      "vertices": [
+        "V_Q4_MM_01",
+        "V_Q4_MM_02"
+      ]
+    },
+    "E_Q4_MM_02": {
+      "assignment": "B",
+      "vertices": [
+        "V_Q4_MM_02",
+        "V_Q4_MM_03"
+      ]
+    },
+    "E_Q4_MM_03": {
+      "assignment": "B",
+      "vertices": [
+        "V_Q4_MM_03",
+        "V_Q4_MM_04"
+      ]
+    },
+    "E_Q4_MM_04": {
+      "assignment": "B",
+      "vertices": [
+        "V_Q4_MM_04",
+        "V_Q4_MM_05"
+      ]
+    },
+    "E_Q4_MM_05": {
+      "assignment": "B",
+      "vertices": [
+        "V_Q4_MM_05",
+        "V_Q4_MM_06"
+      ]
+    },
+    "E_Q4_MM_06": {
+      "assignment": "B",
+      "vertices": [
+        "V_Q4_MM_06",
+        "V_Q4_MM_07"
+      ]
+    },
+    "E_Q4_MM_07": {
+      "assignment": "B",
+      "vertices": [
+        "V_Q4_MM_07",
+        "V_Q4_MM_00"
+      ]
+    },
+    "E_Q4_MM_08": {
+      "assignment": "M",
+      "vertices": [
+        "V_Q4_MM_00",
+        "V_Q4_MM_08"
+      ]
+    },
+    "E_Q4_MM_09": {
+      "assignment": "M",
+      "vertices": [
+        "V_Q4_MM_02",
+        "V_Q4_MM_08"
+      ]
+    },
+    "E_Q4_MM_10": {
+      "assignment": "V",
+      "vertices": [
+        "V_Q4_MM_03",
+        "V_Q4_MM_08"
+      ]
+    },
+    "E_Q4_MM_11": {
+      "assignment": "M",
+      "vertices": [
+        "V_Q4_MM_04",
+        "V_Q4_MM_08"
+      ]
+    },
+    "E_Q4_MM_12": {
+      "assignment": "M",
+      "vertices": [
+        "V_Q4_MM_06",
+        "V_Q4_MM_08"
+      ]
+    },
+    "E_Q4_MM_13": {
+      "assignment": "V",
+      "vertices": [
+        "V_Q4_MM_07",
+        "V_Q4_MM_08"
+      ]
+    },
+    "E_Q4_MM_14": {
+      "assignment": "V",
+      "vertices": [
+        "V_Q4_MM_01",
+        "V_Q4_MM_09"
+      ]
+    },
+    "E_Q4_MM_15": {
+      "assignment": "V",
+      "vertices": [
+        "V_Q4_MM_09",
+        "V_Q4_MM_08"
+      ]
+    },
+    "E_Q4_MM_16": {
+      "assignment": "M",
+      "vertices": [
+        "V_Q4_MM_08",
+        "V_Q4_MM_10"
+      ]
+    },
+    "E_Q4_MM_17": {
+      "assignment": "M",
+      "vertices": [
+        "V_Q4_MM_10",
+        "V_Q4_MM_05"
+      ]
+    }
+  },
+  "face_material_map": [
+    {
+      "face_id": "FACE_Q4_MM_00",
+      "material_parts": [
+        {
+          "area_mm2_exact": "1250",
+          "face_fraction_exact": "1/4",
+          "material_id": "MAT_BODY"
+        },
+        {
+          "area_mm2_exact": "1250",
+          "face_fraction_exact": "1/4",
+          "material_id": "MAT_HL"
+        },
+        {
+          "area_mm2_exact": "2500",
+          "face_fraction_exact": "1/2",
+          "material_id": "MAT_TAIL"
+        }
+      ]
+    },
+    {
+      "face_id": "FACE_Q4_MM_01",
+      "material_parts": [
+        {
+          "area_mm2_exact": "1250",
+          "face_fraction_exact": "1/4",
+          "material_id": "MAT_BODY"
+        },
+        {
+          "area_mm2_exact": "2500",
+          "face_fraction_exact": "1/2",
+          "material_id": "MAT_TAIL"
+        },
+        {
+          "area_mm2_exact": "1250",
+          "face_fraction_exact": "1/4",
+          "material_id": "MAT_HR"
+        }
+      ]
+    },
+    {
+      "face_id": "FACE_Q4_MM_02",
+      "material_parts": [
+        {
+          "area_mm2_exact": "3750",
+          "face_fraction_exact": "3/4",
+          "material_id": "MAT_BODY"
+        },
+        {
+          "area_mm2_exact": "1250",
+          "face_fraction_exact": "1/4",
+          "material_id": "MAT_HR"
+        }
+      ]
+    },
+    {
+      "face_id": "FACE_Q4_MM_03",
+      "material_parts": [
+        {
+          "area_mm2_exact": "1250",
+          "face_fraction_exact": "1/4",
+          "material_id": "MAT_FR"
+        },
+        {
+          "area_mm2_exact": "3750",
+          "face_fraction_exact": "3/4",
+          "material_id": "MAT_BODY"
+        }
+      ]
+    },
+    {
+      "face_id": "FACE_Q4_MM_04",
+      "material_parts": [
+        {
+          "area_mm2_exact": "2500",
+          "face_fraction_exact": "1/2",
+          "material_id": "MAT_HEAD"
+        },
+        {
+          "area_mm2_exact": "1250",
+          "face_fraction_exact": "1/4",
+          "material_id": "MAT_FR"
+        },
+        {
+          "area_mm2_exact": "1250",
+          "face_fraction_exact": "1/4",
+          "material_id": "MAT_BODY"
+        }
+      ]
+    },
+    {
+      "face_id": "FACE_Q4_MM_05",
+      "material_parts": [
+        {
+          "area_mm2_exact": "1250",
+          "face_fraction_exact": "1/4",
+          "material_id": "MAT_FL"
+        },
+        {
+          "area_mm2_exact": "2500",
+          "face_fraction_exact": "1/2",
+          "material_id": "MAT_HEAD"
+        },
+        {
+          "area_mm2_exact": "1250",
+          "face_fraction_exact": "1/4",
+          "material_id": "MAT_BODY"
+        }
+      ]
+    },
+    {
+      "face_id": "FACE_Q4_MM_06",
+      "material_parts": [
+        {
+          "area_mm2_exact": "1250",
+          "face_fraction_exact": "1/4",
+          "material_id": "MAT_FL"
+        },
+        {
+          "area_mm2_exact": "3750",
+          "face_fraction_exact": "3/4",
+          "material_id": "MAT_BODY"
+        }
+      ]
+    },
+    {
+      "face_id": "FACE_Q4_MM_07",
+      "material_parts": [
+        {
+          "area_mm2_exact": "3750",
+          "face_fraction_exact": "3/4",
+          "material_id": "MAT_BODY"
+        },
+        {
+          "area_mm2_exact": "1250",
+          "face_fraction_exact": "1/4",
+          "material_id": "MAT_HL"
+        }
+      ]
+    }
+  ],
+  "faces": {
+    "FACE_Q4_MM_00": [
+      "V_Q4_MM_00",
+      "V_Q4_MM_01",
+      "V_Q4_MM_09",
+      "V_Q4_MM_08"
+    ],
+    "FACE_Q4_MM_01": [
+      "V_Q4_MM_01",
+      "V_Q4_MM_02",
+      "V_Q4_MM_08",
+      "V_Q4_MM_09"
+    ],
+    "FACE_Q4_MM_02": [
+      "V_Q4_MM_02",
+      "V_Q4_MM_03",
+      "V_Q4_MM_08"
+    ],
+    "FACE_Q4_MM_03": [
+      "V_Q4_MM_03",
+      "V_Q4_MM_04",
+      "V_Q4_MM_08"
+    ],
+    "FACE_Q4_MM_04": [
+      "V_Q4_MM_04",
+      "V_Q4_MM_05",
+      "V_Q4_MM_10",
+      "V_Q4_MM_08"
+    ],
+    "FACE_Q4_MM_05": [
+      "V_Q4_MM_05",
+      "V_Q4_MM_06",
+      "V_Q4_MM_08",
+      "V_Q4_MM_10"
+    ],
+    "FACE_Q4_MM_06": [
+      "V_Q4_MM_06",
+      "V_Q4_MM_07",
+      "V_Q4_MM_08"
+    ],
+    "FACE_Q4_MM_07": [
+      "V_Q4_MM_07",
+      "V_Q4_MM_00",
+      "V_Q4_MM_08"
+    ]
+  },
+  "geometry_sha256": "4c0d5c62e02bdf8028905a91c9c84b8f97d5013d08132d1c3f9eaff304b225f0",
+  "id_scope": "Fixed candidate geometry/topology; preserve original arrays when recording evidence.",
+  "vertices": {
+    "V_Q4_MM_00": [
+      0,
+      0
+    ],
+    "V_Q4_MM_01": [
+      0.5,
+      0
+    ],
+    "V_Q4_MM_02": [
+      1,
+      0
+    ],
+    "V_Q4_MM_03": [
+      1,
+      0.5
+    ],
+    "V_Q4_MM_04": [
+      1,
+      1
+    ],
+    "V_Q4_MM_05": [
+      0.5,
+      1
+    ],
+    "V_Q4_MM_06": [
+      0,
+      1
+    ],
+    "V_Q4_MM_07": [
+      0,
+      0.5
+    ],
+    "V_Q4_MM_08": [
+      0.5,
+      0.5
+    ],
+    "V_Q4_MM_09": [
+      0.5,
+      0.25
+    ],
+    "V_Q4_MM_10": [
+      0.5,
+      0.75
+    ]
+  }
+}
