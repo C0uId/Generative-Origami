@@ -1,0 +1,34 @@
+name: autonomy-guard
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  task-branch-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Protect project baseline on task branches
+        shell: bash
+        run: |
+          BRANCH="${{ github.head_ref }}"
+          if [[ "$BRANCH" != task/* ]]; then
+            echo "Non-task branch: baseline change guard not applied."
+            exit 0
+          fi
+
+          git fetch origin "${{ github.base_ref }}"
+          CHANGED="$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")"
+          echo "$CHANGED"
+
+          PROTECTED='^(governance/PROJECT_CHARTER.md|governance/MASTER_PLAN.md|governance/ACCEPTANCE_CRITERIA.md)$'
+          if echo "$CHANGED" | grep -E "$PROTECTED"; then
+            echo "Task branches may not modify protected project baseline files."
+            echo "Use a change-request/* branch and Owner review."
+            exit 1
+          fi

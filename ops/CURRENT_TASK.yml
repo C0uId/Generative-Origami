@@ -1,0 +1,30 @@
+schema_version: task-1.0
+task_id: Q4-B01-CP-MEDIUM-MEDIUM
+state: READY
+priority: P0
+title: Build the first real Q4 crease-pattern candidate
+objective: >
+  Use the medium/medium screened tree-layout candidate to establish the
+  FRONT-REAR body material channel plus four-leg, head and tail crease units,
+  then produce a traceable real CP candidate.
+baseline_refs:
+  - governance/PROJECT_CHARTER.md
+  - governance/MASTER_PLAN.md
+  - governance/ACCEPTANCE_CRITERIA.md
+  - governance/PROJECT_STATUS.md
+evidence_required:
+  - traceable Base ID and version
+  - CP hash
+  - stable material/face/flap identifiers
+  - identifiable head/body/four-leg/tail material regions
+  - flat geometry checks
+  - local foldability checks where applicable
+  - explicit unresolved items
+not_yet_required:
+  - Sequence Planner
+  - APP/player work
+  - production tutorial release
+owner_decision_required_for:
+  - change of Base strategy
+  - change of project acceptance gates
+  - materially better route replacing the approved route
