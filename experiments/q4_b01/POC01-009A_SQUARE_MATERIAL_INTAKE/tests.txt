@@ -1,0 +1,17 @@
+test_coordinate_changes_hash (test_base_intake.IntakeTests.test_coordinate_changes_hash) ... ok
+test_corner_clipping (test_base_intake.IntakeTests.test_corner_clipping) ... ok
+test_crossing_diagonals (test_base_intake.IntakeTests.test_crossing_diagonals) ... ok
+test_duplicate_face (test_base_intake.IntakeTests.test_duplicate_face) ... ok
+test_invalid_inputs (test_base_intake.IntakeTests.test_invalid_inputs) ... ok
+test_metadata_does_not_change_geometry (test_base_intake.IntakeTests.test_metadata_does_not_change_geometry) ... ok
+test_square (test_base_intake.IntakeTests.test_square) ... ok
+test_square_completion (test_base_intake.IntakeTests.test_square_completion) ... ok
+test_unsplit_vertex (test_base_intake.IntakeTests.test_unsplit_vertex) ... ok
+test_boundaries_and_nonfinite (test_optimization.OptimizationTests.test_boundaries_and_nonfinite) ... ok
+test_grid (test_optimization.OptimizationTests.test_grid) ... ok
+test_no_duplicate_parent_or_diagnostic_count (test_optimization.OptimizationTests.test_no_duplicate_parent_or_diagnostic_count) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.018s
+
+OK

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>生成式折纸 MVP</title>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:980px;margin:40px auto;padding:0 20px;background:#fafafa;color:#222}
+.card{background:white;border:1px solid #ddd;border-radius:16px;padding:20px;margin:16px 0}
+.row{display:flex;gap:12px}.row input{flex:1;padding:14px;font-size:18px;border:1px solid #bbb;border-radius:12px}
+button{padding:14px 20px;border:0;border-radius:12px;background:#222;color:white;font-size:16px}
+.badge{display:inline-block;padding:5px 9px;border-radius:999px;background:#eee;margin-right:6px;font-size:12px}
+.warn{background:#fff4d6;border-left:4px solid #d69e00;padding:12px}
+pre{white-space:pre-wrap;word-break:break-word}
+a{color:#1557b0}#preview svg{max-width:100%;height:auto}
+</style>
+</head>
+<body>
+<h1>生成式折纸 MVP</h1>
+<p>输入任意想折的东西。系统会生成参数化折纸基础形候选并做几何门禁；未达到“最终成品已验证”标准时会明确标注，同时给出网络教程兜底。</p>
+<div class="card">
+  <div class="row"><input id="q" value="狐狸" placeholder="例如：狐狸、长颈鹿、霸王龙、咖啡杯"><button onclick="go()">生成</button></div>
+</div>
+<div id="out"></div>
+<script>
+async function go(){
+ const q=document.getElementById('q').value.trim(); if(!q)return;
+ document.getElementById('out').innerHTML='<div class="card">生成中…</div>';
+ const r=await fetch('/api/generate?q='+encodeURIComponent(q));
+ const d=await r.json();
+ const links=d.fallback_links.map(x=>`<li><a target="_blank" href="${x.url}">${x.name}</a></li>`).join('');
+ document.getElementById('out').innerHTML=`
+ <div class="card">
+   <span class="badge">${d.target.family}</span><span class="badge">${d.generation_status}</span>
+   <h2>${d.query}</h2>
+   <p>语义来源：${d.target.semantic_source}；置信度：${d.target.semantic_confidence}</p>
+   <div id="preview">${d.preview_svg_inline}</div>
+ </div>
+ <div class="card">
+   <h3>验证</h3>
+   <pre>${JSON.stringify(d.validation,null,2)}</pre>
+   <div class="warn">${d.tutorial.warning||''}</div>
+ </div>
+ <div class="card"><h3>教程步骤</h3><pre>${JSON.stringify(d.tutorial.steps,null,2)}</pre></div>
+ <div class="card"><h3>网络兜底</h3><ul>${links}</ul></div>`;
+}
+go();
+</script>
+</body></html>

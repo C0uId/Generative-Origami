@@ -1,0 +1,247 @@
+{
+  "status": "GRID_LAYOUT_FEASIBLE",
+  "scope": "15 pairwise tree-distance inequalities only; not sufficient for a foldable base",
+  "searched_count": 16,
+  "feasible_count": 16,
+  "rejected": [],
+  "tree_edges": [
+    {
+      "a": "FRONT",
+      "b": "REAR",
+      "length_mm": "50"
+    },
+    {
+      "a": "FRONT",
+      "b": "MAT_HEAD",
+      "length_mm": "25"
+    },
+    {
+      "a": "REAR",
+      "b": "MAT_TAIL",
+      "length_mm": "25/2"
+    },
+    {
+      "a": "FRONT",
+      "b": "MAT_FL",
+      "length_mm": "25"
+    },
+    {
+      "a": "FRONT",
+      "b": "MAT_FR",
+      "length_mm": "25"
+    },
+    {
+      "a": "REAR",
+      "b": "MAT_HL",
+      "length_mm": "25"
+    },
+    {
+      "a": "REAR",
+      "b": "MAT_HR",
+      "length_mm": "25"
+    }
+  ],
+  "physical_verified": false,
+  "cp": null,
+  "grid_infeasibility_is_not_global_infeasibility": true,
+  "points_mm": {
+    "MAT_FL": [
+      "75/2",
+      "325/2"
+    ],
+    "MAT_FR": [
+      "325/2",
+      "325/2"
+    ],
+    "MAT_HL": [
+      "75/2",
+      "75/2"
+    ],
+    "MAT_HR": [
+      "325/2",
+      "75/2"
+    ],
+    "MAT_HEAD": [
+      "100",
+      "200"
+    ],
+    "MAT_TAIL": [
+      "100",
+      "0"
+    ]
+  },
+  "checks": [
+    {
+      "pair": [
+        "MAT_FL",
+        "MAT_FR"
+      ],
+      "tree_distance_mm": "50",
+      "squared_distance_mm2": "15625",
+      "squared_margin_mm2": "13125",
+      "passed": true
+    },
+    {
+      "pair": [
+        "MAT_FL",
+        "MAT_HL"
+      ],
+      "tree_distance_mm": "100",
+      "squared_distance_mm2": "15625",
+      "squared_margin_mm2": "5625",
+      "passed": true
+    },
+    {
+      "pair": [
+        "MAT_FL",
+        "MAT_HR"
+      ],
+      "tree_distance_mm": "100",
+      "squared_distance_mm2": "31250",
+      "squared_margin_mm2": "21250",
+      "passed": true
+    },
+    {
+      "pair": [
+        "MAT_FL",
+        "MAT_HEAD"
+      ],
+      "tree_distance_mm": "50",
+      "squared_distance_mm2": "10625/2",
+      "squared_margin_mm2": "5625/2",
+      "passed": true
+    },
+    {
+      "pair": [
+        "MAT_FL",
+        "MAT_TAIL"
+      ],
+      "tree_distance_mm": "175/2",
+      "squared_distance_mm2": "60625/2",
+      "squared_margin_mm2": "90625/4",
+      "passed": true
+    },
+    {
+      "pair": [
+        "MAT_FR",
+        "MAT_HL"
+      ],
+      "tree_distance_mm": "100",
+      "squared_distance_mm2": "31250",
+      "squared_margin_mm2": "21250",
+      "passed": true
+    },
+    {
+      "pair": [
+        "MAT_FR",
+        "MAT_HR"
+      ],
+      "tree_distance_mm": "100",
+      "squared_distance_mm2": "15625",
+      "squared_margin_mm2": "5625",
+      "passed": true
+    },
+    {
+      "pair": [
+        "MAT_FR",
+        "MAT_HEAD"
+      ],
+      "tree_distance_mm": "50",
+      "squared_distance_mm2": "10625/2",
+      "squared_margin_mm2": "5625/2",
+      "passed": true
+    },
+    {
+      "pair": [
+        "MAT_FR",
+        "MAT_TAIL"
+      ],
+      "tree_distance_mm": "175/2",
+      "squared_distance_mm2": "60625/2",
+      "squared_margin_mm2": "90625/4",
+      "passed": true
+    },
+    {
+      "pair": [
+        "MAT_HL",
+        "MAT_HR"
+      ],
+      "tree_distance_mm": "50",
+      "squared_distance_mm2": "15625",
+      "squared_margin_mm2": "13125",
+      "passed": true
+    },
+    {
+      "pair": [
+        "MAT_HL",
+        "MAT_HEAD"
+      ],
+      "tree_distance_mm": "100",
+      "squared_distance_mm2": "60625/2",
+      "squared_margin_mm2": "40625/2",
+      "passed": true
+    },
+    {
+      "pair": [
+        "MAT_HL",
+        "MAT_TAIL"
+      ],
+      "tree_distance_mm": "75/2",
+      "squared_distance_mm2": "10625/2",
+      "squared_margin_mm2": "15625/4",
+      "passed": true
+    },
+    {
+      "pair": [
+        "MAT_HR",
+        "MAT_HEAD"
+      ],
+      "tree_distance_mm": "100",
+      "squared_distance_mm2": "60625/2",
+      "squared_margin_mm2": "40625/2",
+      "passed": true
+    },
+    {
+      "pair": [
+        "MAT_HR",
+        "MAT_TAIL"
+      ],
+      "tree_distance_mm": "75/2",
+      "squared_distance_mm2": "10625/2",
+      "squared_margin_mm2": "15625/4",
+      "passed": true
+    },
+    {
+      "pair": [
+        "MAT_HEAD",
+        "MAT_TAIL"
+      ],
+      "tree_distance_mm": "175/2",
+      "squared_distance_mm2": "40000",
+      "squared_margin_mm2": "129375/4",
+      "passed": true
+    }
+  ],
+  "objective": "maximize x + inset; ties maximize x, then inset",
+  "objective_value_mm": "75",
+  "input_sha256": "c97cebccf696f69d9332d3a0e479fe69888d64333802de2f0f564069c045b807",
+  "projection": {
+    "requested": {
+      "leg_budget": "medium",
+      "tail_budget": "short"
+    },
+    "implemented": {
+      "leg_budget": "medium",
+      "tail_budget": "short"
+    },
+    "approximation_notes": [],
+    "domain": "EXPLORATORY_LAYOUT_ONLY"
+  },
+  "assumptions": {
+    "head_length_mm": 25,
+    "body_tree_length_mm": 50,
+    "source": "new exploratory tree hypothesis",
+    "body_river_geometry": "NOT_CONSTRUCTED",
+    "material_flow": "NOT_PROVEN"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "file_spec": 1.2,
+  "file_creator": "Generative Origami MVP",
+  "file_title": "giraffe generated base candidate",
+  "file_description": "Procedural single-vertex base candidate. It is not automatically a certified finished recognizable model.",
+  "file_classes": [
+    "singleModel"
+  ],
+  "frame_classes": [
+    "creasePattern"
+  ],
+  "vertices_coords": [
+    [
+      0.5,
+      0.5
+    ],
+    [
+      1.0,
+      0.5043634339
+    ],
+    [
+      0.9913486316,
+      1.0
+    ],
+    [
+      0.4956365661,
+      1.0
+    ],
+    [
+      0.0,
+      0.9913486316
+    ],
+    [
+      0.0,
+      0.4956365661
+    ],
+    [
+      0.0086513684,
+      0.0
+    ],
+    [
+      0.5043634339,
+      0.0
+    ],
+    [
+      1.0,
+      0.0086513684
+    ]
+  ],
+  "edges_vertices": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "edges_assignment": [
+    "M",
+    "V",
+    "M",
+    "M",
+    "V",
+    "M",
+    "V",
+    "M",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B"
+  ],
+  "edges_go:role": [
+    "CREASE",
+    "CREASE",
+    "CREASE",
+    "CREASE",
+    "CREASE",
+    "CREASE",
+    "CREASE",
+    "CREASE",
+    "BOUNDARY",
+    "BOUNDARY",
+    "BOUNDARY",
+    "BOUNDARY",
+    "BOUNDARY",
+    "BOUNDARY",
+    "BOUNDARY",
+    "BOUNDARY"
+  ],
+  "go:target": {
+    "query": "长颈鹿",
+    "canonical_name": "giraffe",
+    "family": "QUADRUPED",
+    "parameters": {
+      "body_length": 0.32,
+      "neck_length": 0.45,
+      "head_size": 0.12,
+      "front_leg_length": 0.32,
+      "rear_leg_length": 0.32,
+      "tail_length": 0.16,
+      "ear_length": 0.1,
+      "snout_length": 0.11
+    },
+    "semantic_confidence": 0.96,
+    "semantic_source": "builtin_alias"
+  },
+  "go:featureLabels": {
+    "1": "HEAD",
+    "2": "FRONT_LEFT",
+    "3": "FRONT_RIGHT",
+    "4": "BODY_A",
+    "5": "TAIL",
+    "6": "REAR_RIGHT",
+    "7": "REAR_LEFT",
+    "8": "BODY_B"
+  },
+  "go:generationStage": "PARAMETRIC_BASE_CANDIDATE"
+}

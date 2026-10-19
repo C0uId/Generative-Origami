@@ -1,0 +1,1000 @@
+{
+  "release": "教学折纸软件_可执行MVP_POC01-007C3-B",
+  "certificate_counts": {
+    "C3-A": 162,
+    "C3-B": 162
+  },
+  "excluded_directories": [
+    ".git",
+    ".venv",
+    "__pycache__"
+  ],
+  "excluded_suffixes": [
+    ".pyc",
+    ".pyo",
+    ".tmp"
+  ],
+  "files": [
+    {
+      "path": "00_项目总控/CURRENT_STATUS.md",
+      "size": 3314,
+      "sha256": "8e794bc46a2f5c1d761af635e82d3599311b35ba70fe4a7b019311a7eb6fc5d9"
+    },
+    {
+      "path": "00_项目总控/DECISIONS.md",
+      "size": 6032,
+      "sha256": "870bcacfd48e945df245ae056f91bfb39008d7af8f73d0a98b93cd22df7a8eaa"
+    },
+    {
+      "path": "00_项目总控/GENERATIVE_ORIGAMI_EXPERIMENT_LEDGER.json",
+      "size": 7060,
+      "sha256": "05c772f8cece2b5467319f6fb5a570808b2ef7f7520f701cfcd42e19a31fafbd"
+    },
+    {
+      "path": "00_项目总控/ROADMAP.md",
+      "size": 1262,
+      "sha256": "13fa9bfd25a9470dfa6721e5a4bda032247d4eb8d9ea6b9bb3ade3c63033a8d1"
+    },
+    {
+      "path": "01_产品文档/PRODUCT_ACCEPTANCE.md",
+      "size": 536,
+      "sha256": "6e67bca7dc725c3ac4bba88d25465253341db1b94232d0a87f607153087fef9e"
+    },
+    {
+      "path": "02_技术架构/ARCHITECTURE.md",
+      "size": 291,
+      "sha256": "2bbc7ee25923235e92865e7837f6fd9bcdfd5d00d59656f4a552c628e66e6fb0"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/__init__.py",
+      "size": 22,
+      "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/cli.py",
+      "size": 515,
+      "sha256": "c66615cdeb8121fa7db0f1dddeddc816ae5c9763e9fc8020e96e4388e301f622"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/fallback.py",
+      "size": 495,
+      "sha256": "a761016167a938673551f0ca2cc4aea474017bc02fea65446e4fa03c4e3f09dd"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/foldgen.py",
+      "size": 4039,
+      "sha256": "64e413fb230e7f12b3d174815a0d31f4e6b937a20e5c68a281ea01632bc14189"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/models.py",
+      "size": 571,
+      "sha256": "52d02e0eb29b7a94c6f00e0c4fc495642e9cf51df0ad5c4fe4bb25a8abbed1ea"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/pipeline.py",
+      "size": 2141,
+      "sha256": "77af1d49519a37bfbcfa56aab7a39ab86f072fc76d22837f71edd92a9626ebf0"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/planner/__init__.py",
+      "size": 99,
+      "sha256": "64721669a8a1813bc0f8acc016bd96553631fec1f3382714a3d3fbfa897dce05"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/planner/manifold_rrt.py",
+      "size": 13894,
+      "sha256": "4de72706c0df80a0915f2d86675495397c7f70f62be437d8e75164a6be1194f2"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/semantic.py",
+      "size": 6382,
+      "sha256": "4f44bb9abaa5d22a1c559bcc6774f2c5d2b40c8ec3e17f7c8f9a15e156cb5992"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/simulation/__init__.py",
+      "size": 152,
+      "sha256": "94d976b5a3c7b9d032dee5b4b21d551aa900bc8d160377827c5350c55ed5cf2c"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/simulation/adaptive_bridge.py",
+      "size": 12510,
+      "sha256": "d8f1c898cf073511f71e97d89641f888a4d3d2506dd771b83335ada066655080"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/simulation/ccd_adapter.py",
+      "size": 18998,
+      "sha256": "b3bf5a8cc1de3ccc2ca1af467ceab7502bec05d76501046d6e08a465742945c7"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/simulation/ccd_motion.py",
+      "size": 17069,
+      "sha256": "3a4b9d23a8a8425d291cc70f98a870cfe040fab9c41cfb2863428a9b54be1bb4"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/simulation/closure_path.py",
+      "size": 10426,
+      "sha256": "2b6ac7b606cb1306a06cec07d237df6307a77ecd90520661680a3920e6e01448"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/simulation/continuous_ccd.py",
+      "size": 24101,
+      "sha256": "d52e98146a12c060989666c2fd69283236c5cad06ca7be6695a6d3131a033603"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/simulation/layer_contact.py",
+      "size": 10075,
+      "sha256": "4047859791566763d7c08468fbc15f76dca86fd6744eb26b169c342cdb5db925"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/simulation/single_vertex.py",
+      "size": 19785,
+      "sha256": "0de3f846df83d01af43d059b9b6e0377e3f9fafe9d0be3f1485918737efae475"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/simulation/spherical_bridge.py",
+      "size": 15516,
+      "sha256": "0eb7ab71f7d15d7f685b27f81ed64664e6cb2756295ffc3276bb9ffdde7fd369"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/svg.py",
+      "size": 1515,
+      "sha256": "bd79f4e80490e7c89ec161b31df7d73b34c55ebed367dabe11739e9580a6ba9e"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/tutorial.py",
+      "size": 1631,
+      "sha256": "dbee8b954776683c2fdb213a63fa6afe4eee109a78f8a6381d050f2cee694737"
+    },
+    {
+      "path": "03_折纸引擎/src/generative_origami/validate.py",
+      "size": 1985,
+      "sha256": "64961bdfeff18509691d1b0089ae3bc800e27427728b9b2ce88663c97d4bab00"
+    },
+    {
+      "path": "04_动物参数库/animals.json",
+      "size": 375,
+      "sha256": "78e353918a6f48f791e3a239ab36f49cf432ae7a6491fce012424f8be6373123"
+    },
+    {
+      "path": "05_实验/POC01-007C1_MANIFOLD_PLANNER/README.md",
+      "size": 1424,
+      "sha256": "fed0f4f49f7d81bc34bdfef4c13773ed46e0f3d17e5ec4eb4926c040fb153d24"
+    },
+    {
+      "path": "05_实验/POC01-007C1_MANIFOLD_PLANNER/console_output.txt",
+      "size": 3742,
+      "sha256": "2ed073ca3df4f6756b2ca66076f436bd67a7f075897ee5b02f23b1bdec92a8ad"
+    },
+    {
+      "path": "05_实验/POC01-007C1_MANIFOLD_PLANNER/contact_aware_motion_plan.json",
+      "size": 50465,
+      "sha256": "f0663b3c2f12f8db68ec981b66c15eead685d5c1a35fb2575d4c3484402de09c"
+    },
+    {
+      "path": "05_实验/POC01-007C1_MANIFOLD_PLANNER/dog_contact_aware_keyframes.json",
+      "size": 195387,
+      "sha256": "48fae55c0ed2c6b24ba33048e6e349e3534ad997f0f52e8322687e0190f35559"
+    },
+    {
+      "path": "05_实验/POC01-007C1_MANIFOLD_PLANNER/report.json",
+      "size": 3741,
+      "sha256": "13740972e30a7f9b0f85ff410608df465b93209f183779c73a00f93385ff8eb8"
+    },
+    {
+      "path": "05_实验/POC01-007C1_MANIFOLD_PLANNER/run_experiment.py",
+      "size": 4280,
+      "sha256": "d8f2fef39b1dd5fe7266c3747c1f6dbe5768fc2be67f9e781d06e738b5ea0129"
+    },
+    {
+      "path": "05_实验/POC01-007C1_MANIFOLD_PLANNER/strict_motion_plan.json",
+      "size": 1132,
+      "sha256": "6b6c6e60cb3fcae4c9f9629eefea39e322a8c1f06ceb947fb6602a0ba44cde60"
+    },
+    {
+      "path": "05_实验/POC01-007C1_MANIFOLD_PLANNER/test_output.txt",
+      "size": 1159,
+      "sha256": "1d7439c39fe08596f0ff48aa2a6fea292f2b62c2950a2b76acf4a92b9912a1e0"
+    },
+    {
+      "path": "05_实验/POC01-007C1_MANIFOLD_PLANNER/test_output_final.txt",
+      "size": 1159,
+      "sha256": "8d073d7596a3b12d56b1a1fc678caeda435f7dde3ff8233bc6302382aeab9de8"
+    },
+    {
+      "path": "05_实验/POC01-007C2_LAYER_ORDER_CONTACT/README.md",
+      "size": 1292,
+      "sha256": "823eeb71d82df96db480e802c5e4d4a7ee21cc92145d770e659db88159aa7888"
+    },
+    {
+      "path": "05_实验/POC01-007C2_LAYER_ORDER_CONTACT/cli_smoke.txt",
+      "size": 383,
+      "sha256": "b0a2f5325045009977833b3b249665fce432d013ee7576b9fa2cb53a7d16d770"
+    },
+    {
+      "path": "05_实验/POC01-007C2_LAYER_ORDER_CONTACT/console_output.txt",
+      "size": 1168,
+      "sha256": "4c1dec47617fe10d51f03a0c93fea21005d76f70fe22946222d9bdf44c600ccc"
+    },
+    {
+      "path": "05_实验/POC01-007C2_LAYER_ORDER_CONTACT/dog_layer_order_keyframes.json",
+      "size": 231243,
+      "sha256": "c25ac604c1f4c90f0d44734370313967f2e333309c6bffcc3c52d6e37199be1d"
+    },
+    {
+      "path": "05_实验/POC01-007C2_LAYER_ORDER_CONTACT/dog_layer_order_motion_plan.json",
+      "size": 53488,
+      "sha256": "0094524afc5156591c325829d09e8c741b5ddd7eb85f5b97309cb06707933e0e"
+    },
+    {
+      "path": "05_实验/POC01-007C2_LAYER_ORDER_CONTACT/report.json",
+      "size": 1167,
+      "sha256": "72b9a02254c57e6b8fa4f49b94efb5d5d8869e708ac0f028307cde4c844b5a87"
+    },
+    {
+      "path": "05_实验/POC01-007C2_LAYER_ORDER_CONTACT/run_experiment.py",
+      "size": 2371,
+      "sha256": "c1cddfd8a211efc3072bc5e44fe765546cf5cfde412292b1378e42f1d92b24e0"
+    },
+    {
+      "path": "05_实验/POC01-007C2_LAYER_ORDER_CONTACT/test_output.txt",
+      "size": 1155,
+      "sha256": "2225697b1e68942571ba89123d106d64d2427e02efaeee41d34a3984a7148295"
+    },
+    {
+      "path": "05_实验/POC01-007C2_LAYER_ORDER_CONTACT/test_output_final.txt",
+      "size": 1155,
+      "sha256": "290b19b3eb646dcd1085cb4ebf92b0887d809a1e40892e76cb3b3a0b213f4a71"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/INTERVAL_SUMMARY.md",
+      "size": 20415,
+      "sha256": "48687c6981db91b7cb3565120c27f448dcd0d285f4694b0a9fbc0a3dba0752ac"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/README.md",
+      "size": 6543,
+      "sha256": "6324fe8f8c761420f109955e9d6ce76e44250be32f09425029a3fca978b0d9d6"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/backend_probe.json",
+      "size": 844,
+      "sha256": "7f2b442673506f2e2d566a6a99fcf50cc02f761225ab98b792226eb966e84acd"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_000.json",
+      "size": 155619,
+      "sha256": "15146bb9ea307607db90a9402e6722b4de46335eb96f3db8b0923f8e506841e6"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_001.json",
+      "size": 155746,
+      "sha256": "cb35cfbd96ad809b8100c2c12fe3b61fdcd489bcc06130b316c73e730e9f59a5"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_002.json",
+      "size": 155951,
+      "sha256": "24c35d5ac9f321f3023a381958fa3fe2d06c5f1b8e03112ec57a3663067cd8a2"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_003.json",
+      "size": 155949,
+      "sha256": "5e2e336c309d8934e741bd3337c4a68f1034908b2f182dd14dcea54c3a7d3864"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_004.json",
+      "size": 155975,
+      "sha256": "212f7f547649ae72a704ed20fe8a6b4be57f5b93a8b6ac806c509c051d384858"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_005.json",
+      "size": 155800,
+      "sha256": "04a589c5076c8cbc4601c48540d44bf5ac19055cd8f251542fbf6b42b4005c80"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_006.json",
+      "size": 155947,
+      "sha256": "d6b5ccd2119e0be7a836dd2cb99d17f0df0769ea468d2b1623ef917fdcda9572"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_007.json",
+      "size": 155972,
+      "sha256": "9fb6b8fca31a75a9bc7fb3f18b474b88b98cb3ac12688a6d5dc1aee480e96949"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_008.json",
+      "size": 155930,
+      "sha256": "2b481daf032d74798c00c16e33ae336713de725dada959ceca95ed09cb93e649"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_009.json",
+      "size": 155939,
+      "sha256": "ded457aca84532e343c4689960f0a83fe315fb0d3567f38ad98bb79ce6115413"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_010.json",
+      "size": 155954,
+      "sha256": "d86193b2117570bca34a59a09fae6a702f54e43054d117d0371bce68a03d988b"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_011.json",
+      "size": 155928,
+      "sha256": "0dda25006068a3560b67bc1664babf8945f180cb61822a3b13a1cc2bd94c8f31"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_012.json",
+      "size": 155937,
+      "sha256": "a1c549eb564b22bffb33e5a9f26e1cee48ec55236289794fd01fbb0d6a798fce"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_013.json",
+      "size": 156024,
+      "sha256": "98cb1aa124290f3638b290e759d28a05dbd4ed5f939a84aced9fe9c551c66fc5"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_014.json",
+      "size": 81467,
+      "sha256": "6153ebe5d5f23df83c608d3e32fec1e5733f048575906925cbfe4f470964e248"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_015.json",
+      "size": 21015,
+      "sha256": "1dbd83b11b6f2fa53343a51991114304b989b0d3302bd96b66cc56deaf0b6468"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_016.json",
+      "size": 21009,
+      "sha256": "48d55d65c5dcd3933f76fc2c6e73166239a7a93bd7ed3eba6951e5c3de219fe8"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_017.json",
+      "size": 20990,
+      "sha256": "bf8bbe48f8b556439d43936d5e0e8843eecb0dd9aa34d4d9f1e57fc99ad65345"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_018.json",
+      "size": 21007,
+      "sha256": "0ed00b159cf684fffdad613428799d816269f5ee891edec848a913e946469225"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_019.json",
+      "size": 153586,
+      "sha256": "c62d2cc1258145df835388f0aa38328e798558403c6886897a9009998e61de21"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_020.json",
+      "size": 153606,
+      "sha256": "85d9e1290f8f97d25c47e94f98e653f69d91c3c70c38c693e6b89827fe31acc8"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_021.json",
+      "size": 153627,
+      "sha256": "bde85f5559e2616c78edf3f9fb9f82df78f5abaca43021ea527ddf2685a788bf"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_022.json",
+      "size": 153677,
+      "sha256": "0f42cd7a7581ce0332d65ee36dfeee049fec4b41fb62143e773bd5381840a56f"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_023.json",
+      "size": 153872,
+      "sha256": "7e72299d6537e7306826f7ecfa7067fd2e046d2f7d3a0fabbdee9e03469582ce"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_024.json",
+      "size": 154146,
+      "sha256": "e4e85b334f378f4693a1e26c3a2c4fd8298de04618ad8de281822cb5ec090141"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_025.json",
+      "size": 154443,
+      "sha256": "3998c12bd3663e8fd7d489c2d6ee97d9ebe351379473bfa62ab229f1e05d6181"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_026.json",
+      "size": 154357,
+      "sha256": "dfc67e851b98fcc6ea043ccf99ac92968c89a871f6112d2d68aa9b2dc2c28872"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_027.json",
+      "size": 154276,
+      "sha256": "576c4f43c50dd0e042957a8f25d43781b59a31718d5f5490b1081562f695d311"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_028.json",
+      "size": 154348,
+      "sha256": "c6a0e14435ffaa68e999347421027aa218bcf8943226e6d20a447e1dfdfc50f5"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_029.json",
+      "size": 154719,
+      "sha256": "6ce37c4c5642ce1685b9c6e934ffb60d3b33de295d189cb21483306888132831"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_030.json",
+      "size": 154936,
+      "sha256": "f534d29acb4f8bfed29be5c0a1d691c3e0e7e74b230889d1c7530c4558c0a5a6"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_031.json",
+      "size": 155124,
+      "sha256": "69f88fb30e28c13a5243f7ab47f748852553ca860d926299adc59c1c3ab281c7"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_032.json",
+      "size": 155250,
+      "sha256": "86b74cfc9cf93738d5c3a9302afe04bcf725d2d81387f35204ccf18f5dedb6eb"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_033.json",
+      "size": 155449,
+      "sha256": "26f6e63ca40ef0f7a4782adc1d33a06ffa37676808448bffac793d0f88e9c9c2"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_034.json",
+      "size": 155602,
+      "sha256": "698564bd56ed8e33a626c0e1df21ab43f16a0797ae6c48cc87a2581eddc02abb"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_035.json",
+      "size": 155687,
+      "sha256": "f64a8ca72c473dc2a80aa64774050596084a80b0c34b9a8bbb795a4605fb4aec"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_036.json",
+      "size": 155770,
+      "sha256": "0130526e2406a96533c9c302953682029cf7c1c07fe50dbd46e945a03161e27f"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_037.json",
+      "size": 155819,
+      "sha256": "d084205397e29618c7bb32f8c542df9169f2526f752ebc37b9ff57b683997cfa"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_038.json",
+      "size": 155797,
+      "sha256": "efe296329378bf86001e4bb18c5a38d17aadaf25a480dee2911a5e160156a950"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_039.json",
+      "size": 155721,
+      "sha256": "e2f055f96b20b2f48b68e854e98c9ece30a3edc6f0e38f11c6609c6a86219ba2"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_040.json",
+      "size": 155769,
+      "sha256": "252bc018cfe4b0e912026942d53cf38a54e141599c635f23f02dd4ad5b39cb55"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_041.json",
+      "size": 155807,
+      "sha256": "6dcd4e9c90d754c46f4caac90f46d01093376f30c331e8467f5b2b3d55dd2676"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_042.json",
+      "size": 155770,
+      "sha256": "8e7319db369ed51740f750591e508de548e245883380681ed30a83c36a1eac6f"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_043.json",
+      "size": 155785,
+      "sha256": "cdf8ccbd4d395cd45940d9822f4ec45765f042ce8ea19b31e34c1e63906dab01"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_044.json",
+      "size": 155721,
+      "sha256": "7af06ecf7b59ca66992df96d86e23d784808770983b6f1207913fcca8e40ff31"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_045.json",
+      "size": 155687,
+      "sha256": "1d6d80fae8ca2b6501cc7a80abe7e1a62b6c52abab10b9f0016566ccae384a3d"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_046.json",
+      "size": 155761,
+      "sha256": "2e4e5aa7443d07dba722ca46501230cb75ddabf2940fa8e50e50566da0620c77"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_047.json",
+      "size": 155749,
+      "sha256": "50c09dd6f64307f368a0f2bc772fcbb1fd05cd4dcec9bb0f6d2e03e2c82c6fb4"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_048.json",
+      "size": 155729,
+      "sha256": "1da63fde089e696ae6c9e6398194dd13cde53eec63f5afbbe74ff2c1d8873cb7"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_049.json",
+      "size": 155728,
+      "sha256": "ea2a6528d35813df879604768edf618f05ac77f7d401d96bd3695e3a2ac6fe89"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_050.json",
+      "size": 155704,
+      "sha256": "3680b80368f535b2e99e21c0efc7edfacaec580f075410a254b547f2e8e216eb"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_051.json",
+      "size": 155677,
+      "sha256": "a21367da51958a38b7d2828b0af52cadbe17d2f32220d7b983fee50d423bae5f"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_052.json",
+      "size": 155515,
+      "sha256": "f695aa8944d172396aabb4c026a0c3cff575d83abc83f3dd32d5a19601a19787"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_053.json",
+      "size": 155192,
+      "sha256": "6d41fff9bd2b0a98feaed724cf501b820c7761da81d862ca497b24f8a5b47372"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_054.json",
+      "size": 155065,
+      "sha256": "3875b5c18490fa92d308f564ad8d55ff3b43341dd54e9163fb14529e527c2f1c"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_055.json",
+      "size": 154901,
+      "sha256": "5871dbd8836ba8f4cfd6b86df4e9e198419a38c1890c65dc88b95db244834f84"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_056.json",
+      "size": 154614,
+      "sha256": "af9fe3ab69e7b01edeec8a927afba941b8ac33a1d71227d07d05cba58e083660"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_057.json",
+      "size": 154750,
+      "sha256": "3295578d3ab95e6886a93cd39f95e73b90b5e5501933d0353bda1f28382c31be"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_058.json",
+      "size": 154740,
+      "sha256": "89a7170c04a8389d4094b3509c4de91ef3cfb6deb790a75003a2db8c1ec3d2b4"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_059.json",
+      "size": 154588,
+      "sha256": "f603957fe64a9dc555c2ca7cf708846ecbd21d7aa85b4e8fc638e29126fc4d14"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_060.json",
+      "size": 154631,
+      "sha256": "272037cc0fc34eba1bc3cde1ad8f1a3974cd10c1b942653fdd9b762f2ec3903f"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_061.json",
+      "size": 154371,
+      "sha256": "359bcb3154aa160f529539da3b83da0714f2bc579b28258a26830a0d3ac1cbb0"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_062.json",
+      "size": 154139,
+      "sha256": "b88d3fa61c0162a132ec133ff28d309df34944c7e9b3c8de1fa1a2b02b5cae5a"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_063.json",
+      "size": 154169,
+      "sha256": "50c0ef4f04f8f946545f008b6c8f471c6b5cecc8fcffde2dab869c53e2e695f9"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_064.json",
+      "size": 154118,
+      "sha256": "6f6485638d8eb41616c51533f8e77eac142c63168a0923811b847ef35e9d4903"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_065.json",
+      "size": 153856,
+      "sha256": "7c4638a166d1cd6847a6586a31fd4805362f81eb634e753a9dc0d4605fe08d54"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_066.json",
+      "size": 154674,
+      "sha256": "5c1fbad84e0e3d26e575cde4aff4bc3c18790846a52ad611d4ad142a855cf874"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_067.json",
+      "size": 21021,
+      "sha256": "ffa68f72154c8daa4d9ecd9e7964e43ade1a7c29d10547426600930e34a6c886"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_068.json",
+      "size": 21000,
+      "sha256": "a010556119831eae725b0b5da98f82705d41cbe22c47ef6ef797c7ab3765f050"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_069.json",
+      "size": 155789,
+      "sha256": "b66ea7d681c5ce29f7092f6eea662d518d454f6b4dcec976569780024e496494"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_070.json",
+      "size": 155833,
+      "sha256": "94666a36900732b6d90b497f64c7ca17edb24ff1263592d4028ff659f44a0c40"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_071.json",
+      "size": 578274,
+      "sha256": "65da0a31e4cc9ebf1594e0f5c3f476f2b164bdf7dadb77393e9f30bf1db81db8"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_072.json",
+      "size": 1527673,
+      "sha256": "23f2a47c237bd6dbc1c64b7e482332a1708ef2490a81ac0391338d00f800a2c2"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_073.json",
+      "size": 1249717,
+      "sha256": "74d7378729a50c3e8fc8ff14ce3a762eceee4c15a14d9353b1a342142606c566"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_074.json",
+      "size": 1249731,
+      "sha256": "4e6c977c71e791a68bc974b94ea29c44af7c9e7e455f01e50a0b987b402c3c19"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_075.json",
+      "size": 1249770,
+      "sha256": "924091d8607a138a97f7a63c7315c82c6605290f6eedf49f41e26ff0427b7420"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_076.json",
+      "size": 1527596,
+      "sha256": "6cab633dda60ba8a8d50062ea052199c5c26fbf8f04bfa5c330c64109e76c49a"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_077.json",
+      "size": 1527431,
+      "sha256": "d28bbae0c14a359c83d3c54b5599d9221a6c4976bdf9813d93e45a62e2a8921e"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_078.json",
+      "size": 1249485,
+      "sha256": "4f3d5980ec36c114b0c6f90d6380bbe03ef96d06196bb17240637d62307cef42"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_079.json",
+      "size": 1249484,
+      "sha256": "4199e68cc26b5d4d66a1065011d625e950996306f185de539ca59389c8502ac8"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_080.json",
+      "size": 1249436,
+      "sha256": "a825b4ab0cc3fdc572b4b08f3ecad5b89373f6c9dd2b2eba035c59f929bf4978"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_081.json",
+      "size": 1527112,
+      "sha256": "61f232a0a414452b17522384c3b51ec73d3e628b8c58797d30af71f8da22aabe"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_082.json",
+      "size": 1526841,
+      "sha256": "62dfe742bed3e589f77e47282d7ccb9b46968daf38b08f575b135584f5a8bf96"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_083.json",
+      "size": 1249235,
+      "sha256": "e4d7cfa5e7f92439988a70b05fc0faee17d0e54c22461ce7ac8c1a98689880c6"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_084.json",
+      "size": 1248386,
+      "sha256": "5e1de4c9263b6be37d6298d62cba336972af1c090f0061751bf946b82f1881be"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_085.json",
+      "size": 1248189,
+      "sha256": "01fd8057a036b91a88d4b3df3e3008b2ce60251ec0a70c70a6666c46b7b002a1"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_086.json",
+      "size": 1526583,
+      "sha256": "d251d719c0c2a3505418c23e9c9d28d959df9d3ce80e83dc4b910c1756633719"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_087.json",
+      "size": 1526445,
+      "sha256": "fa3c4c58f079fa4ec206c3a79d10f79a98c2aa2e698727d6b127df21fa852b85"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_088.json",
+      "size": 1248184,
+      "sha256": "eb526d5909483d10f6b5ed50e9ac6bbfc122ad64bdd93276c221126cc13d7c47"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_089.json",
+      "size": 1248163,
+      "sha256": "c976d57ccc65020f513fc5df69672793a6b6066bff694c5826686cade8571f98"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_090.json",
+      "size": 1248147,
+      "sha256": "e3578a7b3da27202d127fe20617821e270b435d4e77ab7c8e7e7eecf003420b9"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_091.json",
+      "size": 1525749,
+      "sha256": "22a2fe0c7d857cba1b3a61217c7e6335e4d0589b2308c73d0f67ca529b869c1e"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_092.json",
+      "size": 1525383,
+      "sha256": "aa068bb6d0ffa003e8392905b3da9a0f9a1c93dcc3e93ac36374c1f967c8800b"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_093.json",
+      "size": 1248180,
+      "sha256": "adc67a532ac6da3c2a40c7c865ecdadddd1ea333092628793b66f2df2080406f"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_094.json",
+      "size": 1248136,
+      "sha256": "1a6dc59ec226005ae71d8b5d76a4545d9f05dc7126c7db4ed91f44c087fc2542"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_095.json",
+      "size": 1248054,
+      "sha256": "ef6fb498a4b69c3875d90a7fc526371c1f6a67bae05b2ec095a8a286649632ee"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_096.json",
+      "size": 1525735,
+      "sha256": "b2def6ec2db12f410e2c73ee726405e2f0c733c0efbd8bf968e4f7d0c752d167"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_097.json",
+      "size": 1525924,
+      "sha256": "74bf92bb9859ac93002ac0bbe13ef5de900bbb068a27bba832ad2dff1eca450f"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_098.json",
+      "size": 1248256,
+      "sha256": "a6f166547dad5a269f460e2d6af0d4f29820dc8728cb79f3d69eb759e285c791"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_099.json",
+      "size": 1248001,
+      "sha256": "5de2996ee9b636fb718437c7a979513a19c317f9510d1e7be7d59d4d54ecbe83"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_100.json",
+      "size": 1248023,
+      "sha256": "dfa4674550ebb7aa5e79f6da408a826ba6fc32d098c04fab4a590268e7721534"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_101.json",
+      "size": 1525729,
+      "sha256": "a16ff4ac84dc5ffdbef8e3c052d6370a6d630c4bc3253391ca08480c2eecf182"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_102.json",
+      "size": 1525828,
+      "sha256": "a9fad4d64d591995eb3a9814caff8212472377cca457c04686590e33d785e7bf"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_103.json",
+      "size": 1247820,
+      "sha256": "4ee15d640e5b22a99c4050060c1f8fceb867f77e2f50a0d3f19ad0f04f81334c"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_104.json",
+      "size": 1247912,
+      "sha256": "984fa7ca65ff0fb33d4c67baa1d238320bda1641037abd7342c89d22bd7cb5f0"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_105.json",
+      "size": 1247948,
+      "sha256": "592ec736bb4fdafd6618df512bea45ec9e45d8c618f7650f76a124546e16c2e8"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_106.json",
+      "size": 1526122,
+      "sha256": "9dd83513a06000d67cf4555ba41e51cee13f1f83af8b7f65713f020a163cea13"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_107.json",
+      "size": 1526199,
+      "sha256": "6e3f22b68cfcd64f03750bcccdf0f3f4680c2ff63428abb2feb9903c82c96a17"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_108.json",
+      "size": 1248181,
+      "sha256": "b2807f6c7f4ec0523a1bfeb25bebb2b6bec9e062229f1053bc4784d993804965"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_109.json",
+      "size": 1248169,
+      "sha256": "3e3d283a1122008135e759123329c7f2240ec22d2068b738b53105818e917749"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_110.json",
+      "size": 1248250,
+      "sha256": "4a6674ed657382b55033428ff96412c77e0be798f4c37d79b544e26320786317"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_111.json",
+      "size": 1526171,
+      "sha256": "510fe75ff3be1ad32c4085ba1ef48b0d77c5ae961184bdf3312540b63d0db122"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_112.json",
+      "size": 1526461,
+      "sha256": "6b042873c5ebb44f82f7954b37ec74e1276c408912bda7f83e729b4c041f68be"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_113.json",
+      "size": 1248186,
+      "sha256": "9406bffaa09ec8bcdabb7dbf795511308af52f9c93b072a7355c83fb752a5abf"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_114.json",
+      "size": 1248086,
+      "sha256": "0350ed18270cc9186590eecd456db00b5b55597a6a4d1ff6b14a802150d64d12"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_115.json",
+      "size": 1247962,
+      "sha256": "441f1df3d2a7955f99c3f25e4c4ccb7e1995f7bc9ba872c7b7861ea37b6a5536"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_116.json",
+      "size": 1525991,
+      "sha256": "50fb1cb30d143d94e58dbbd92bb186446d3155baaeeb31f2fba6df69bc8b4381"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_117.json",
+      "size": 1526126,
+      "sha256": "456db23ba075e4bd6b0528fc639588bdc51a439ad213684cb0a385c68cd28306"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_118.json",
+      "size": 1248346,
+      "sha256": "781a65b753e42bbabb0ed31e9fbb3ece26571ae38c86bea50e75a97eb6f0a00d"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_119.json",
+      "size": 1248336,
+      "sha256": "aa0e426dfd1a22b242667004de2c8ac2a170d779d08617c90f83c35d133ec3c1"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_120.json",
+      "size": 1248413,
+      "sha256": "9e7b7d0e61397b10952aacd6de74b87ae86ec562a3a0b76f20d1e814816e3bd9"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_121.json",
+      "size": 1526374,
+      "sha256": "7b77b74d77b59db7437653e369e2f6d449b057b3b6d689e1feed57a4c320e0ae"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_122.json",
+      "size": 1526533,
+      "sha256": "5b0645c1597c05ff7329e10af7bb01bf77f97cb68d3e081f229b51887ed9e8e4"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_123.json",
+      "size": 1248681,
+      "sha256": "063d8fb84f87219041044d04d2ae8cc8b82a47c021af37890f0e4137968c0371"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_124.json",
+      "size": 1248704,
+      "sha256": "5ba75b5df84e5895ea952f6075e0df7ecf4435579cd66063c8f0babb543578b0"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_125.json",
+      "size": 1248652,
+      "sha256": "eea100ce05768a43243d62453a84d576d53cd6d0c395df5cf3decd4f4f9cef65"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_126.json",
+      "size": 1526309,
+      "sha256": "ab910659bfb62788aac1756c372f5a60d4ea1f5bf948826e147354e8cae1838c"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_127.json",
+      "size": 1526291,
+      "sha256": "b335e031709e4fb3997851948ee9d1e0374db58f4f493fad3fba445e7917338f"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_128.json",
+      "size": 1248695,
+      "sha256": "6d51450ea92779ba4e0fa81408b2f945527e23db51ab9f24e44086dda3928dbf"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_129.json",
+      "size": 1248721,
+      "sha256": "c028735766b3c4c57cd0bf715a5f535cdd6f841b9903b3b57053b658b630d9ee"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_130.json",
+      "size": 1248746,
+      "sha256": "b4938a5a9852a576263b664f19cc6d07cdbd3b35fcde7712c7cd4072fd60335e"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_131.json",
+      "size": 1526549,
+      "sha256": "da5fae11db3c9cf622865dd0721c2a744fb4b9bcc8bd6f0d732e1ebaa49f1ae3"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_132.json",
+      "size": 1526471,
+      "sha256": "9dd922ea6c1b72933a005d6617671288b9902281a7d4a5cf3fad38c2146a6679"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_133.json",
+      "size": 1248555,
+      "sha256": "1d536f319251b6c69131076ea5dcbd860993b11afe9e15043758b9188cf923b5"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_134.json",
+      "size": 1248521,
+      "sha256": "71adfba3726c2f56f5c3d91e1ac8475c430f37d1469acbfcc1aa821d3a4c185f"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_135.json",
+      "size": 1248561,
+      "sha256": "d05f7a57761b419139ed299b01ea62c5fa0ce8bf622fe25a23183c9b393e6a46"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_136.json",
+      "size": 1526683,
+      "sha256": "d08145729fbddc3086a10d06b895fd9a3034e30ecb490a9e8d926d7cdafd638e"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_137.json",
+      "size": 1526837,
+      "sha256": "d292678400b769f0083dc8ee1b6b3d396d2bc882da23b85def6bde5596795bd7"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_138.json",
+      "size": 1248709,
+      "sha256": "6f129efb3e538367b30f8e12957b631f1df1b1a64d39e9d249ae8786cdbea3b0"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_139.json",
+      "size": 1248720,
+      "sha256": "aebeaf517d4f92705599550a74c30619e3fb88347008a41ee2c4ec5258e08a5a"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_140.json",
+      "size": 1248774,
+      "sha256": "0c63521d322545b7ebe1f1de3b8a2cbb7e9690e67b364d835d1617d91c7dbf96"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_141.json",
+      "size": 1526793,
+      "sha256": "15e1856bebb34b79565bf5eb33021388933c6f893ba38de6972d4db0d1d39d7d"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_142.json",
+      "size": 1526700,
+      "sha256": "b6c78426c8699ad48bd80789003765ccd7cd14a23580450b2584b6e5f09a1402"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_143.json",
+      "size": 1248523,
+      "sha256": "55bed4a3abd156f1e27d36de96d4ec027f1d950ada1bc84a8ebb01e2f4113361"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_144.json",
+      "size": 1248486,
+      "sha256": "c2d9b242e83ccaae47c4397737893068c1154956420103b9391aaa3edfeaf4d7"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_145.json",
+      "size": 1248494,
+      "sha256": "7e26ce03cd1005203b292f9cba37c49dc58ac62eddc7bd70515494d8c000f519"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_146.json",
+      "size": 1526655,
+      "sha256": "cd4fc03adeb4f6ab36dfe4da07bc1786404324022144d0228a74352ccdfd6793"
+    },
+    {
+      "path": "05_实验/POC01-007C3-A_CONTINUOUS_CCD/certificates/interval_147.json",
+      "size": 1526647,

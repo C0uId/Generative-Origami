@@ -1,0 +1,119 @@
+[
+  {
+    "requested": {
+      "body_to_leg_ratio": "short",
+      "tail_ratio": "short"
+    },
+    "implemented": {
+      "body_to_leg_ratio": "short",
+      "tail_ratio": "short"
+    },
+    "approximation_notes": [],
+    "domain_status": "EXPERIMENTAL_NOT_CERTIFIED",
+    "geometry_status": "BLOCKED_PENDING_PHYSICAL_BASE_COMPILER"
+  },
+  {
+    "requested": {
+      "body_to_leg_ratio": "short",
+      "tail_ratio": "medium"
+    },
+    "implemented": {
+      "body_to_leg_ratio": "short",
+      "tail_ratio": "medium"
+    },
+    "approximation_notes": [],
+    "domain_status": "EXPERIMENTAL_NOT_CERTIFIED",
+    "geometry_status": "BLOCKED_PENDING_PHYSICAL_BASE_COMPILER"
+  },
+  {
+    "requested": {
+      "body_to_leg_ratio": "short",
+      "tail_ratio": "long"
+    },
+    "implemented": {
+      "body_to_leg_ratio": "short",
+      "tail_ratio": "long"
+    },
+    "approximation_notes": [],
+    "domain_status": "EXPERIMENTAL_NOT_CERTIFIED",
+    "geometry_status": "BLOCKED_PENDING_PHYSICAL_BASE_COMPILER"
+  },
+  {
+    "requested": {
+      "body_to_leg_ratio": "medium",
+      "tail_ratio": "short"
+    },
+    "implemented": {
+      "body_to_leg_ratio": "medium",
+      "tail_ratio": "short"
+    },
+    "approximation_notes": [],
+    "domain_status": "EXPERIMENTAL_NOT_CERTIFIED",
+    "geometry_status": "BLOCKED_PENDING_PHYSICAL_BASE_COMPILER"
+  },
+  {
+    "requested": {
+      "body_to_leg_ratio": "medium",
+      "tail_ratio": "medium"
+    },
+    "implemented": {
+      "body_to_leg_ratio": "medium",
+      "tail_ratio": "medium"
+    },
+    "approximation_notes": [],
+    "domain_status": "EXPERIMENTAL_NOT_CERTIFIED",
+    "geometry_status": "BLOCKED_PENDING_PHYSICAL_BASE_COMPILER"
+  },
+  {
+    "requested": {
+      "body_to_leg_ratio": "medium",
+      "tail_ratio": "long"
+    },
+    "implemented": {
+      "body_to_leg_ratio": "medium",
+      "tail_ratio": "long"
+    },
+    "approximation_notes": [],
+    "domain_status": "EXPERIMENTAL_NOT_CERTIFIED",
+    "geometry_status": "BLOCKED_PENDING_PHYSICAL_BASE_COMPILER"
+  },
+  {
+    "requested": {
+      "body_to_leg_ratio": "long",
+      "tail_ratio": "short"
+    },
+    "implemented": {
+      "body_to_leg_ratio": "long",
+      "tail_ratio": "short"
+    },
+    "approximation_notes": [],
+    "domain_status": "EXPERIMENTAL_NOT_CERTIFIED",
+    "geometry_status": "BLOCKED_PENDING_PHYSICAL_BASE_COMPILER"
+  },
+  {
+    "requested": {
+      "body_to_leg_ratio": "long",
+      "tail_ratio": "medium"
+    },
+    "implemented": {
+      "body_to_leg_ratio": "long",
+      "tail_ratio": "medium"
+    },
+    "approximation_notes": [],
+    "domain_status": "EXPERIMENTAL_NOT_CERTIFIED",
+    "geometry_status": "BLOCKED_PENDING_PHYSICAL_BASE_COMPILER"
+  },
+  {
+    "requested": {
+      "body_to_leg_ratio": "long",
+      "tail_ratio": "long"
+    },
+    "implemented": {
+      "body_to_leg_ratio": "long",
+      "tail_ratio": "long"
+    },
+    "approximation_notes": [],
+    "domain_status": "EXPERIMENTAL_NOT_CERTIFIED",
+    "geometry_status": "BLOCKED_PENDING_PHYSICAL_BASE_COMPILER"
+  }
+]

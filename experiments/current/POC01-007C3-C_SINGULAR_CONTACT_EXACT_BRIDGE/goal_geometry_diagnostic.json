@@ -1,0 +1,74 @@
+{
+  "diagnostic_only_not_an_impossibility_proof": true,
+  "existing_geometry_changed": false,
+  "existing_goal_changed": false,
+  "goal_product_rotation_matrix": [
+    [
+      1.0,
+      -2.797856074464196e-10,
+      2.436970022304196e-16
+    ],
+    [
+      2.7978600572823804e-10,
+      0.9999999999999996,
+      -2.4538997746060112e-17
+    ],
+    [
+      -2.436970022235539e-16,
+      2.4538997814243086e-17,
+      0.9999999999999996
+    ]
+  ],
+  "goal_product_identity_frobenius_residual": 3.956768822360463e-10,
+  "goal_closure_residual_norm": 2.797855656485852e-10,
+  "folded_virtual_crease_axes": {
+    "0": [
+      0.7743926439376662,
+      0.6327053287393992,
+      -1.731912112410415e-16
+    ],
+    "1": [
+      0.10018806162839096,
+      0.9949685182492688,
+      0.0
+    ],
+    "2": [
+      0.7743926440704325,
+      0.6327053285769012,
+      8.65956056205208e-17
+    ],
+    "3": [
+      0.10018806155879649,
+      0.9949685182562765,
+      8.659560561801188e-17
+    ],
+    "4": [
+      0.774392644026177,
+      0.6327053286310671,
+      2.508928139364984e-27
+    ],
+    "5": [
+      0.10018806148920202,
+      0.9949685182632841,
+      -2.5089089918113687e-27
+    ],
+    "6": [
+      0.7743926439819216,
+      0.6327053286852331,
+      -8.659560561801185e-17
+    ],
+    "7": [
+      0.10018806141960755,
+      0.9949685182702919,
+      -8.659560562052077e-17
+    ]
+  },
+  "opposite_original_axis_sum_norms": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "interpretation": "The finite input geometry must not be silently replaced by exactly coincident virtual A/B axes to assert pair cancellation. A small observed residual is a tolerance diagnostic, not an exact identity.",
+  "terminal_bridge_evidence": "See interval 161 atlas_attempts and contact_root_causes.json; no reliable regular/deflated Goal endpoint chart was established."
+}

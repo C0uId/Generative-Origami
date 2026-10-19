@@ -1,0 +1,33 @@
+{
+  "client_date": "2026-10-18",
+  "source_sha256": "c25ac604c1f4c90f0d44734370313967f2e333309c6bffcc3c52d6e37199be1d",
+  "modules_sha256": {
+    "singular_contact_motion.py": "1b231054c4b8b448a23feca00c4f3017cfbee739729426641cf86ad4d7c0f17c",
+    "03_折纸引擎/src/generative_origami/simulation/continuous_ccd.py": "8b5769df18c4094ba51f253c772feb43d12f5225348350c0dfb3c7dd4d9b05c5",
+    "03_折纸引擎/src/generative_origami/simulation/singular_bridge.py": "ede863baf77b4b0d9535ab9ac14810e699a32876de609c0dcbf86eb40fc7c38a",
+    "03_折纸引擎/src/generative_origami/simulation/contact_bridge.py": "70520c9a4cadabb42153f35772e1d9787cfda3b997ab1b40219a8b0ec7db7607",
+    "03_折纸引擎/src/generative_origami/simulation/contact_separation.py": "22e1c051f0112221eabb2d0ec32d5fe8d5238a7f080ca7aab38e10b92d0c3f56",
+    "03_折纸引擎/src/generative_origami/simulation/contact_gate.py": "ed7f176e3b570051c6262a4c7f3ab1470e237105f4b1324edf52d83d0a9cad3f",
+    "03_折纸引擎/src/generative_origami/simulation/motion_cache.py": "af7a170fc442e299cf152975692d0bdc5357c3a86b62c9ea94802e9fc7fe2fae"
+  },
+  "ccd_config": {
+    "closure_tolerance": 4e-06,
+    "numerical_error": 1e-11,
+    "material_tolerance": 3e-05,
+    "minimum_separation": 0.0,
+    "curve_tolerance": 1e-05,
+    "max_curve_depth": 3,
+    "max_feature_subdivisions": 64,
+    "max_pair_nodes": 31
+  },
+  "completed": true,
+  "memoization_scope": "Pure per-cell point/box queries only; mathematical motion and bounds unchanged",
+  "contact_gate_scope": "Mode-specific proofs; global-z final-correspondence gaps retained as diagnostics",
+  "interval_count": 162,
+  "counts": {
+    "PASS": 71,
+    "COLLISION": 0,
+    "UNCERTAIN": 91
+  },
+  "post_run_gate_audit": "post_run_gate_audit.json"
+}

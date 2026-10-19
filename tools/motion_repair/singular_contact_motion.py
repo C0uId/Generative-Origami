@@ -1,0 +1,338 @@
+"""C3-C: preserve the certified middle and audit endpoint exact-bridge attempts.
+
+The immutable B plans define the replayed baseline, never vertex interpolation.
+Exit 0 means every continuous gate passed, 2 means completed but uncertified,
+and 3 means an invalid input or unavailable requested backend.
+"""
+from __future__ import annotations
+
+import argparse
+from collections import Counter
+from copy import deepcopy
+from dataclasses import asdict
+import hashlib
+import itertools
+import json
+import math
+from pathlib import Path
+import sys
+import time
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO_ROOT))
+ROOT = REPO_ROOT
+sys.path.insert(0, str(REPO_ROOT / "src"))
+sys.path.insert(0, str(REPO_ROOT / "tools" / "certification"))
+from certify_motion import write_json
+from tools.motion_repair.repair_motion import aggregate_cells
+from generative_origami.foldgen import generate_fold
+from generative_origami.semantic import parse_target
+from generative_origami.simulation import SingleVertexMechanism
+from generative_origami.simulation.ccd_adapter import BackendUnavailable, get_backend
+from generative_origami.simulation.ccd_motion import RigidMechanismInterval
+from generative_origami.simulation.closure_path import RestrictedSphericalMotion
+from generative_origami.simulation.closure_path import HybridClosurePath
+from generative_origami.simulation.continuous_ccd import CertificationConfig, ContinuousPathCertifier
+from generative_origami.simulation.spherical_bridge import BridgeUnavailable, SphericalClosureBridge
+from generative_origami.simulation.motion_cache import MemoizedMotion
+from generative_origami.simulation.certification_evidence import validate_goal_contact_evidence
+import numpy as np
+
+BASELINE_INPUTS = REPO_ROOT / "experiments/current/baseline_inputs"
+BASELINE_PLANS = BASELINE_INPUTS / "c3c_baseline_plans.json"
+BASELINE_KNOTS = BASELINE_INPUTS / "repaired_source_knots.json"
+DEFAULT_OUTPUT = REPO_ROOT / "experiments/current/POC01-007C3-C_SINGULAR_CONTACT_EXACT_BRIDGE"
+SOURCE = BASELINE_INPUTS / "dog_layer_order_keyframes.json"
+ORDER = [7, 6, 5, 0, 4, 1, 3, 2]
+JOIN_TOL = 2e-11
+
+
+def digest(value):
+    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(",", ":"),
+                                    allow_nan=False).encode("utf-8")).hexdigest()
+
+
+def replay_plan(mechanism, nodes, index, plan):
+    """Reconstruct exactly the B motion definition, including parent time chart."""
+    parent = None
+    motions = []
+    for description in plan["cells"]:
+        if description["kind"] == "ANALYTIC_SPHERICAL_3R":
+            if parent is None:
+                parent = SphericalClosureBridge(mechanism, nodes[index], nodes[index + 1])
+            a, b = description["source_parameter_interval"]
+            motion = RestrictedSphericalMotion(parent, a, b)
+        elif description["kind"] == "FINITE_TOLERANCE_POLYLINE":
+            motion = RigidMechanismInterval(mechanism, description["q0"], description["q1"])
+        else:
+            raise ValueError("Unknown B motion kind")
+        for actual, name in ((motion.q0, "q0"), (motion.q1, "q1")):
+            if np.max(np.abs(actual - np.asarray(description[name]))) > JOIN_TOL:
+                raise ValueError(f"B cell replay disagrees with stored {name}: interval {index}")
+        motions.append(motion)
+    return motions
+
+
+def joined(motions, q0, q1):
+    if not motions:
+        return False, None
+    errors = [float(np.max(np.abs(np.asarray(q0) - motions[0].q0))),
+              float(np.max(np.abs(np.asarray(q1) - motions[-1].q1)))]
+    errors += [float(np.max(np.abs(a.q1 - b.q0))) for a, b in zip(motions, motions[1:])]
+    error = max(errors)
+    return bool(math.isfinite(error) and error <= JOIN_TOL), error
+
+
+def whole_interval_bounds(motion, certifier, pair_certificates=None):
+    """Record actual analytic envelopes; unavailable bounds remain explicit nulls."""
+    low, high = motion.joint_bounds()
+    speeds, accelerations = [], []
+    if isinstance(motion, RestrictedSphericalMotion):
+        scale = motion.b - motion.a
+        for panel in range(motion.n):
+            speeds.append(motion.parent.speed_bound(panel, motion.a, motion.b) * scale)
+            accelerations.append(motion.parent.curvature_bound(panel, motion.a, motion.b) * scale ** 2)
+    else:
+        for panel in range(motion.n):
+            speed = getattr(motion, "speed_bound", None)
+            acceleration = getattr(motion, "acceleration_bound", None)
+            speeds.append(float(speed(panel)) if callable(speed) else None)
+            accelerations.append(float(acceleration(panel)) if callable(acceleration) else None)
+    patches = [{"panels": list(pair), **certifier.contact.patch_audit(motion, pair)}
+               for pair in sorted(certifier.contact.patches)]
+    seam_method = getattr(motion, "exact_closing_hinge_certificate", None)
+    seam = seam_method() if callable(seam_method) else {"status": "UNCERTAIN", "reason": "NO_EXACT_SEAM_IDENTITY"}
+    active_method = getattr(motion, "contact_audit", None)
+    active = active_method() if callable(active_method) else None
+    if active is not None and pair_certificates is not None:
+        from generative_origami.simulation.contact_gate import merge_contact_modes
+        active = merge_contact_modes(pair_certificates, active, panel_count=motion.n,
+                                     layer_order=ORDER)
+    return {"time_domain": [0., 1.], "angle_lower_rad": low.tolist(),
+            "angle_upper_rad": high.tolist(), "point_speed_upper_bounds": speeds,
+            "point_acceleration_upper_bounds": accelerations,
+            "derivative_units": "per normalized cell time; source derivatives divide by cell width and its square",
+            "contact_bounds": patches, "exact_closing_seam": seam, "active_set_contact_bounds": active,
+            "proof_scope": "analytic whole interval enclosures with declared reference floating guards; no sample extrema"}
+
+
+def final_gate(intervals, middle_preserved, global_join_passed):
+    """Validate coverage and underlying gates; cached PASS labels are insufficient."""
+    if ([c.get("interval") for c in intervals] != list(range(162))
+            or not middle_preserved or not global_join_passed):
+        return False
+    expected_pairs = set(itertools.combinations(range(8), 2))
+    for c in intervals:
+        fresh = aggregate_cells(c["interval"], c["plan"], c["cell_certificates"], True)
+        if fresh["status"] != "PASS" or fresh["closure_status"] != "PASS":
+            return False
+        if c["status"] != "PASS" or c["closure_status"] != "PASS":
+            return False
+        if c["interval"] not in range(9, 70) and not c.get("exact_bridge_passed", False):
+            return False
+        for cell in c["cell_certificates"]:
+            if (cell.get("uses_vertex_linear_interpolation_as_motion", True)
+                    or {tuple(p["panels"]) for p in cell["pairs"]} != expected_pairs):
+                return False
+            bounds = cell.get("whole_interval_bounds", {})
+            derivatives = bounds.get("point_speed_upper_bounds", []) + bounds.get("point_acceleration_upper_bounds", [])
+            if (len(derivatives) != 16 or any(x is None or not math.isfinite(x) or x < 0 for x in derivatives)
+                    or bounds.get("exact_closing_seam", {}).get("status") != "PASS"):
+                return False
+            if not 0 <= cell["hinge_closure"].get("continuous_upper_bound", math.inf) <= 4e-6:
+                return False
+            if c["interval"] >= 70 and not validate_goal_contact_evidence(cell, ORDER):
+                return False
+    return True
+
+
+def leaf_nodes(node):
+    if node.get("children"):
+        for child in node["children"]:
+            yield from leaf_nodes(child)
+    else:
+        yield node
+
+
+def unresolved_record(result):
+    pairs = []
+    for cell in result["cell_certificates"]:
+        for pair in cell["pairs"]:
+            if pair["status"] == "PASS":
+                continue
+            for leaf in leaf_nodes(pair):
+                if leaf["status"] == "PASS":
+                    continue
+                a, b = cell["source_parameter_interval"]
+                x, y = leaf.get("time_interval", [0., 1.])
+                pairs.append({"cell": cell["interval"], "panels": pair["panels"],
+                    "status": leaf["status"], "cell_time_interval": [x, y],
+                    "source_time_interval": [a + (b-a)*x, a + (b-a)*y],
+                    "reason": leaf["reason"], "max_depth": pair["stats"]["max_depth"],
+                    "feature_reasons": dict(Counter(f["reason"] for f in
+                        leaf.get("features", {}).get("records", []) if f["status"] != "SAFE")),
+                    "material_patch": leaf.get("material_patch"), "witness": leaf.get("witness")})
+    return {"interval": result["interval"], "status": result["status"],
+            "reasons": result["reasons"], "bridge_attempt": result.get("bridge_attempt"),
+            "unresolved_pairs": pairs}
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--out", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--backend", choices=["reference", "native"], default="reference")
+    parser.add_argument("--curve-depth", type=int, default=3)
+    parser.add_argument("--feature-budget", type=int, default=64)
+    args = parser.parse_args(argv)
+    start = time.perf_counter()
+    try:
+        baseline = json.loads(BASELINE_PLANS.read_text(encoding="utf-8"))
+        changes = json.loads(BASELINE_KNOTS.read_text(encoding="utf-8"))
+        nodes = [np.asarray(c["repaired"], float) for c in changes]
+        baseline_nodes = [q.copy() for q in nodes]
+        if (len(nodes) != 163 or [c["interval"] for c in baseline["intervals"]] != list(range(162))
+                or hashlib.sha256(SOURCE.read_bytes()).hexdigest() != baseline["source_sha256"]):
+            raise ValueError("B input coverage or source hash mismatch")
+        m = SingleVertexMechanism(generate_fold(parse_target("狗")))
+        backend = get_backend(args.backend)
+        certifier = ContinuousPathCertifier(m, layer_order=ORDER, backend=backend,
+            config=CertificationConfig(max_curve_depth=args.curve_depth,
+                                       max_feature_subdivisions=args.feature_budget))
+        tracked = ["tools/motion_repair/singular_contact_motion.py", "src/generative_origami/simulation/continuous_ccd.py",
+            "src/generative_origami/simulation/singular_bridge.py",
+            "src/generative_origami/simulation/contact_bridge.py",
+            "src/generative_origami/simulation/contact_separation.py",
+            "src/generative_origami/simulation/contact_gate.py",
+            "src/generative_origami/simulation/motion_cache.py",
+            "src/generative_origami/simulation/certification_evidence.py"]
+        provenance = {"client_date":"2026-10-18", "source_sha256":baseline["source_sha256"],
+            "modules_sha256":{path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in tracked},
+            "ccd_config":asdict(certifier.config), "completed":False,
+            "memoization_scope":"Pure per-cell point/box queries only; mathematical motion and bounds unchanged",
+            "contact_gate_scope":"Mode-specific proofs; global-z final-correspondence gaps retained as diagnostics"}
+        write_json(args.out / "run_provenance.json",provenance)
+        # Lazy import allows direct gate/replay regression tests without solvers.
+        from generative_origami.simulation.singular_bridge import FlatSingularBridgeBuilder
+        from generative_origami.simulation.contact_bridge import GoalContactBridgeBuilder
+        flat = FlatSingularBridgeBuilder(m)
+        contact = GoalContactBridgeBuilder(m)
+        node_repairs = []
+        if callable(getattr(contact, "repair_nodes", None)):
+            nodes, node_repairs = contact.repair_nodes(nodes)
+            nodes = [np.asarray(q, float) for q in nodes]
+            if (len(nodes) != 163 or any(not np.isfinite(q).all() or q.shape != (m.n,) for q in nodes)
+                    or any(not np.array_equal(nodes[k], baseline_nodes[k]) for k in range(9, 71))
+                    or any(np.linalg.norm(q-old) > 1e-3 for q, old in zip(nodes, baseline_nodes))):
+                raise ValueError("Endpoint knot repair exceeded scope or correction budget")
+        write_json(args.out / "endpoint_knot_repairs.json", node_repairs)
+        fallback_builder = HybridClosurePath(m)
+        middle_hash = digest([c["plan"] for c in baseline["intervals"][9:70]])
+        intervals, kinds = [], Counter()
+        previous_q = None
+        global_join = True
+        for i in range(162):
+            old_plan = baseline["intervals"][i]["plan"]
+            plan, attempt = deepcopy(old_plan), None
+            if np.array_equal(nodes[i], baseline_nodes[i]) and np.array_equal(nodes[i+1], baseline_nodes[i+1]):
+                motions = replay_plan(m, baseline_nodes, i, plan)
+            else:
+                motions, plan = fallback_builder.build_interval(nodes[i], nodes[i+1], i)
+            exact = all(c["kind"] != "FINITE_TOLERANCE_POLYLINE" for c in plan["cells"])
+            if i not in range(9, 70):
+                builder = flat if i < 9 else contact
+                try:
+                    candidate, candidate_plan = builder.build_interval(nodes[i], nodes[i+1], i)
+                    attempt = deepcopy(candidate_plan)
+                    ok, error = joined(candidate, nodes[i], nodes[i+1])
+                    if (candidate and ok and candidate_plan.get("continuous_join_passed", False)
+                            and all(c.get("construction_status") == "PASS" and c.get("exact_seam_claimed", False)
+                                    for c in candidate_plan["cells"])
+                            and not any(c["kind"] == "FINITE_TOLERANCE_POLYLINE" for c in candidate_plan["cells"])):
+                        motions, plan, exact = candidate, candidate_plan, True
+                    else:
+                        attempt["root_rejection"] = "EXACT_CONSTRUCTION_OR_ENDPOINT_JOIN_NOT_PROVEN"
+                        attempt["root_max_join_error"] = error
+                        exact = False
+                except BridgeUnavailable as exc:
+                    attempt = {"status": "UNCERTAIN", "reason": str(exc)}
+                    exact = False
+            local_join, local_error = joined(motions, nodes[i], nodes[i+1])
+            if not motions or len(motions) != len(plan["cells"]):
+                raise ValueError(f"Incomplete motion/plan cell coverage: {i}")
+            if not local_join:
+                raise ValueError(f"Source interval endpoint join failed: {i}: {local_error}")
+            if previous_q is not None:
+                global_join &= bool(np.max(np.abs(previous_q - motions[0].q0)) <= JOIN_TOL)
+            previous_q = motions[-1].q1
+            certificates = []
+            for j, (motion, description) in enumerate(zip(motions, plan["cells"])):
+                certificate = certifier.certify_defined_motion(MemoizedMotion(motion), j)
+                certificate["source_parameter_interval"] = description["source_parameter_interval"]
+                certificate["whole_interval_bounds"] = whole_interval_bounds(motion, certifier, certificate["pairs"])
+                certificates.append(certificate)
+                kinds[description["kind"]] += 1
+            result = aggregate_cells(i, plan, certificates, True)
+            result.update(ccd_status=result["status"], exact_bridge_passed=bool(exact), bridge_attempt=attempt,
+                          baseline_plan_preserved=plan == old_plan,
+                          endpoint_join_error=local_error)
+            if i not in range(9, 70) and not exact:
+                if result["status"] == "PASS":
+                    result["status"] = "UNCERTAIN"
+                result["reasons"] = sorted(set(result["reasons"] + ["EXACT_ENDPOINT_BRIDGE_NOT_PROVEN"]))
+            if i >= 70 and exact and not all(
+                    cell["whole_interval_bounds"].get("active_set_contact_bounds", {}).get("status") == "PASS"
+                    for cell in certificates):
+                if result["status"] == "PASS":
+                    result["status"] = "UNCERTAIN"
+                result["reasons"] = sorted(set(result["reasons"] + ["ACTIVE_SET_SIGNED_GAP_OR_EVENT_NOT_PROVEN"]))
+            intervals.append(result)
+            write_json(args.out / "certificates" / f"interval_{i:03d}.json", result)
+            if i % 5 == 0 or i == 161:
+                print(f"interval {i:03d}/161: {result['status']}; closure={result['closure_status']}; exact={exact}; counts={dict(Counter(c['status'] for c in intervals))}", flush=True)
+        preserved = middle_hash == digest([c["plan"] for c in intervals[9:70]])
+        certified = final_gate(intervals, preserved, global_join)
+        counts = {s: sum(c["status"] == s for c in intervals) for s in ("PASS", "COLLISION", "UNCERTAIN")}
+        report = {"schema_version": 1, "experiment_id": "POC01-007C3-C_SINGULAR_CONTACT_EXACT_BRIDGE",
+            "client_date": "2026-10-18", "source_interval_count": 162, "source_keyframe_count": 163,
+            "status": "CONTINUOUS_RIGID_PATH_COLLISION_CERTIFIED" if certified else "CONTINUOUS_RIGID_PATH_NOT_CERTIFIED",
+            "continuous_collision_detection_certified": certified,
+            "historical_baseline_status": "RIGID_PATH_LAYER_ORDER_VALIDATED",
+            "counts": counts, "closure_counts": dict(Counter(c["closure_status"] for c in intervals)),
+            "raw_ccd_counts": dict(Counter(c["ccd_status"] for c in intervals)),
+            "source_sha256": baseline["source_sha256"], "middle_plans_sha256": middle_hash,
+            "middle_intervals_preserved": preserved, "global_join_passed": bool(global_join),
+            "protected_source_knots_preserved": all(np.array_equal(nodes[k], baseline_nodes[k]) for k in range(9, 71)),
+            "source_knot_records_sha256": hashlib.sha256((B / "repaired_source_knots.json").read_bytes()).hexdigest(),
+            "generated_cell_count": sum(c["cell_count"] for c in intervals), "cell_motion_kinds": dict(kinds),
+            "exact_endpoint_interval_count": sum(c["exact_bridge_passed"] for c in intervals if c["interval"] not in range(9, 70)),
+            "max_continuous_closure_bound": max(cell["hinge_closure"]["continuous_upper_bound"] for c in intervals for cell in c["cell_certificates"]),
+            "whole_path_exact_manifold_claimed": all(c["exact_bridge_passed"] for c in intervals),
+            "remaining_intervals": [c["interval"] for c in intervals if c["status"] != "PASS"],
+            "backend": backend.backend_info(), "native_tight_inclusion_used": bool(backend.backend_info().get("native", False)),
+            "ccd_config": asdict(certifier.config), "elapsed_seconds": time.perf_counter() - start,
+            "numeric_scope": "Conditional float64 reference enclosures with explicit guards; no formal interval arithmetic or native Tight-Inclusion claim",
+            "upgrade_gate": "162 distinct intervals; every cell/pair/closure/sector/coverage/join PASS; endpoint exact construction proved; protected middle unchanged",
+            "sequence_planner_started": False, "dog_or_rrt_replanned": False, "intervals": intervals}
+        write_json(args.out / "interval_certificates.json", report)
+        summary = {k: v for k, v in report.items() if k != "intervals"}
+        write_json(args.out / "report.json", summary)
+        write_json(args.out / "remaining_failures.json", [unresolved_record(c) for c in intervals if c["status"] != "PASS"])
+        write_json(args.out / "middle_integrity.json", {"source_intervals": [9, 69], "before_sha256": middle_hash,
+            "after_sha256": digest([c["plan"] for c in intervals[9:70]]), "passed": preserved,
+            "definition": "canonical B plan JSON; same parent endpoints, dependent chart and time restrictions"})
+        table = ["# C3-C 连续认证区间表", "", "| 区间 | CCD | Closure | Exact bridge | 原因 |", "| --- | --- | --- | --- | --- |"]
+        for c in intervals:
+            table.append(f"| [{c['interval']:03d}](certificates/interval_{c['interval']:03d}.json) | {c['status']} | {c['closure_status']} | {c['exact_bridge_passed']} | {'; '.join(c['reasons'])} |")
+        (args.out / "INTERVAL_SUMMARY.md").write_text("\n".join(table) + "\n", encoding="utf-8")
+        provenance.update(completed=True,interval_count=162,counts=counts)
+        write_json(args.out / "run_provenance.json",provenance)
+        print(json.dumps(summary, ensure_ascii=False, indent=2, allow_nan=False))
+        return 0 if certified else 2
+    except (BackendUnavailable, BridgeUnavailable, ValueError, OSError, TypeError, KeyError) as exc:
+        print(json.dumps({"status": "UNCERTAIN", "reason": "BRIDGE_OR_INPUT_UNAVAILABLE", "error": str(exc),
+                          "continuous_collision_detection_certified": False}, ensure_ascii=False), file=sys.stderr)
+        return 3
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
