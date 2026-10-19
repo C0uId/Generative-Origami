@@ -10,7 +10,7 @@ def build_medium_medium_cp():
     boundary = [[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,0]]
     interior = [[0,8],[2,8],[3,8],[4,8],[6,8],[7,8],[1,9],[9,8],[8,10],[10,5]]
     faces = [[0,1,9,8],[1,2,8,9],[2,3,8],[3,4,8],[4,5,10,8],[5,6,8,10],[6,7,8],[7,0,8]]
-    assignments = ["B"]*8 + ["M","M","M","M","M","V","V","V","M","M"]
+    assignments = ["B"]*8 + ["M","M","V","M","M","V","V","V","M","M"]
     return {"file_spec":1.2,"frame_title":"Q4-B01 medium/medium CP candidate v0.1","vertices_coords":vertices,"edges_vertices":boundary+interior,"edges_assignment":assignments,"faces_vertices":faces}
 
 def local_flat_foldability(cp):
