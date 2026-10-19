@@ -998,3 +998,1090 @@ and ratios[k] > 0 for k in target))
 source = (root / p["source_path"]).resolve()
 
 require(source.is_relative_to(root))
+
+require(source.is_file())
+
+digest = hashlib.sha256(source.read_bytes()).hexdigest()
+
+require(digest == p["sha256"])
+
+loss = sum((target[k] - ratios[k]) ** 2
+
+for k in target)
+
+ranked.append((loss, pid, p))
+
+except (KeyError, TypeError, ValueError, OSError):
+
+rejected.append(pid)
+
+ranked.sort(key=lambda row: (row[0], row[1]))
+
+selected = [{"id": p["id"], "actual_ratios": p["ratios"],
+
+"source_sha256": p["sha256"],
+
+"status": "verified_catalogue_match"}
+
+for _, _, p in ranked[:limit]]
+
+return {"outcome": "ok" if selected
+
+else "NO_VERIFIED_CANDIDATE",
+
+"candidates": selected, "rejected_ids": rejected}
+
+if __name__ == "__main__":
+
+if len(sys.argv) != 4:
+
+raise SystemExit("preflight.py catalogue.json target.json assets")
+
+catalogue = json.loads(Path(sys.argv[1]).read_text("utf-8"))
+
+target = json.loads(Path(sys.argv[2]).read_text("utf-8"))
+
+result = choose(target["ratios"], catalogue, sys.argv[3],
+
+target["paper_profile"])
+
+print(json.dumps(result, ensure_ascii=False, indent=2))
+
+运行环境为 Python 3.12；用空目录测试时，catalogue.json 内容为 []，target.json 如下。命令 python preflight.py catalogue.json target.json assets 会输出 NO_VERIFIED_CANDIDATE。开发者可使用临时测试文件构造正例，必须标注为测试替身，不作为可实折资产。
+
+{
+
+"paper_profile": "paper-200-01",
+
+"ratios": {"body_to_leg": 1.3, "tail_to_body": 0.5}
+
+}
+
+原型目录只接受本地管理员整理的可信元数据，不能作为开放上传接口。正式实现增加 schema 类型、重复 ID、证据签名或审核权限检查，用验证服务计算 checks，并把 expert_trials 解析为对应版本的真实证据。文件读取还要设置大小限制。比例损失只适合同一 base 的归一化比例，不是完整视觉相似度。
+
+## 14.7 后端接入和本地运行
+
+第一次迭代先跑核心 CLI 和测试，再接 API；API 不得把本地原型当成长任务框架。开发环境准备 PostgreSQL、Redis 或许可确认后的替代、api 与单 worker，使用私有环境文件配置连接。执行迁移、导入已审核目录、启动 API，提交任务后应返回 202，worker 计算并写入固定版本结果，Flutter 用任务 ID 拉取。
+
+python -m pytest tests/core tests/contracts
+
+alembic upgrade head
+
+uvicorn apps.api.main:app --host 127.0.0.1 --port 8000
+
+python -m apps.api.worker
+
+flutter analyze
+
+flutter test
+
+上述模块是仓库待建目标路径，按本章任务逐项实现后可执行；preflight.py 则是可直接运行的预检示例。README 必须记录实际启动方式、环境变量名、迁移、fixture 导入和一条端到端请求。不得将生产密钥写入示例或 APP。
+
+## 14.8 PoC 任务分解
+
+依赖为 P01→P02→P04→P05/P06→P07；P03 与 P01 可并行，P08 使用固定测试包并行；P09/P10 在 schema 冻结后推进。P11 不能提前用未经验证的演示动画替代教学包。
+
+# 15 一人公司与多 AI 虚拟团队
+
+## 15.1 责任与并行控制
+
+采用五个常用角色，加按需专家能力。角色代表任务上下文和职责，不代表必须购买五个不同模型或长期同时运行。每日最多两个实现分支、一个独立审查任务；一项任务只有一个 owner，避免多个 AI 同时改协议或数据库。
+
+几何验证、复杂动画或 DevOps 可临时拆为专家子任务，仍由一个 owner 整合。总控 AI 不同时大范围改代码；QA 不以阅读作者说明代替实际运行。任何 AI 的“看起来可行”都不覆盖真人试折。
+
+## 15.2 docs 项目事实源
+
+沿用旧方案的编号，增加折纸生成特有事实。聊天中的决定经确认后写入文件，代码、schema 和文档出现冲突时必须修正，不能让后续 AI 自行挑选有利版本。
+
+/docs/01_PRODUCT.md          承诺 边界 用户和回退
+
+/docs/02_ARCHITECTURE.md     模块依赖 部署和资产流
+
+/docs/03_DATABASE.md         数据字典 迁移和权限
+
+/docs/04_API.yaml            OpenAPI 合同与错误码
+
+/docs/05_UI_STANDARD.md      页面和播放器交互
+
+/docs/06_ORIGAMI_PROTOCOL.md FOLD profile 和 Sequence DSL
+
+/docs/07_ROADMAP.md          版本 阶段门和预算
+
+/docs/08_TASKS.md            任务状态及依赖
+
+/docs/09_TEST_STANDARD.md    反例 容差和发布门槛
+
+/docs/10_DECISIONS.md        ADR 索引及已作决定
+
+/docs/11_DEPENDENCIES.md     版本 哈希 许可与支持平台
+
+/docs/12_EXPERIMENTS.md      真人实验及数据集规则
+
+/docs/13_LICENSE_REGISTER.md 代码 模型 媒体 授权凭证
+
+/docs/adr/                  每项架构决定的理由
+
+/docs/tasks/                单任务卡
+
+/docs/qa/                   验收和回归报告
+
+Agent 开工先读产品、架构、相关 schema、测试标准和当前任务；遇到字段或产品边界缺失，先在同一 PR 中提出具体修改，不凭聊天记忆造字段。重要假设标为 proposed，真人或被授权的总控确认后记为 accepted；被替代的决定保留原因和新索引。
+
+## 15.3 可复制任务模板
+
+TASK ID 及标题
+
+目标行为  谁在何种条件下获得什么结果
+
+输入事实源  文件及固定版本
+
+范围  允许修改的模块
+
+非范围  本次不解决的事项
+
+交付物  代码 schema 文档 fixture 迁移
+
+接口影响  字段 状态和兼容措施
+
+验收  一条正例 两条反例 关键不变量
+
+依赖  前置任务和阻塞项
+
+预算  时间 计算和外部 API 上限
+
+验证  命令 设备和实折要求
+
+风险与回滚  触发条件和恢复方法
+
+完成证据  提交哈希 测试报告和剩余限制
+
+任务示例：P07 检测“首尾无碰撞但中间穿透”的两面运动。输入 contact-policy-v1 和冻结反例；只改 contact 模块。验收为反例被拒绝、合法铰链接触不误报、超时返回 unknown，提交失败时间区间及面 ID。只看两帧或放宽 epsilon 均不能通过。
+
+## 15.4 PR CI 和 QA
+
+任务卡及验收 → codex/任务分支 → 小范围实现
+
+→ 自检及证据 → PR → 自动 CI
+
+→ 独立 QA 反例 → 创始人验收与合并
+
+→ 同一构建部署预发布 → 实机与实折抽验
+
+→ 创始人发布 → 监控与回滚
+
+PR 写明具体问题、行为变化、关联任务、接口迁移、测试结果、几何假设、许可证新增及回滚方式。生成器变化必须附固定参数和失败样本；数据库变化附迁移和旧数据兼容。CI 失败阻止合并，main 禁止 Agent 直接提交。按路径运行检查，避免每个文案变动都跑昂贵求解。
+
+基础 CI 包含 Python 格式与类型、必要单元及性质测试、schema、固定 seed、API 鉴权和幂等、TypeScript 构建、Flutter analyze/test、密钥扫描及依赖许可清单。夜间或发布前再跑参数边界、碰撞反例、worker 中断、旧协议和实机回归。AI 评审只是补充，必需证据仍是执行结果和真人验收。
+
+## 15.5 日常节奏
+
+每日 15 分钟由总控整理“已完成、阻塞、今日唯一主目标”，创始人用 30 至 60 分钟审看关键差异和演示。每周安排一次完整纸张实验、一次版本演示、一次单位成本与失败原因回顾。以可发布教学包、未解决反例和用户完成率衡量进展，不以 AI 生成代码行数衡量产能。
+
+生产密钥、应用商店账号、支付、许可签约和外部消息发送由创始人控制。默认 Agent 可在任务范围内读写、测试、建立分支和起草 PR；不可自行发布、购买服务、修改生产数据或对外承诺。权限应按实际工具设置落实，而不是只写在提示词中。
+
+# 16 许可 商业化与成本
+
+## 16.1 软件许可矩阵
+
+以下为截至 2026 年 10 月 17 日的一手资料核查。实际发布须按锁定版本、依赖、修改、分发和服务方式复核；同一软件的算法论文、源码、二进制及示例内容并非同一授权对象。
+
+TreeMaker 的 GPL 不是禁止收费；分发包含或修改其代码的组合程序可能涉及对应源代码及许可义务。仅加一个 HTTP 接口并不能自动给出豁免结论。首版优先独立实现受限模板，不复制后再让 AI 改变量名来掩盖来源。[R10][R19]
+
+Tachi 软件不能因为可下载就默认为商业可用，内部用于生成付费产品资产也应先确认授权范围。论文可用于研究算法，但独立实现仍应记录来源、代码洁净边界以及专利等其他权利核查。[R2][R11]
+
+Redis ≤7.2 使用 BSD-3-Clause；7.4 至 7.8 为 RSALv2 或 SSPLv1；8 及以后提供 RSALv2、SSPLv1 或 AGPLv3 的选择。许可后果取决于版本、所选条款和实际使用，不能把客户端 redis-py 的许可当成服务端许可。需要宽松许可时可评估 Valkey；不要仅为规避审查而长期停留在缺乏安全维护的版本。[R17][R18]
+
+## 16.2 内容 设计和数据的权利
+
+建立 rights_record：作者、原始来源、获取日期、许可原文及哈希、可商用、可改编、可分发图纸和动画、可用于训练、署名、地域期限、撤回与争议状态。折纸成品设计、图纸、摄影、视频、文字和角色品牌各自记录，不认为“折法公开”即可复制整套教程。
+
+在线教程初期仅做合法索引和来源跳转；结构化改编需要明确权限。用户投稿与实验上传默认不赋予公开传播或训练权。商业角色和商标需求可用泛化造型替代，并在必要时取得授权。license manifest 未通过或授权到期的版本停止新下载，并保留已购用户处理和替代方案记录。
+
+## 16.3 商业验证路线
+
+首批定位为“能折完的个性化折纸教学”，测试用户是否愿意为可靠教程、难度选择、离线包及参数变体付费。先用访谈和小规模邀请验证，再决定订阅、单个模型包或教育机构授权；不在尚未稳定生成时出售“任意物体无限生成”。
+
+建议首轮访谈 15 至 20 人，邀请测试至少 30 人；记录用户实际完成任务后的付费意愿，而非只问“觉得 AI 折纸有趣吗”。定价属于待验证变量，可用假设价测算毛利，不把文档中的数值当市场定价。用户留存与完成率低时先改善教学，不能用更复杂目标掩盖核心体验问题。
+
+## 16.4 90 天预算和单位经济
+
+预算按已有电脑、创始人每周约 25 小时、无常驻 GPU、月约 1,000 次受限任务的假设编制。下表是内部规划额度，不是云厂商或服务商报价；支付、应用商店、税费、法律服务及重大外包另计。
+
+为以上支出另预留 30%，90 天运行预算约 4,300 至 17,200 元。基础折法设计和商用授权若需外购，单列内部暂定储备 2,000 至 10,000 元；该数值只用于预算情景，采购前取得实际报价和合同。创始人约 325 小时的时间成本必须计入商业分析，不能因没有工资支出就视为零成本。
+
+C_job = C_parse + Σ(C_generate + C_validate + C_simulate) + C_package + C_storage；C_completed = 总服务成本 / 独立完成的用户任务数。看板同时记录 token、CPU 秒、候选数、缓存率、失败和完成。预算达到 80% 停止非必要研究，达到上限停止新增付费调用并保留已提交任务的可解释状态。
+
+毛利测算还须扣除支付、分成、授权摊销、内容维护和客服。若连续两周每个独立完成任务的成本高于目标收入可承受范围，先缩候选、预计算和收窄类别；仍不改善则暂停自动生成商业承诺。
+
+# 17 30 60 90 天执行计划
+
+## 17.1 产能安排
+
+Day 1 是实际启动日，不是文档日期。每周约 25 小时可用时间中，建议 8 小时用于纸张实验与用户观察、8 小时用于 AI 任务管理和集成、5 小时用于评审与回归、4 小时用于产品和来源。若只能投入每周 10 小时，按实际比例延长计划；不能把真人折叠和验收全部挤掉。
+
+## 17.2 前 30 天
+
+Day 30 不达标时最多安排一次两周的明确修复冲刺，写出唯一阻塞与验收。没有可验证改进路径就改为受控教程工具，不继续无期限增加 Agent 或模型调用。
+
+## 17.3 Day 31 至 60
+
+Day 60 目标：PoC 稳定，至少一至三类实际可用，五类规格完整；资源允许才完成五类基础实现。发布清单只列通过验证的类别。工程门槛是复用编译器、协议与播放器，不能每类都重新开发一套动画。
+
+## 17.4 Day 61 至 90
+
+Day 90 只允许三种结论：继续扩大已验证类别；保持现有范围改善教学和作者成本；停止生成路线投入并转为已验证教程与设计工具。不得以“未来 AI 会解决”作为继续投入的唯一理由。
+
+## 17.5 下一个工作日即可启动的清单
+
+建立私有仓库与 main 保护；写出 docs/01_PRODUCT.md 的支持与拒绝示例；选择一种 200 mm 正方形材料并登记；确定 Q4-B01 的合法来源；让核心 AI 建 schema 和空目录预检，让 QA AI 同时编写非法几何与穿透反例。创始人当日只需验收明确范围、首个纸样来源和未来三天的任务，不必先批准完整 APP 页面设计。
+
+# 18 测试体系与验收指标
+
+## 18.1 关键测试用例
+
+T08 的具体反例应为同一重叠单元中 A>B、B>C、C>A。T10 若当前验证器仅支持离散采样，其验收必须使用足够细分能检出的已知反例，并在报告声明连续覆盖不足；不得声称通用连续碰撞保证。反例 fixture 与修复一起保留，防止后续回归。
+
+## 18.2 不变量与性质测试
+
+对有限合法参数随机采样，检查刚性区域度量守恒、对称约束、ID 引用完整、源哈希一致及动作前后状态连接。对支持的可逆宏做 round-trip 数值检查，但逆向可播放不代表真人能逆向恢复。把输入扰动、阈值边界和极小面片纳入测试；失败 seed 写入固定回归集。
+
+协议做 Python→JSON→TypeScript→JSON 的往返测试，验证山谷符号、单位、面环方向和三角化映射。API 重点测鉴权、幂等、配额、取消和恢复。UI 重点测可学习流程，不以大量镜像实现的快照测试代替端到端。
+
+## 18.3 分阶段验收表
+
+表中 PoC 的 9/12 和单配置 2/4 是 project_go_gate，仅支持继续研发；对用户公开发布仍须分别满足第 9.3 节 preset_release_gate。预检 CLI 的缺字段错误接入 API 时需转为第 12 章统一错误，不能把原始堆栈返回用户。
+
+p95 等性能目标需记录样本数、并发、网络、是否缓存及数据规模。超时任务必须进入失败或未决统计，不能从延迟分母删除。V0.5 完成率指标以至少 30 名独立用户首次任务为主，分层结果和置信区间必报，不以所有重复试折次数当独立样本。
+
+## 18.4 发布验收模板
+
+Release ID / commit / manifest hash
+
+支持的 base preset 材料和协议
+
+本次产品行为及限制
+
+自动检查 通过 失败 unknown 及原因
+
+专家与用户实折证据及适用范围
+
+基线设备和性能样本
+
+新引入依赖及权利检查
+
+任务失败和已知缺陷
+
+备份恢复与回滚演练
+
+创始人决定  发布 仅邀请测试 或退回修复
+
+模板中的 unknown 必须逐项说明是否为产品必需检查；必需项未决就不能公开标为已验证。允许降级的内容必须有独立、已经实折的替代教学包，不能以降级名义绕过正确性。
+
+# 19 风险矩阵 退出条件与决策标准
+
+## 19.1 风险矩阵
+
+概率和影响使用 1 至 5 的工程初评，相乘用于排序，不代表统计概率。每周更新；实际故障发生后要用证据调整而非保持初值。
+
+## 19.2 单次任务退出条件
+
+达到候选数、时间、内存、迭代或 API 费用上限；发现硬几何错误、不可解层序、未覆盖的关键动作、授权缺失或证据哈希不匹配；用户取消；依赖服务超过重试预算。退出产物要保留阶段、已消耗预算和原因，不产生半个“成功教程”。
+
+## 19.3 项目 Go Conditional Go No Go
+
+项目退出不等于放弃全部资产：FOLD profile、播放器、作者工具和已授权教程仍可服务教学产品。必须停止的只是缺乏证据的自动生成承诺；研究沙箱可在独立预算下保留。
+
+# 20 最终可行性分析与启动决定
+
+技术上，限定拓扑和动作域的参数化设计、模板化序列、确定性几何检查以及交互播放器可以组成可执行方案；最先要解决的是基础模型资产和真人教学，而不是选择更大的语言模型。统一协议、不可变版本和分级验证能使各 AI 的工作互相接合，降低一人公司的集成成本。
+
+研发上，通用全局可折判定、复杂接触和任意 CP 的人类序列仍是高风险问题。把这些问题约束在受支持的 base 和宏动作内，是近期可靠性的主要来源。V2.0/V3.0 以研究阶段门推进，不应成为首个付费版本的前置依赖。
+
+商业上，可靠性、可完成率、内容授权、作者效率和用户愿付成本尚需实验。首期采用 30 天有条件投入，满足 PoC 门槛再扩大至 90 天；90 天决定继续、缩域或退出生成路线。主张为“有限范围内可解释、可验证、可学习的折纸生成”，每次扩域都补上与新增能力对应的证据。
+
+启动顺序为：确认 Q4-B01 的合法纸样与材料；冻结 Target/FOLD/Sequence 合同；同源编译并实现几何与路径反例；跑通播放器和 APP；进行真人实验。只要第一道纸样门槛未过，就不把后续动画展示当成系统成功。
+
+# 21 研究与官方资料
+
+以下链接用于研究、能力和许可复核，访问核查日期为 2026 年 10 月 17 日。软件采用时仍需固定具体版本与 commit。本文的架构、阈值、预算和里程碑属于实施建议，外部研究并未替本项目验证这些工程假设。
+
+[R1] Robert J. Lang  TreeMaker 官方介绍。https://langorigami.com/article/treemaker/
+
+[R2] Tomohiro Tachi  Origamizing Polyhedral Surfaces  IEEE TVCG 16(2) 298–311 2010  DOI 10.1109/TVCG.2009.67。https://tsg.ne.jp/TT/cg/OrigamizingPolyhedralSurfaces_tachi_IEEETVCG.pdf
+
+[R3] FOLD 官方规范 1.2  字段和 Custom Properties。https://github.com/edemaine/fold/blob/main/doc/spec.md
+
+[R4] Amanda Ghassaei 等  Origami Simulator 作者仓库及方法说明。https://github.com/amandaghassaei/OrigamiSimulator
+
+[R5] Yanjia Huang 等  Learn2Fold Structured Origami Generation with World Model Planning  arXiv:2603.29585v2  2026。https://arxiv.org/html/2603.29585v2
+
+[R6] Erik Demaine  Origami Foldability  作者综述；Hugo A. Akitaya 等  Computing Flat Folded States  OSME 2024。https://erikdemaine.org/papers/OSME2001/paper.pdf ； https://erikdemaine.org/papers/FlatFolder_OSME2024/paper.pdf
+
+[R7] FastAPI  Background Tasks  重计算与独立工具。https://fastapi.tiangolo.com/tutorial/background-tasks/
+
+[R8] Flutter 官方维护  webview_flutter  支持平台 API 及许可。https://pub.dev/packages/webview_flutter
+
+[R9] PostgreSQL  Row Security Policies。https://www.postgresql.org/docs/current/ddl-rowsecurity.html
+
+[R10] TreeMaker 作者源码仓库  README  GPL version 2 or later。https://github.com/bugfolder/TreeMaker
+
+[R11] Tomohiro Tachi  Software  官方使用条款和商业联系说明。https://www.tsg.ne.jp/TT/software/
+
+[R12] FOLD  MIT License。https://github.com/edemaine/fold/blob/main/LICENSE
+
+[R13] Origami Simulator  MIT License。https://github.com/amandaghassaei/OrigamiSimulator/blob/main/LICENSE
+
+[R14] FastAPI  官方仓库及许可。https://github.com/FastAPI/FastAPI
+
+[R15] Three.js  MIT License。https://github.com/mrdoob/three.js/blob/dev/LICENSE
+
+[R16] PostgreSQL  官方许可证。https://www.postgresql.org/about/licence/
+
+[R17] Redis  官方许可总览及版本区别。https://redis.io/legal/licenses/
+
+[R18] Valkey  官方介绍及 BSD 许可。https://valkey.io/docs/topics/introduction/
+
+[R19] GNU  GPL Frequently Asked Questions。https://www.gnu.org/licenses/gpl-faq.en.html
+
+[R20] Three.js  WebGLRenderer  WebGL2 要求。https://threejs.org/docs/pages/WebGLRenderer
+
+[R21] Flutter  在 Web 页面嵌入 Web 内容。https://docs.flutter.dev/platform-integration/web/web-content-in-flutter
+
+[R22] Celery  Tasks  幂等与任务确认。https://docs.celeryq.dev/en/stable/userguide/tasks.html
+
+
+<!-- Table 1 -->
+
+| 项目 | 明确约定 | 对实现的约束 |
+
+| --- | --- | --- |
+
+| 核心价值 | 输入目标后获得可实际学习的折纸近似方案 | 搜索命中和生成成功分开统计 |
+
+| 默认材料 | 单张正方形纸，不剪切、不粘贴 | 多纸、裁剪、湿折必须另列模式 |
+
+| 初始用户 | 具有基础对折能力的成人或青少年自学者 | 不以低龄儿童数据替代早期验证 |
+
+| 形似目标 | 优先突出轮廓和标志部件 | 不承诺照片级细节或商标复刻 |
+
+| 正确性 | 硬校验优先于相似度和评分 | 不可行候选不得靠高分抵消 |
+
+| 教学产物 | 结构、动作、状态、文字和动画版本一致 | 每一步均可回放和追溯 |
+
+| 生成范围 | 当前 generator manifest 明示的拓扑和参数域 | 未支持目标必须回退或拒绝 |
+
+| 发布条件 | 自动检查通过且具有对应实折证据 | 模拟通过不自动等于可发布 |
+
+
+<!-- Table 2 -->
+
+| 能力 | 一手研究或项目 | 可以借鉴 | 不能据此承诺 |
+
+| --- | --- | --- | --- |
+
+| 树状折纸设计 | Lang Tree Method 与 TreeMaker [R1] | 把附肢长度及连接关系转为 base 设计问题 | 一个四足骨架可任意长出耳、鼻、角 |
+
+| 多面体逆向设计 | Tachi Origamizer [R2] | 从目标多面体设计单张纸折痕 | 自动得到初学者教程和短路径 |
+
+| 通用数据交换 | FOLD 官方规范 [R3] | 折痕、面、角度、帧与层序交换 | 格式合法即物理可折 |
+
+| 实时数值仿真 | Origami Simulator [R4] | GPU 迭代、折痕驱动、预览 | 无穿透路径证明或真人可折证明 |
+
+| 神经符号序列 | Learn2Fold 预印本 [R5] | 候选程序、世界模型、前瞻搜索 | 任意物体到教学方案已成熟 |
+
+| 全局折叠判定 | 计算折纸复杂性研究 [R6] | 使用限制问题、搜索预算和证据分级 | 存在覆盖所有模型的简单万能检查 |
+
+
+<!-- Table 3 -->
+
+| 层面 | 判断 | 立项条件 |
+
+| --- | --- | --- |
+
+| 产品闭环 | 条件可行 | 限定类别、可靠回退、可学习的动画 |
+
+| 参数化工程 | 条件可行 | 先获得已验证 base 和动作资产 |
+
+| 一人公司交付 | 可执行但产能受限 | 一条主线、最多两个实现任务并行 |
+
+| 真人教学质量 | 必须实验 | 新手成功率和失败步骤可追溯 |
+
+| 任意目标逆向生成 | 高不确定研究 | 独立预算，不能阻塞主营产品 |
+
+| 商业成立 | 尚待验证 | 留存、付费意愿、生成成本与授权成本 |
+
+
+<!-- Table 4 -->
+
+| 模块 | 输入 | 输出 | 失败处理 |
+
+| --- | --- | --- | --- |
+
+| Text Parser | 文本、用户限制 | TargetSpec | 低置信时澄清或推荐相近目标 |
+
+| Target Representation | 语义结果 | 部件图、必需和可省略特征 | 未知拓扑不自动编造 |
+
+| Strategy Router | TargetSpec、能力清单 | RouteDecision | 返回 UNSUPPORTED_TARGET |
+
+| Parametric Generator | base 版本、受限参数 | DesignProgram | 超域拒绝并说明限制 |
+
+| Candidate Generator | 程序、seed、预算 | CandidateBundle 列表 | 保留失败原因与样本统计 |
+
+| Geometry Validator | CP 和目标状态 | ValidationReport L1/L2 | fail 或 unknown |
+
+| Fold Simulator | CP、动作草案、材料 | 轨迹、残差、接触事件 | 超时保留 unknown |
+
+| Human Score | 轨迹、动作、纸张 | 风险项、H 分、证据等级 | 数据不足标待验证 |
+
+| Sequence Planner | 动作模板、状态图 | CompiledSequence | 无路径则停止发布 |
+
+| Tutorial Generator | 已确定动作、术语 | 逐步文案和标注 | 使用确定性模板兜底 |
+
+| Animation Engine | 轨迹、摄像机、标注 | 播放资产包 | 失败显示验证过的图文 |
+
+| Flutter APP | manifest 和资产 | 学习体验及事件 | 离线缓存、进度恢复 |
+
+
+<!-- Table 5 -->
+
+| 优先级 | 条件 | 路线 | 输出要求 |
+
+| --- | --- | --- | --- |
+
+| 1 | 精确命中已发布设计 | 检索已验证版本 | 明确“已验证方案” |
+
+| 2 | 拓扑及参数处于认证域 | 参数化生成 | 重新编译和自动验证 |
+
+| 3 | 需求可由相近基础模型表达 | 语义近似 | 列出省略特征供用户选择 |
+
+| 4 | 需要新 flap 或新 base | 人工设计队列 | 不返回假生成结果 |
+
+| 5 | Tree 或网格逆向实验 | 研究沙箱 | 禁止默认生产发布 |
+
+
+<!-- Table 6 -->
+
+| 生成器 | V0.1 基础模型 | 可调项目 | 必须锁定或约束的项目 |
+
+| --- | --- | --- | --- |
+
+| Quadruped | 原创或获授权的四腿带头尾模型 | 头颈姿态、尾角、已验证的局部修形 | flap 数、纸面度量、腿层分配 |
+
+| Bird | 一个具有双翼和头尾的 base | 翼展开角、颈部姿态、尾部开合 | 不能凭角度产生新的翼尖或长颈 |
+
+| Fish | 一个鱼身及尾鳍 base | 尾开角、体侧修形、头角 | 鲨鱼背鳍需对应真实 flap |
+
+| Flower | 一个经过实折的放射花形 | 花瓣开合及允许的卷曲姿态 | 花瓣数量属于离散拓扑选择 |
+
+| Box | 无剪切单纸开口盒 base | 合法折线位置及成品宽高 | 宽深高相互耦合，厚纸留隙 |
+
+
+<!-- Table 7 -->
+
+| 字段 | 使用约定 | 检查 |
+
+| --- | --- | --- |
+
+| file_spec 与 file_creator | 标准版本及生成工具 | 不冒充第三方工具 |
+
+| vertices_coords | 同一帧二维或三维坐标 | 维度一致、数值有限 |
+
+| edges_vertices | 两端顶点下标 | 范围合法、无零长边 |
+
+| edges_assignment | B/M/V/F/U 等标准赋值 | 按规范枚举校验 |
+
+| edges_foldAngle | 度；V 为正、M 为负 | 与 assignment 保持一致 |
+
+| faces_vertices | 面顶点有序索引 | 面简单、面积大于容差 |
+
+| faceOrders | 重叠面的相对顺序约束 | 只按官方方向语义写入 |
+
+| file_frames | 子帧和继承关系 | frame_parent 无环 |
+
+
+<!-- Table 8 -->
+
+| 扩展或文件 | 内容 | 约束 |
+
+| --- | --- | --- |
+
+| go:schema_version | 自有协议版本 | 与 FOLD 版本分开演进 |
+
+| go:stable_ids | vertex/edge/face 稳定 ID 映射 | 数组重排不能改变语义引用 |
+
+| go:provenance | 来源、版本、license manifest 引用 | 不含用户隐私 |
+
+| sequence.json | 宏动作、前后状态、移动层、依赖 | 不用渲染面序号代替稳定 ID |
+
+| trajectory | 关节角轨迹、关键帧、接触事件 | 记录时间与 solver 版本 |
+
+| validation.json | 各检查状态、指标、容差和证据 | pass/fail/unknown/not_applicable |
+
+| tutorial.json | 文案、语音、箭头、摄像机、检查点 | 不得独立创造几何动作 |
+
+| manifest.json | 哈希、尺寸、兼容性、发布信息 | 发布后不可变 |
+
+
+<!-- Table 9 -->
+
+| 等级 | 内容 | 产物 | 不能证明 |
+
+| --- | --- | --- | --- |
+
+| L1 | schema、拓扑、边界、度量及适用局部条件 | 静态检查报告 | 全局路径存在 |
+
+| L2 | 折叠状态残差、相交、接触与层序 | 状态和接触证据 | 从初态可达 |
+
+| L3 | 动作路径、扫掠碰撞、接触变化 | 经验证的轨迹 | 真实材料一定成功 |
+
+| L4 | 真人按教程完成及困难记录 | 实折证据与完成数据 | 所有用户必然成功 |
+
+
+<!-- Table 10 -->
+
+| 动作类别 | 初始支持方式 | 发布要求 |
+
+| --- | --- | --- |
+
+| 谷折和山折 | 单铰链或已定义的多面组联动 | 明确轴、运动侧、固定侧和角路径 |
+
+| 预折和展开 | 成对模板与折痕激活状态 | 保留折痕及准确参考线 |
+
+| 翻纸和转纸 | 整体刚体操作 | 与摄像机变化区别显示 |
+
+| 内翻和外翻 | base 专用宏动作 | 有完整中间轨迹和实折证据 |
+
+| 压折和花瓣折 | 离线编写的复杂宏 | 可拆步，不把弯曲伪装成刚性 |
+
+| 塞入和拉开 | 暂时限定已认证模板 | 明确入口纸层、可触达空间 |
+
+
+<!-- Table 11 -->
+
+| 风险项 | 初始计算方式 | 数据来源 |
+
+| --- | --- | --- |
+
+| r_steps | clip((主要动作数−15)/45) | 编译后的完整序列 |
+
+| r_size | clip((10−最小操作宽度mm)/8) | 几何与指定纸张尺寸 |
+
+| r_layers | clip((最大接触层数−4)/12) | 局部接触区域 |
+
+| r_precision | clip((2−容许定位误差mm)/1.8) | 宏动作误差实验 |
+
+| r_access | 已标记难触达操作数/操作总数 | 专家标注与用户卡点 |
+
+| r_complex | clip(复杂宏动作加权数/10) | 内翻、压折、塞入等 |
+
+
+<!-- Table 12 -->
+
+| 实体 | 必需记录 | 用途 |
+
+| --- | --- | --- |
+
+| DesignCase | base、preset、版本、几何及难度特征 | 保证实验对象可复现 |
+
+| PaperProfile | 边长、厚度测量、克重、批次、环境备注 | 解释厚纸和尺寸差异 |
+
+| Participant | 匿名 ID、经验层、惯用手、同意状态 | 分层，不收多余身份数据 |
+
+| FoldTrial | 指定版本、开始结束、成功/失败/退出 | 计算完成率和时间 |
+
+| StepAttempt | 卡点、重播、回退、求助、误差 | 找到具体失败动作 |
+
+| OutcomeReview | 成品照片、结构完整、独立辨识结果 | 区分完成和像不像 |
+
+| EvidenceAsset | 授权媒体、访问权限、保留期限 | 复核与内容制作 |
+
+
+<!-- Table 13 -->
+
+| 层 | 建议技术 | 初始职责 |
+
+| --- | --- | --- |
+
+| 几何原型 | Python、NumPy、SciPy、专用网格代码 | 参数、约束、轨迹与验证 |
+
+| API | FastAPI、Pydantic、SQLAlchemy、Alembic | 合同、鉴权、事务与迁移 |
+
+| 数据 | PostgreSQL、Redis | 持久事实、队列通知和缓存 |
+
+| 动画 | Three.js、WebGL、TypeScript | 材料面片、轨迹回放、标注 |
+
+| 移动端 | Flutter 与受支持的 WebView 插件 | 页面、学习状态和下载 |
+
+| 质量 | pytest、Flutter test、播放器回归 | 几何反例、协议和端到端 |
+
+
+<!-- Table 14 -->
+
+| 页面 | 核心内容 | 必须处理的异常 |
+
+| --- | --- | --- |
+
+| 输入页 | 目标、纸张、难度、支持范围 | 模糊描述、敏感权限拒绝 |
+
+| 任务页 | 当前阶段、可取消、超时说明 | 断网重连、任务失败、配额超限 |
+
+| 候选页 | 真实差异、步骤、验证范围 | 少于三个候选、无可靠结果 |
+
+| 作品页 | 成品、纸张、来源、限制 | 旧版本下架、授权失效 |
+
+| 播放器 | 当前动作、操作层、检查点 | 资产损坏、WebGL 不支持 |
+
+| 我的学习 | 收藏、本地下载和版本进度 | 多设备进度冲突、缓存过期 |
+
+
+<!-- Table 15 -->
+
+| 表 | 核心字段 | 约束与索引 |
+
+| --- | --- | --- |
+
+| users | id、subject_id、role、created_at | subject_id 唯一 |
+
+| targets | id、canonical_name、family、aliases | 名称别名检索索引 |
+
+| generators | id、family、capability_manifest | 启用状态受审核控制 |
+
+| generator_versions | id、generator_id、version、commit_sha | generator_id 与 version 唯一 |
+
+| base_asset_versions | id、base_id、version、artifact_id、rights_id | 版本不可原地覆盖 |
+
+| generation_jobs | id、user_id、request、status、idempotency_key | 用户与幂等键唯一 |
+
+| candidates | id、job_id、design_version_id、rank、reject_code | job_id 与序号唯一 |
+
+| designs | id、target_id、owner_id、visibility | 私有与公开权限隔离 |
+
+| design_versions | id、design_id、version、base_id、params、hash | design_id 与 version 唯一 |
+
+| validation_runs | id、design_version_id、policy、status、report | 版本、材料和时间索引 |
+
+| tutorial_versions | id、design_version_id、locale、sequence_hash | 版本和语言唯一 |
+
+| tutorial_steps | tutorial_version_id、step_no、stable_id、action | 教程与步号唯一 |
+
+| artifacts | id、sha256、storage_key、size、media_type | sha256 与存储作用域索引 |
+
+| rights_records | id、source、license、commercial_ok、evidence | 到期和撤回状态 |
+
+| fold_trials | id、participant_id、tutorial_version_id、outcome | 绑定 consent 和材料 |
+
+| step_attempts | trial_id、step_id、attempt_no、event | 防重采集键 |
+
+| learning_progress | user_id、tutorial_version_id、step_id、revision | 复合主键与乐观锁 |
+
+| favorites | user_id、design_id、created_at | 复合主键 |
+
+| tutorial_requests | target、normalized_key、count、status | 归一需求键唯一 |
+
+| outbox_events | id、job_id、event_type、delivered_at | 未投递部分索引 |
+
+| audit_events | actor、action、resource、version、time | 只追加及受控访问 |
+
+
+<!-- Table 16 -->
+
+| 方法及路径 | 职责 | 成功响应 |
+
+| --- | --- | --- |
+
+| GET /v1/capabilities | 类别、材料、支持的参数域 | 200 及版本 |
+
+| POST /v1/targets/parse | 文本转 TargetSpec | 200 或 needs_clarification |
+
+| POST /v1/generations | 幂等创建生成任务 | 202 和 job_id |
+
+| GET /v1/jobs/{id} | 查询阶段、结果及失败原因 | 200 |
+
+| POST /v1/jobs/{id}/cancel | 请求取消可中断任务 | 202 或已终态 |
+
+| GET /v1/designs/{id}/versions/{v} | 固定版本候选摘要 | 200 |
+
+| GET /v1/designs/{id}/versions/{v}/bundle | manifest 和下载地址 | 200 |
+
+| GET /v1/tutorials/{id}/versions/{v} | 步骤、语言和检查点 | 200 |
+
+| PUT /v1/progress/{tutorial_version_id} | 带 revision 更新进度 | 200 或 409 |
+
+| PUT 与 DELETE /v1/favorites/{design_id} | 幂等收藏或取消 | 204 |
+
+| POST /v1/trials | 同意后的试折记录 | 201 |
+
+| POST /v1/requests | 未覆盖需求 | 201 或累计结果 |
+
+| POST /v1/admin/releases | 内部提交发布审核 | 202 和审核状态 |
+
+
+<!-- Table 17 -->
+
+| 状态或错误 | 语义 | 客户端动作 |
+
+| --- | --- | --- |
+
+| 401 / 403 | 未认证或无权限 | 登录或返回可访问页面 |
+
+| 404 | 无资源或不披露存在性 | 提示资源不可用 |
+
+| 409 | 幂等冲突或进度 revision 冲突 | 获取当前状态后确认更新 |
+
+| 413 / 422 | 输入过大或 schema 不合法 | 指出可修改字段 |
+
+| 429 | 用户配额或并发超限 | 按 Retry-After 重试 |
+
+| NO_VERIFIED_CANDIDATE | 已处理但无可靠候选 | 显示替代目标与需求入口 |
+
+| SIMULATION_TIMEOUT | 当前预算未得出结论 | 标注未决，不说物理不可折 |
+
+| RIGHTS_NOT_CLEARED | 来源权利未完成 | 不提供受限资产下载 |
+
+| 503 | 计算或存储暂不可用 | 保留任务 ID，可恢复重试 |
+
+
+<!-- Table 18 -->
+
+| 版本 | 主要能力 | 必须交付 | 进入下一阶段的条件 |
+
+| --- | --- | --- | --- |
+
+| PoC-01 | 一个四足 base 的可验证变体 | 三个配置、统一包、实折和用户实验 | 第 14 章门槛达标 |
+
+| V0.1 | 五类参数化生成器框架 | Quadruped/Bird/Fish/Flower/Box 规格及基础实现 | 上线的每类均有完整验证资产 |
+
+| V0.5 | 真人可折性筛选和测试闭环 | H 分、失败样本、材料档案、邀请测试 | 新手指标、成本与恢复演练达标 |
+
+| V1.0 | 限定域内自动序列编译和统一动画 | 模板展开、宏组合、Flutter 完整闭环 | 冻结测试集通过且允许商用 |
+
+| V2.0 | 检索与算法生成混合 | 多 base、受限 Tree/Box Pleating、局部规划 | 新 base 复用成本和路径可靠性可接受 |
+
+| V3.0 | Text→Mesh→逆向折纸研究 | 网格简化、逆向 CP、教学复杂度优化 | 独立复现、许可、路径及真人验证 |
+
+
+<!-- Table 19 -->
+
+| 资产 | 具体要求 | 验收证据 |
+
+| --- | --- | --- |
+
+| Q4-B01 原始纸样 | 固定 200 mm 正方形纸及材料批次 | 成品和展开纸照片 |
+
+| 权利记录 | 创作者、来源、允许用途、凭证 | rights_record 与文件哈希 |
+
+| CP | 全部真实折痕、山谷、边界和正反方向 | FOLD 与展开纸交叉复核 |
+
+| 宏动作程序 | 从展开纸到完成态，每步可定位 | 全程录像和结构化步骤 |
+
+| 语义映射 | 四腿、身体、头尾对应的纸面区域 | 稳定面 ID 与标注图 |
+
+| 轨迹 | 关键状态、合法接触和复杂过渡 | 检查点与仿真报告 |
+
+| A/B/C 配置 | 三个邻近且可重复的造型或修形变体 | 每配置两次专家复折 |
+
+| 教学包 | 文案、参考线、摄像机与错误提示 | 非作者完整试做 |
+
+
+<!-- Table 20 -->
+
+| 输入 | PoC 接受方式 | 实际输出 |
+
+| --- | --- | --- |
+
+| target_label | dog、fox 或简化动物意图 | 仅发布经辨识测试的名称 |
+
+| paper_profile_id | 首轮固定 paper-200-01 | 记录具体材料和厚度 |
+
+| body_to_leg_ratio | 目标视觉比例 | 映射至 A/B/C 的实际比例 |
+
+| neck_to_body_ratio | 仅用于判断结构需求 | 超出 base 能力则拒绝 |
+
+| head_variant | 离散已验证修形宏 | 不新增没有纸源的耳或鼻 |
+
+| tail_variant | 离散已验证配置 | 保留实际可完成的尾角 |
+
+| stance_variant | 已实折站姿 | 不对成品随意非刚性缩放 |
+
+| max_steps | 排序偏好 | 不通过隐藏子步骤达标 |
+
+
+<!-- Table 21 -->
+
+| 编号 | 交付 | 主责 AI 或真人 | 可验收结果 |
+
+| --- | --- | --- | --- |
+
+| P01 | base 选择与权利记录 | 创始人及折纸协作者 | 可商用来源和实物 |
+
+| P02 | CP 与宏动作录入 | 几何 AI 辅助真人 | 展开图和录像对应 |
+
+| P03 | Target 与 FOLD profile schema | 核心 AI | 合法及非法 fixture |
+
+| P04 | 稳定 ID 和同源编译器 | 核心 AI | 共享程序源哈希且各产物哈希正确 |
+
+| P05 | L1/L2 验证器 | 验证 AI | 拒绝明确几何与层序反例 |
+
+| P06 | 三个配置的轨迹 | 图形 AI 及真人 | 支持动作路径可复核 |
+
+| P07 | L3 碰撞与未知状态 | 验证 AI | 中途穿透反例能检出 |
+
+| P08 | Three.js 逐步播放器 | 客户端 AI | 暂停跳步和状态恢复 |
+
+| P09 | FastAPI 任务与目录 API | 后端 AI | 幂等和中断恢复 |
+
+| P10 | Flutter 最小闭环 | 客户端 AI | 实机完成一个教程 |
+
+| P11 | 复折与 12 人实验 | 创始人及 QA AI | 原始记录和失败分母 |
+
+| P12 | Gate 报告和下一步 | 总控 AI 及创始人 | Go 或有依据的收缩决定 |
+
+
+<!-- Table 22 -->
+
+| 角色 | 主要职责 | 必须提交 |
+
+| --- | --- | --- |
+
+| 创始人 | 目标、权利、实物、预算、合并和发布 | 决策、验收记录、授权凭证 |
+
+| 总控 AI | 拆任务、依赖、ADR、事实源一致性 | 任务板、接口决定、Gate 报告 |
+
+| 核心与后端 AI | 生成器、几何、API、数据和 worker | 代码、迁移、协议及测试证据 |
+
+| Flutter 与图形 AI | APP、Three.js、bridge、作者工具 | 实机演示、协议与性能数据 |
+
+| 内容与研究 AI | 来源、许可、宏动作标注、教学语言 | 来源表、教学包、实验脚本 |
+
+| QA AI | 独立反例、回归、故障和验收 | 缺陷、复现步骤、通过证据 |
+
+
+<!-- Table 23 -->
+
+| 对象 | 核实情况 | 本项目执行规则 |
+
+| --- | --- | --- |
+
+| TreeMaker | 作者仓库声明 GPL-2.0-or-later [R10] | 商用可行；复制或分发前确定 GPL 履行方案 |
+
+| Tachi 软件 | Origamizer 等为专有软件，默认非商用、需联系和署名 [R11] | 未获匹配书面许可，不作商业生产依赖 |
+
+| FOLD | 官方仓库 MIT [R12] | 保留通知，schema 版本及来源可追溯 |
+
+| Origami Simulator | 作者仓库 MIT [R13] | 固定 commit 并审计依赖与示例资产 |
+
+| FastAPI | MIT [R14] | 保留通知，第三方依赖独立登记 |
+
+| Three.js | MIT [R15] | 保留通知；其许可不覆盖教程媒体 |
+
+| Flutter WebView 插件 | 官方插件 BSD-3-Clause [R8] | 核对锁定版平台支持和 notice |
+
+| PostgreSQL | PostgreSQL License [R16] | 保留通知，扩展另审 |
+
+| Redis 服务端 | 按版本使用不同许可 [R17] | 不能写为 MIT，记录实际选择及部署方式 |
+
+| Valkey 可选替代 | BSD 许可 [R18] | 如需替代，先做队列和运维兼容测试 |
+
+
+<!-- Table 24 -->
+
+| 项目 | 月预算人民币 | 控制措施 |
+
+| --- | --- | --- |
+
+| API worker 数据和备份 | 300 至 1,200 | 小环境、限时计算、按需扩容 |
+
+| AI 开发席位和 API | 500 至 2,000 | 固定月上限、减少重复上下文 |
+
+| 监控和域名摊销 | 0 至 200 | 限制日志、优先已有工具 |
+
+| 测试补贴和纸张 | 300 至 1,000 | 周度小样本、失败即修正 |
+
+| 合计 | 1,100 至 4,400 | 90 天约 3,300 至 13,200 |
+
+
+<!-- Table 25 -->
+
+| 时间 | 核心任务 | 交付物 | 决策门 |
+
+| --- | --- | --- | --- |
+
+| Day 1 至 3 | 仓库、docs、能力边界、base 和材料 | 产品基线、权利方案、任务卡 | 选定可获得的合法 base |
+
+| Day 4 至 10 | Q4-B01 实物、CP、宏步骤、关键帧 | 基准实折包和权利凭证 | 无可复折 base 则停止扩建 |
+
+| Day 11 至 15 | schema、稳定 ID、同源编译、预检 | FOLD/Sequence fixture 和编译器 | 几何与步骤引用一致 |
+
+| Day 16 至 20 | L1/L2、轨迹、播放器和反例 | 检查报告和可回放包 | 中途碰撞不能被漏掉 |
+
+| Day 21 至 25 | A/B/C、两次专家复折、API 最小闭环 | 三个固定配置和教程 | 证据匹配设计版本 |
+
+| Day 26 至 30 | 12 人测试、修正、Gate 报告 | 原始数据、失败清单和结论 | 按 PoC 标准 Go 或收缩 |
+
+
+<!-- Table 26 -->
+
+| 周次 | 工作重点 | 可交付证据 |
+
+| --- | --- | --- |
+
+| 第 5 周 | PoC 卡点修正、作者工具、导出自动化 | 新增 preset 不再手动复制多个文件 |
+
+| 第 6 周 | Bird 或 Fish 的第二个 base | 至少一个新族完整实折包 |
+
+| 第 7 周 | Flower 和 Box 专属约束、五类 manifest | 各类别能力清单，未达标的禁用 |
+
+| 第 8 周 | Flutter 实机、离线包、收藏和进度 | 首个用户可自行走完整闭环 |
+
+
+<!-- Table 27 -->
+
+| 周次 | 工作重点 | 可交付证据 |
+
+| --- | --- | --- |
+
+| 第 9 周 | H 分特征、实验采集和失败定位 | 特征缺失规则和实验数据字典 |
+
+| 第 10 周 | 30 名独立用户、累计 60 次试折 | 分组完成率、耗时、求助和辨识 |
+
+| 第 11 周 | 断网、崩溃、worker 重试和权限 | 故障注入及恢复报告 |
+
+| 第 12 周 | 许可清单、成本、付费访谈和发布候选 | SBOM、单位经济、邀请版本 |
+
+| 第 13 周 | 冻结版本验收和下一阶段决定 | V0.5 Gate 与 V1.0 任务板 |
+
+
+<!-- Table 28 -->
+
+| 编号 | 用例 | 期望结果 |
+
+| --- | --- | --- |
+
+| T01 | 支持的短颈四足目标 | 返回范围内且证据完整的候选 |
+
+| T02 | 三头龙带翅膀长鼻 | 明确不支持或让用户选近似 |
+
+| T03 | 未认证纸张、过小尺寸、超域比例 | 不外推可折性承诺 |
+
+| T04 | NaN、越界索引、重复稳定 ID | schema 或拓扑失败并定位 |
+
+| T05 | CP 折线相交未切分、零长边 | L1 失败 |
+
+| T06 | 成品顶点拉伸但外观正确 | 度量检查失败 |
+
+| T07 | 局部角条件通过、全局层序冲突 | L2 拒绝，不能靠局部 pass 覆盖 |
+
+| T08 | 同一重叠区域 A>B、B>C、C>A | 检出层序矛盾 |
+
+| T09 | 合法共享铰链接触 | 不误报整对面片碰撞 |
+
+| T10 | 首尾无碰撞、中途穿透 | 路径检查检出或明确未覆盖 |
+
+| T11 | 翻折需柔性过渡但只提供刚体模型 | 返回 unknown 或切换认证宏 |
+
+| T12 | 教学引用不存在的边或错误纸层 | 编译和导出被阻止 |
+
+| T13 | 相同程序 seed 与锁定环境重编译 | 规范化产物一致或记录可接受误差 |
+
+| T14 | manifest 哈希错误或旧主协议 | 播放器拒绝并可恢复 |
+
+| T15 | 同幂等键同输入及不同输入 | 复用原任务；冲突返回 409 |
+
+| T16 | worker 在上传后提交前崩溃 | 重试不重复发布和扣费 |
+
+| T17 | Redis 重启与消息重复 | 从事实源恢复，副作用幂等 |
+
+| T18 | 用户 A 读取用户 B 私有 job/媒体 | 拒绝访问，不泄露文件路径 |
+
+| T19 | 暂停跳步、退出重开、断网、旋转 | 恢复同教程版本检查点 |
+
+| T20 | WebGL2 不可用、上下文丢失 | 展示图文降级或清晰恢复入口 |
+
+| T21 | 授权撤回或缺失 notice | 阻止新发布并追踪影响版本 |
+
+| T22 | 真人卡在中途、求助或退出 | 如实计入实验，保留失败步骤 |
+
+
+<!-- Table 29 -->
+
+| 指标 | PoC 门槛 | V0.5 目标 |
+
+| --- | --- | --- |
+
+| 资产权利和版本 | 发布配置 100% 可追溯 | 上线全部版本可追溯 |
+
+| 程序一致性 | 已知 CP/序列/轨迹错配为 0 | CI 阻止任何错配发布 |
+
+| 专家实折 | 3 preset 各至少 2 次成功 | 每个新 base 和关键边界有证据 |
+
+| 独立用户完成 | 至少 9/12，总体且各 preset ≥2/4 | 首次任务完成 ≥80%，报告区间 |
+
+| 求助 | 需要研究者代折计失败 | 分组报告提示与代折比例 |
+
+| 盲评辨识 | 预定义类别识别 ≥70% | 按家族和具体目标分别统计 |
+
+| 主要动作数 | 初始预算 ≤35 | 不隐藏复杂子步骤以达标 |
+
+| 热缓存 API | 固定环境 p95 ≤1 s | 锁定测试环境和负载 |
+
+| PoC 在线目录命中 | p95 ≤5 s | 与真正冷生成分开统计 |
+
+| 冷生成 | 有界异步，初始预算 60 s | 超时有明确状态和回退 |
+
+| 播放 | 基线设备 ≥30 fps | 100 次加载无不可恢复崩溃 |
+
+| 新增近邻 preset 成本 | 记录真实工时 | 连续两次 ≤1 人日为优化目标 |
+
+| 恢复 | 演示 worker 崩溃可恢复 | 达到 RPO/RTO 并实际演练 |
+
+
+<!-- Table 30 -->
+
+| 风险 | 概率×影响 | 最早预警 | 应对与主责 |
+
+| --- | --- | --- | --- |
+
+| 无合法可复折 base | 4×5 | Day 10 纸样仍不稳定 | 换 base 或采购授权；创始人 |
+
+| 参数变化破坏可折性 | 4×5 | 邻近样本频繁失败 | 离散认证、缩域；核心 AI |
+
+| 碰撞或层序漏检 | 4×5 | 实折与仿真矛盾 | 增反例与接触模型；QA/核心 |
+
+| 序列需大量手工修补 | 4×4 | 新配置逐步重画 | 固定宏和作者工具；图形 AI |
+
+| 真人完成率低 | 4×5 | 同一步求助集中 | 拆步、改 base、重测；创始人 |
+
+| 形似程度不足 | 3×4 | 盲评只认出泛化动物 | 新 base 或收窄物种标签；产品 |
+
+| 软件和内容授权受限 | 3×5 | 缺凭证或不允许改编 | 替代组件与独立实现；研究 AI |
+
+| 一人集成负担过高 | 4×4 | PR 积压、事实源分叉 | 两实现分支、缩范围；总控 |
+
+| AI 输出相互矛盾 | 4×4 | 字段、ID 和单位不一致 | 合同先行、同源编译；总控 |
+
+| 移动端 WebGL2 不稳 | 3×3 | 特定设备黑屏或掉帧 | 能力检测和图文包；客户端 |
+
+| 成本超过收入空间 | 3×4 | 冷任务耗时和 token 攀升 | 预计算、配额、停研究；创始人 |
+
+| 私有媒体或权限泄露 | 2×5 | 跨用户 URL 可下载 | 权限测试、短签名、撤回；后端 |
+
+| 需求不足 | 3×5 | 能折但不愿再使用 | 访谈、聚焦场景、停止扩张；产品 |
+
+
+<!-- Table 31 -->
+
+| 决策 | 条件 | 资源决定 |
+
+| --- | --- | --- |
+
+| Go | PoC 权利、路径一致、专家实折及用户门槛均满足 | 扩展研发，配置发布仍须单独过门 |
+
+| Conditional Go | 能折且用户能完成，但形似或作者成本弱 | 保持模型范围，限定两周优化 |
+
+| No Go 生成 | 90 天仍无稳定变体，或每次都需重做全流程 | 停止扩大自动生成，转作者工具 |
+
+| No Go 权利 | 无法取得匹配商业用途的资产或软件权利 | 更换来源，不能带病发布 |
+
+| No Go 用户价值 | 两轮修正后完成、辨识或复用意愿仍不达标 | 调整目标用户或停止该产品假设 |
+
+| No Go 单位经济 | 缩候选预计算后成本仍不支持拟定模式 | 停付费冷生成，重新设计商业模式 |
