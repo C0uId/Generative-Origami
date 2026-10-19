@@ -1,0 +1,110 @@
+{
+  "schema_version": "q4-cp-audit-1.0",
+  "task_id": "Q4-B01-CP-MEDIUM-MEDIUM",
+  "base_id": "Q4-B01",
+  "base_version": "0.2-draft",
+  "candidate_version": "0.1",
+  "parameter_levels": {
+    "leg_budget": "medium",
+    "tail_budget": "medium"
+  },
+  "artifact": "candidate.fold",
+  "cp_geometry_sha256": "9f66033892e3b668c3288f62c06f741a53bb870b42650a14012f8bff12921395",
+  "cp_topology_sha256": "f9d696953f771b1aff9bb234132c70beecd465f5cc2fdfef21c2e59bccd6721f",
+  "stable_face_ids": [
+    "FACE_Q4_MM_00",
+    "FACE_Q4_MM_01",
+    "FACE_Q4_MM_02",
+    "FACE_Q4_MM_03",
+    "FACE_Q4_MM_04",
+    "FACE_Q4_MM_05",
+    "FACE_Q4_MM_06",
+    "FACE_Q4_MM_07"
+  ],
+  "stable_flap_ids": [
+    "MAT_FL",
+    "MAT_FR",
+    "MAT_HL",
+    "MAT_HR",
+    "MAT_HEAD",
+    "MAT_TAIL"
+  ],
+  "semantic_material_ids": [
+    "MAT_FL",
+    "MAT_FR",
+    "MAT_HL",
+    "MAT_HR",
+    "MAT_HEAD",
+    "MAT_BODY",
+    "MAT_TAIL"
+  ],
+  "body_channel": {
+    "id": "CHANNEL_FRONT_REAR",
+    "vertex_path": [
+      1,
+      9,
+      8,
+      10,
+      5
+    ]
+  },
+  "crease_units": {
+    "hind_left": [
+      0,
+      8
+    ],
+    "hind_right": [
+      2,
+      8
+    ],
+    "front_right": [
+      4,
+      8
+    ],
+    "front_left": [
+      6,
+      8
+    ],
+    "tail": [
+      [
+        1,
+        9
+      ],
+      [
+        9,
+        8
+      ]
+    ],
+    "head": [
+      [
+        8,
+        10
+      ],
+      [
+        10,
+        5
+      ]
+    ]
+  },
+  "planar_gate": "PASS",
+  "local_center_foldability": {
+    "kawasaki": "PASS",
+    "alternating_sums_deg": [
+      180,
+      180
+    ],
+    "maekawa": "PASS",
+    "mountain_count": 6,
+    "valley_count": 4,
+    "difference": 2,
+    "scope": "single interior branching vertex only; not global physical proof"
+  },
+  "physical_verified": false,
+  "continuous_motion_verified": false,
+  "claim_boundary": "REAL_PLANAR_CP_CANDIDATE_ONLY_NOT_PHYSICAL_BASE",
+  "unresolved": [
+    "No physical refold evidence.",
+    "No global rigid-fold or continuous-path certificate.",
+    "Material flow to final 3D flaps remains unverified."
+  ]
+}
