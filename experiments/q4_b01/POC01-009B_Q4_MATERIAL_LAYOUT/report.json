@@ -1,0 +1,77 @@
+{
+  "id": "POC01-009B",
+  "status": "MATERIAL_LAYOUT_ONLY",
+  "tests_passed": 22,
+  "q4_tests_passed": 10,
+  "distinct_layout_hashes": 9,
+  "distinct_topology_hashes": 1,
+  "real_cp_count": 0,
+  "physical_refolds": 0,
+  "certified_samples": 0,
+  "cases": [
+    {
+      "id": "leg_short__tail_short",
+      "geometry_sha256": "94ba9b0ea5a26eb434d9480af7a214cc0353e1f72f34705c3224c220051c8d3d",
+      "topology_sha256": "fa038c69b7906461d325d3d32c7fa9d6f61ec23cbcd68ca9d63be38fd32dac61",
+      "leg_source_mm": 17.67766952966369,
+      "tail_source_mm": 12.5
+    },
+    {
+      "id": "leg_short__tail_medium",
+      "geometry_sha256": "de817250968535ca37482f2fda5bf88553c5f75f0f5e70e238c26c00317fb935",
+      "topology_sha256": "fa038c69b7906461d325d3d32c7fa9d6f61ec23cbcd68ca9d63be38fd32dac61",
+      "leg_source_mm": 17.67766952966369,
+      "tail_source_mm": 25
+    },
+    {
+      "id": "leg_short__tail_long",
+      "geometry_sha256": "0e3e6d546c8e6ade27e89535257ef5ca9589b802e93f93dfcecb54312eb6f170",
+      "topology_sha256": "fa038c69b7906461d325d3d32c7fa9d6f61ec23cbcd68ca9d63be38fd32dac61",
+      "leg_source_mm": 17.67766952966369,
+      "tail_source_mm": 37.5
+    },
+    {
+      "id": "leg_medium__tail_short",
+      "geometry_sha256": "15f6925b4013c4d91f0edbe9f61885e3cc69a9e514b43ba83c8d2fc8810817c4",
+      "topology_sha256": "fa038c69b7906461d325d3d32c7fa9d6f61ec23cbcd68ca9d63be38fd32dac61",
+      "leg_source_mm": 35.35533905932738,
+      "tail_source_mm": 12.5
+    },
+    {
+      "id": "leg_medium__tail_medium",
+      "geometry_sha256": "2c2e3e5a04a1a4bd1d49e4cbd31b178e528eea18434e5b67b4615b2e5298f284",
+      "topology_sha256": "fa038c69b7906461d325d3d32c7fa9d6f61ec23cbcd68ca9d63be38fd32dac61",
+      "leg_source_mm": 35.35533905932738,
+      "tail_source_mm": 25
+    },
+    {
+      "id": "leg_medium__tail_long",
+      "geometry_sha256": "1db913d5f999b3e500d4179e56af0ed1ae7010f739f6d0414a69cf190907abe5",
+      "topology_sha256": "fa038c69b7906461d325d3d32c7fa9d6f61ec23cbcd68ca9d63be38fd32dac61",
+      "leg_source_mm": 35.35533905932738,
+      "tail_source_mm": 37.5
+    },
+    {
+      "id": "leg_long__tail_short",
+      "geometry_sha256": "dc09878b09b2db2b52c9a3e54a4dd5618a25cf418c03cc68bb08512005bb57c4",
+      "topology_sha256": "fa038c69b7906461d325d3d32c7fa9d6f61ec23cbcd68ca9d63be38fd32dac61",
+      "leg_source_mm": 53.033008588991066,
+      "tail_source_mm": 12.5
+    },
+    {
+      "id": "leg_long__tail_medium",
+      "geometry_sha256": "8425ac24201ac72468108869bf9c9887ee30a0c5c2239bdb76c11d2a81144f0f",
+      "topology_sha256": "fa038c69b7906461d325d3d32c7fa9d6f61ec23cbcd68ca9d63be38fd32dac61",
+      "leg_source_mm": 53.033008588991066,
+      "tail_source_mm": 25
+    },
+    {
+      "id": "leg_long__tail_long",
+      "geometry_sha256": "4447331a6afab542b23dad957876dc4af8bb25d2ce1569d4a368b31188875ba6",
+      "topology_sha256": "fa038c69b7906461d325d3d32c7fa9d6f61ec23cbcd68ca9d63be38fd32dac61",
+      "leg_source_mm": 53.033008588991066,
+      "tail_source_mm": 37.5
+    }
+  ],
+  "source_docx_sha256": "e9956397fe346598df8b82e04258dc1a2e8c580339a3afed6690811f939ffe8f"
+}

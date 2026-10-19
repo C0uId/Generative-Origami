@@ -1,0 +1,48 @@
+{
+  "source_archive": "00_项目总控.zip",
+  "source_archive_size_bytes": 56581074,
+  "source_archive_sha256": "6856bc4aa36a82fbdee793c788cf14c64b7357b45c63d5587aa12ef60aa94a4b",
+  "policy": "Only current POC01-007C3-C generated evidence is tracked by immutable hashes. Payloads belong in Git LFS or dedicated artifact storage.",
+  "large_files": [
+    {
+      "path": "05_实验/POC01-007C3-C_SINGULAR_CONTACT_EXACT_BRIDGE/certificates/interval_157.json",
+      "size_bytes": 15564926,
+      "sha256": "0e474c5e79454f4b06d2eae8960a7f2e23b082b093702ecb95d413ec81443851"
+    },
+    {
+      "path": "05_实验/POC01-007C3-C_SINGULAR_CONTACT_EXACT_BRIDGE/certificates/interval_158.json",
+      "size_bytes": 23570440,
+      "sha256": "8697d84b6e804b9d1f2de7cf00e2171c97a0d60f9568e7ee02c4baf7eb62e72a"
+    },
+    {
+      "path": "05_实验/POC01-007C3-C_SINGULAR_CONTACT_EXACT_BRIDGE/certificates/interval_159.json",
+      "size_bytes": 48089618,
+      "sha256": "73f6133b346c625cdd78dd66a68548ea15be02e1c25014735e27fd2106daca1c"
+    },
+    {
+      "path": "05_实验/POC01-007C3-C_SINGULAR_CONTACT_EXACT_BRIDGE/certificates/interval_160.json",
+      "size_bytes": 141421105,
+      "sha256": "9b519e61e0e933745baa2d358952ab3cde1c65e333176b62239027a130ebe260"
+    },
+    {
+      "path": "05_实验/POC01-007C3-C_SINGULAR_CONTACT_EXACT_BRIDGE/EXP-C3C-02_GOAL_CONTACT/report.json",
+      "size_bytes": 28939042,
+      "sha256": "be4cd6ac3ed7050b306cd074ee60bb3ac38f22cb6cc3d5292fb6317152c80891"
+    },
+    {
+      "path": "05_实验/POC01-007C3-C_SINGULAR_CONTACT_EXACT_BRIDGE/EXP-C3C-03_CERTIFICATION_RERUN/report.json",
+      "size_bytes": 32239689,
+      "sha256": "722f5ad5328191690a960f13a334e92fb79ad5a4af274be0d2ad29924bf26572"
+    },
+    {
+      "path": "05_实验/POC01-007C3-C_SINGULAR_CONTACT_EXACT_BRIDGE/interval_certificates.json",
+      "size_bytes": 418416324,
+      "sha256": "898baeee4773e368cab8961d6a98669a957e81f3d5f7bfbacdc197cf36dc2974"
+    },
+    {
+      "path": "05_实验/POC01-007C3-C_SINGULAR_CONTACT_EXACT_BRIDGE/remaining_failures.json",
+      "size_bytes": 39893726,
+      "sha256": "8cabc57fead5ec78038e486aeb63c3e0a0659905519aa6c46f83485dff882238"
+    }
+  ]
+}

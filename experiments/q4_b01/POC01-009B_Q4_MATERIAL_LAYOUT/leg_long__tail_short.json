@@ -1,0 +1,251 @@
+{
+  "base_id": "Q4-B01",
+  "base_version": "0.2-draft",
+  "manifest_sha256": "be94eed0bf2dba97ebbf6d037674370bc6f475c0eb4ce60d718bd7951b3c34f3",
+  "status": "MATERIAL_LAYOUT_CANDIDATE_NOT_CP",
+  "projection": {
+    "requested": {
+      "leg_budget": "long",
+      "tail_budget": "short"
+    },
+    "implemented": {
+      "leg_budget": "long",
+      "tail_budget": "short"
+    },
+    "approximation_notes": [],
+    "domain": "EXPLORATORY_LAYOUT_ONLY"
+  },
+  "geometry": {
+    "paper_mm": [
+      200,
+      200
+    ],
+    "material_regions": [
+      {
+        "id": "MAT_FL",
+        "role": "front_left_leg",
+        "bounds_mm": [
+          0,
+          150,
+          50,
+          200
+        ]
+      },
+      {
+        "id": "MAT_HEAD",
+        "role": "head_neck",
+        "bounds_mm": [
+          50,
+          150,
+          150,
+          200
+        ]
+      },
+      {
+        "id": "MAT_FR",
+        "role": "front_right_leg",
+        "bounds_mm": [
+          150,
+          150,
+          200,
+          200
+        ]
+      },
+      {
+        "id": "MAT_BODY",
+        "role": "body_core",
+        "bounds_mm": [
+          0,
+          50,
+          200,
+          150
+        ]
+      },
+      {
+        "id": "MAT_HL",
+        "role": "hind_left_leg",
+        "bounds_mm": [
+          0,
+          0,
+          50,
+          50
+        ]
+      },
+      {
+        "id": "MAT_TAIL",
+        "role": "tail",
+        "bounds_mm": [
+          50,
+          0,
+          150,
+          50
+        ]
+      },
+      {
+        "id": "MAT_HR",
+        "role": "hind_right_leg",
+        "bounds_mm": [
+          150,
+          0,
+          200,
+          50
+        ]
+      }
+    ],
+    "source_paths": [
+      {
+        "id": "MAT_FL_SOURCE_GUIDE",
+        "points_mm": [
+          [
+            0,
+            200
+          ],
+          [
+            37.5,
+            162.5
+          ]
+        ]
+      },
+      {
+        "id": "MAT_FR_SOURCE_GUIDE",
+        "points_mm": [
+          [
+            200,
+            200
+          ],
+          [
+            162.5,
+            162.5
+          ]
+        ]
+      },
+      {
+        "id": "MAT_HL_SOURCE_GUIDE",
+        "points_mm": [
+          [
+            0,
+            0
+          ],
+          [
+            37.5,
+            37.5
+          ]
+        ]
+      },
+      {
+        "id": "MAT_HR_SOURCE_GUIDE",
+        "points_mm": [
+          [
+            200,
+            0
+          ],
+          [
+            162.5,
+            37.5
+          ]
+        ]
+      },
+      {
+        "id": "MAT_TAIL_SOURCE_GUIDE",
+        "points_mm": [
+          [
+            100,
+            0
+          ],
+          [
+            100,
+            12.5
+          ]
+        ]
+      }
+    ]
+  },
+  "geometry_sha256": "dc09878b09b2db2b52c9a3e54a4dd5618a25cf418c03cc68bb08512005bb57c4",
+  "topology_sha256": "fa038c69b7906461d325d3d32c7fa9d6f61ec23cbcd68ca9d63be38fd32dac61",
+  "source_paths": [
+    {
+      "id": "MAT_FL_SOURCE_GUIDE",
+      "material_id": "MAT_FL",
+      "points_mm": [
+        [
+          0,
+          200
+        ],
+        [
+          37.5,
+          162.5
+        ]
+      ],
+      "source_path_length_mm": 53.033008588991066,
+      "folded_flap_length_mm": null
+    },
+    {
+      "id": "MAT_FR_SOURCE_GUIDE",
+      "material_id": "MAT_FR",
+      "points_mm": [
+        [
+          200,
+          200
+        ],
+        [
+          162.5,
+          162.5
+        ]
+      ],
+      "source_path_length_mm": 53.033008588991066,
+      "folded_flap_length_mm": null
+    },
+    {
+      "id": "MAT_HL_SOURCE_GUIDE",
+      "material_id": "MAT_HL",
+      "points_mm": [
+        [
+          0,
+          0
+        ],
+        [
+          37.5,
+          37.5
+        ]
+      ],
+      "source_path_length_mm": 53.033008588991066,
+      "folded_flap_length_mm": null
+    },
+    {
+      "id": "MAT_HR_SOURCE_GUIDE",
+      "material_id": "MAT_HR",
+      "points_mm": [
+        [
+          200,
+          0
+        ],
+        [
+          162.5,
+          37.5
+        ]
+      ],
+      "source_path_length_mm": 53.033008588991066,
+      "folded_flap_length_mm": null
+    },
+    {
+      "id": "MAT_TAIL_SOURCE_GUIDE",
+      "material_id": "MAT_TAIL",
+      "points_mm": [
+        [
+          100,
+          0
+        ],
+        [
+          100,
+          12.5
+        ]
+      ],
+      "source_path_length_mm": 12.5,
+      "folded_flap_length_mm": null
+    }
+  ],
+  "seed": 0,
+  "certified": false,
+  "cp": null,
+  "motion_certificate": null
+}

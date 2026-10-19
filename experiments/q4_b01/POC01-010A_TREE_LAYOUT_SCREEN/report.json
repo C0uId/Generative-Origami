@@ -1,0 +1,294 @@
+{
+  "cases": [
+    {
+      "case": "short_short",
+      "status": "GRID_LAYOUT_FEASIBLE",
+      "feasible_grid_points": 16,
+      "objective_mm": "75",
+      "points_mm": {
+        "MAT_FL": [
+          "75/2",
+          "325/2"
+        ],
+        "MAT_FR": [
+          "325/2",
+          "325/2"
+        ],
+        "MAT_HL": [
+          "75/2",
+          "75/2"
+        ],
+        "MAT_HR": [
+          "325/2",
+          "75/2"
+        ],
+        "MAT_HEAD": [
+          "100",
+          "200"
+        ],
+        "MAT_TAIL": [
+          "100",
+          "0"
+        ]
+      }
+    },
+    {
+      "case": "short_medium",
+      "status": "GRID_LAYOUT_FEASIBLE",
+      "feasible_grid_points": 16,
+      "objective_mm": "75",
+      "points_mm": {
+        "MAT_FL": [
+          "75/2",
+          "325/2"
+        ],
+        "MAT_FR": [
+          "325/2",
+          "325/2"
+        ],
+        "MAT_HL": [
+          "75/2",
+          "75/2"
+        ],
+        "MAT_HR": [
+          "325/2",
+          "75/2"
+        ],
+        "MAT_HEAD": [
+          "100",
+          "200"
+        ],
+        "MAT_TAIL": [
+          "100",
+          "0"
+        ]
+      }
+    },
+    {
+      "case": "short_long",
+      "status": "GRID_LAYOUT_FEASIBLE",
+      "feasible_grid_points": 16,
+      "objective_mm": "75",
+      "points_mm": {
+        "MAT_FL": [
+          "75/2",
+          "325/2"
+        ],
+        "MAT_FR": [
+          "325/2",
+          "325/2"
+        ],
+        "MAT_HL": [
+          "75/2",
+          "75/2"
+        ],
+        "MAT_HR": [
+          "325/2",
+          "75/2"
+        ],
+        "MAT_HEAD": [
+          "100",
+          "200"
+        ],
+        "MAT_TAIL": [
+          "100",
+          "0"
+        ]
+      }
+    },
+    {
+      "case": "medium_short",
+      "status": "GRID_LAYOUT_FEASIBLE",
+      "feasible_grid_points": 16,
+      "objective_mm": "75",
+      "points_mm": {
+        "MAT_FL": [
+          "75/2",
+          "325/2"
+        ],
+        "MAT_FR": [
+          "325/2",
+          "325/2"
+        ],
+        "MAT_HL": [
+          "75/2",
+          "75/2"
+        ],
+        "MAT_HR": [
+          "325/2",
+          "75/2"
+        ],
+        "MAT_HEAD": [
+          "100",
+          "200"
+        ],
+        "MAT_TAIL": [
+          "100",
+          "0"
+        ]
+      }
+    },
+    {
+      "case": "medium_medium",
+      "status": "GRID_LAYOUT_FEASIBLE",
+      "feasible_grid_points": 16,
+      "objective_mm": "75",
+      "points_mm": {
+        "MAT_FL": [
+          "75/2",
+          "325/2"
+        ],
+        "MAT_FR": [
+          "325/2",
+          "325/2"
+        ],
+        "MAT_HL": [
+          "75/2",
+          "75/2"
+        ],
+        "MAT_HR": [
+          "325/2",
+          "75/2"
+        ],
+        "MAT_HEAD": [
+          "100",
+          "200"
+        ],
+        "MAT_TAIL": [
+          "100",
+          "0"
+        ]
+      }
+    },
+    {
+      "case": "medium_long",
+      "status": "GRID_LAYOUT_FEASIBLE",
+      "feasible_grid_points": 16,
+      "objective_mm": "75",
+      "points_mm": {
+        "MAT_FL": [
+          "75/2",
+          "325/2"
+        ],
+        "MAT_FR": [
+          "325/2",
+          "325/2"
+        ],
+        "MAT_HL": [
+          "75/2",
+          "75/2"
+        ],
+        "MAT_HR": [
+          "325/2",
+          "75/2"
+        ],
+        "MAT_HEAD": [
+          "100",
+          "200"
+        ],
+        "MAT_TAIL": [
+          "100",
+          "0"
+        ]
+      }
+    },
+    {
+      "case": "long_short",
+      "status": "GRID_LAYOUT_FEASIBLE",
+      "feasible_grid_points": 16,
+      "objective_mm": "75",
+      "points_mm": {
+        "MAT_FL": [
+          "75/2",
+          "325/2"
+        ],
+        "MAT_FR": [
+          "325/2",
+          "325/2"
+        ],
+        "MAT_HL": [
+          "75/2",
+          "75/2"
+        ],
+        "MAT_HR": [
+          "325/2",
+          "75/2"
+        ],
+        "MAT_HEAD": [
+          "100",
+          "200"
+        ],
+        "MAT_TAIL": [
+          "100",
+          "0"
+        ]
+      }
+    },
+    {
+      "case": "long_medium",
+      "status": "GRID_LAYOUT_FEASIBLE",
+      "feasible_grid_points": 16,
+      "objective_mm": "75",
+      "points_mm": {
+        "MAT_FL": [
+          "75/2",
+          "325/2"
+        ],
+        "MAT_FR": [
+          "325/2",
+          "325/2"
+        ],
+        "MAT_HL": [
+          "75/2",
+          "75/2"
+        ],
+        "MAT_HR": [
+          "325/2",
+          "75/2"
+        ],
+        "MAT_HEAD": [
+          "100",
+          "200"
+        ],
+        "MAT_TAIL": [
+          "100",
+          "0"
+        ]
+      }
+    },
+    {
+      "case": "long_long",
+      "status": "GRID_LAYOUT_FEASIBLE",
+      "feasible_grid_points": 12,
+      "objective_mm": "125/2",
+      "points_mm": {
+        "MAT_FL": [
+          "25",
+          "325/2"
+        ],
+        "MAT_FR": [
+          "175",
+          "325/2"
+        ],
+        "MAT_HL": [
+          "25",
+          "75/2"
+        ],
+        "MAT_HR": [
+          "175",
+          "75/2"
+        ],
+        "MAT_HEAD": [
+          "100",
+          "200"
+        ],
+        "MAT_TAIL": [
+          "100",
+          "0"
+        ]
+      }
+    }
+  ],
+  "cp_generated": false,
+  "physical_verified": false
+}

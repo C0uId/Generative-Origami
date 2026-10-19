@@ -1,0 +1,10 @@
+{
+  "source_intervals": [
+    9,
+    69
+  ],
+  "before_sha256": "56fdcd74ce2b98da9cd5467f8dcd93328e001e26f270acd582a6583e3409a6df",
+  "after_sha256": "56fdcd74ce2b98da9cd5467f8dcd93328e001e26f270acd582a6583e3409a6df",
+  "passed": true,
+  "definition": "canonical B plan JSON; same parent endpoints, dependent chart and time restrictions"
+}

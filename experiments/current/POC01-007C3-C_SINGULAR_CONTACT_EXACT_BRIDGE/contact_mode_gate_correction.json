@@ -1,0 +1,27 @@
+{
+  "scope_correction_document": "CONTACT_MODE_SCOPE.md",
+  "original_world_z_audit_retained": true,
+  "sampled_frames_used_as_proof": false,
+  "examples": [
+    {
+      "interval": 70,
+      "cell": 0,
+      "original_world_z_status": "UNCERTAIN",
+      "mode_gate_status": "PASS",
+      "modes": {
+        "TOPOLOGICAL_HINGE": 8,
+        "FREE": 20
+      }
+    },
+    {
+      "interval": 70,
+      "cell": 1,
+      "original_world_z_status": "UNCERTAIN",
+      "mode_gate_status": "PASS",
+      "modes": {
+        "TOPOLOGICAL_HINGE": 8,
+        "FREE": 20
+      }
+    }
+  ]
+}

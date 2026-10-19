@@ -1,0 +1,22 @@
+{
+  "dog": {
+    "family": "QUADRUPED",
+    "neck_length": 0.12,
+    "tail_length": 0.18
+  },
+  "fox": {
+    "family": "QUADRUPED",
+    "neck_length": 0.12,
+    "tail_length": 0.35
+  },
+  "deer": {
+    "family": "QUADRUPED",
+    "neck_length": 0.25,
+    "tail_length": 0.15
+  },
+  "giraffe": {
+    "family": "QUADRUPED",
+    "neck_length": 0.45,
+    "tail_length": 0.16
+  }
+}

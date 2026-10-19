@@ -1,0 +1,192 @@
+interval 000/161: PASS; closure=PASS; exact=True; counts={'PASS': 1}
+interval 005/161: PASS; closure=PASS; exact=True; counts={'PASS': 6}
+interval 010/161: PASS; closure=PASS; exact=True; counts={'PASS': 11}
+interval 015/161: PASS; closure=PASS; exact=True; counts={'PASS': 16}
+interval 020/161: PASS; closure=PASS; exact=True; counts={'PASS': 21}
+interval 025/161: PASS; closure=PASS; exact=True; counts={'PASS': 26}
+interval 030/161: PASS; closure=PASS; exact=True; counts={'PASS': 31}
+interval 035/161: PASS; closure=PASS; exact=True; counts={'PASS': 36}
+interval 040/161: PASS; closure=PASS; exact=True; counts={'PASS': 41}
+interval 045/161: PASS; closure=PASS; exact=True; counts={'PASS': 46}
+interval 050/161: PASS; closure=PASS; exact=True; counts={'PASS': 51}
+interval 055/161: PASS; closure=PASS; exact=True; counts={'PASS': 56}
+interval 060/161: PASS; closure=PASS; exact=True; counts={'PASS': 61}
+interval 065/161: PASS; closure=PASS; exact=True; counts={'PASS': 66}
+interval 070/161: PASS; closure=PASS; exact=True; counts={'PASS': 71}
+interval 075/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 5}
+interval 080/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 10}
+interval 085/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 15}
+interval 090/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 20}
+interval 095/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 25}
+interval 100/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 30}
+interval 105/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 35}
+interval 110/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 40}
+interval 115/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 45}
+interval 120/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 50}
+interval 125/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 55}
+interval 130/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 60}
+interval 135/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 65}
+interval 140/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 70}
+interval 145/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 75}
+interval 150/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 80}
+interval 155/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 85}
+interval 160/161: UNCERTAIN; closure=PASS; exact=True; counts={'PASS': 71, 'UNCERTAIN': 90}
+interval 161/161: UNCERTAIN; closure=PASS; exact=False; counts={'PASS': 71, 'UNCERTAIN': 91}
+{
+  "schema_version": 1,
+  "experiment_id": "POC01-007C3-C_SINGULAR_CONTACT_EXACT_BRIDGE",
+  "client_date": "2026-10-18",
+  "source_interval_count": 162,
+  "source_keyframe_count": 163,
+  "status": "CONTINUOUS_RIGID_PATH_NOT_CERTIFIED",
+  "continuous_collision_detection_certified": false,
+  "historical_baseline_status": "RIGID_PATH_LAYER_ORDER_VALIDATED",
+  "counts": {
+    "PASS": 71,
+    "COLLISION": 0,
+    "UNCERTAIN": 91
+  },
+  "closure_counts": {
+    "PASS": 162
+  },
+  "raw_ccd_counts": {
+    "PASS": 71,
+    "UNCERTAIN": 91
+  },
+  "source_sha256": "c25ac604c1f4c90f0d44734370313967f2e333309c6bffcc3c52d6e37199be1d",
+  "middle_plans_sha256": "56fdcd74ce2b98da9cd5467f8dcd93328e001e26f270acd582a6583e3409a6df",
+  "middle_intervals_preserved": true,
+  "global_join_passed": true,
+  "protected_source_knots_preserved": true,
+  "source_knot_records_sha256": "13655b56ed39d8b94dd27a2aee0be932cab73b9d5c5f002a6b62724d399e1b1d",
+  "generated_cell_count": 574,
+  "cell_motion_kinds": {
+    "FLAT_SINGULAR_DEFLATED_EXACT_CHART": 1,
+    "REGULAR_EXACT_LOCAL_CHART": 126,
+    "ANALYTIC_SPHERICAL_3R": 128,
+    "GOAL_CONTACT_ACTIVE_SET_EXACT_3R_CHART": 318,
+    "FINITE_TOLERANCE_POLYLINE": 1
+  },
+  "exact_endpoint_interval_count": 100,
+  "max_continuous_closure_bound": 1.2359965766189411e-06,
+  "whole_path_exact_manifold_claimed": false,
+  "remaining_intervals": [
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161
+  ],
+  "backend": {
+    "name": "python_reference",
+    "native": false,
+    "algorithm": "swept_aabb_and_distance_lipschitz_subdivision",
+    "trajectory_scope": "linear_vertex_surrogate_only",
+    "guarantee_scope": "conditional_float64_error_allowance; ill_conditioned_queries_fail_closed",
+    "is_tight_inclusion_library": false,
+    "safe_semantics": "all_time_cells_have_separation_lower_bound_above_minimum_separation",
+    "possible_hit_is_definite_collision": false
+  },
+  "native_tight_inclusion_used": false,
+  "ccd_config": {
+    "closure_tolerance": 4e-06,
+    "numerical_error": 1e-11,
+    "material_tolerance": 3e-05,
+    "minimum_separation": 0.0,
+    "curve_tolerance": 1e-05,
+    "max_curve_depth": 3,
+    "max_feature_subdivisions": 64,
+    "max_pair_nodes": 31
+  },
+  "elapsed_seconds": 787.6364816,
+  "numeric_scope": "Conditional float64 reference enclosures with explicit guards; no formal interval arithmetic or native Tight-Inclusion claim",
+  "upgrade_gate": "162 distinct intervals; every cell/pair/closure/sector/coverage/join PASS; endpoint exact construction proved; protected middle unchanged",
+  "sequence_planner_started": false,
+  "dog_or_rrt_replanned": false
+}

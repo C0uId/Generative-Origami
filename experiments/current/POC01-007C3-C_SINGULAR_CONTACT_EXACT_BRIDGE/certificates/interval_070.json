@@ -1,0 +1,1000 @@
+{
+  "interval": 70,
+  "keyframes": [
+    70,
+    71
+  ],
+  "status": "PASS",
+  "reasons": [
+    "ALL_CONTINUOUS_GATES_PASS"
+  ],
+  "closure_status": "PASS",
+  "coverage_passed": true,
+  "collision_checked": true,
+  "cell_count": 2,
+  "plan": {
+    "source_interval": 70,
+    "cells": [
+      {
+        "kind": "GOAL_CONTACT_ACTIVE_SET_EXACT_3R_CHART",
+        "source_interval": 70,
+        "source_parameter_interval": [
+          0.0,
+          0.5
+        ],
+        "construction_status": "PASS",
+        "exact_seam_claimed": true,
+        "q0": [
+          -0.3310486042993785,
+          0.6326492491126658,
+          -0.33507085185281066,
+          -3.044444264885266,
+          0.2962232377050323,
+          -0.5832723419778885,
+          0.2933570068534557,
+          -3.0452090755074366
+        ],
+        "q1": [
+          -0.32693456390467956,
+          0.6281856705584177,
+          -0.3299489630232528,
+          -3.0687702053345225,
+          0.3006580441398655,
+          -0.5909264042678173,
+          0.2985076440822886,
+          -3.0693449813096327
+        ],
+        "dependent": [
+          0,
+          1,
+          2
+        ],
+        "regularity": {
+          "proven": true,
+          "status": "PASS",
+          "reason": "REGULAR_SPHERICAL_3R_BRANCH",
+          "interval": [
+            0.0,
+            0.5
+          ],
+          "acos_bounds": [
+            0.8053750915173172,
+            0.8101645662782171
+          ],
+          "inverse_jacobian_bound": 5.117685407650253,
+          "sin_beta_lower_bound": 0.5862025038732165,
+          "dependent_speed_l2_bound": 0.6724777028853196,
+          "angular_speed_l1_bound": 1.2961682527646756,
+          "dependent_acceleration_l1_bound": 14.892135289641699,
+          "branch_margin": 2.9708432625906753,
+          "alpha_projection_lower_bound": 0.41450776562278807,
+          "evaluation_error_bound": 3.1322549287169296e-09,
+          "proof_assumptions": [
+            "coplanar fixed unit axes",
+            "linear free angles",
+            "floating reference guard"
+          ]
+        },
+        "closure_certificate": {
+          "status": "PASS",
+          "reason": "SPHERICAL_3R_CONTINUOUS_IDENTITY",
+          "rotation_upper_bound": 3.1322549287169296e-09,
+          "endpoint_gap_upper_bound": 2.0223945517314605e-09,
+          "continuous_upper_bound": 3.1322549287169296e-09,
+          "observed_lower_bound": 0.0,
+          "structural_identity": "dependent product = inverse(free product)",
+          "regularity": {
+            "proven": true,
+            "status": "PASS",
+            "reason": "REGULAR_SPHERICAL_3R_BRANCH",
+            "interval": [
+              0.0,
+              0.5
+            ],
+            "acos_bounds": [
+              0.8053750915173172,
+              0.8101645662782171
+            ],
+            "inverse_jacobian_bound": 5.117685407650253,
+            "sin_beta_lower_bound": 0.5862025038732165,
+            "dependent_speed_l2_bound": 0.6724777028853196,
+            "angular_speed_l1_bound": 1.2961682527646756,
+            "dependent_acceleration_l1_bound": 14.892135289641699,
+            "branch_margin": 2.9708432625906753,
+            "alpha_projection_lower_bound": 0.41450776562278807,
+            "evaluation_error_bound": 3.1322549287169296e-09,
+            "proof_assumptions": [
+              "coplanar fixed unit axes",
+              "linear free angles",
+              "floating reference guard"
+            ]
+          },
+          "tolerance": 4e-06,
+          "numeric_scope": "conditional floating reference guard; not verified interval arithmetic"
+        },
+        "chart_after_active_set_update": {
+          "recomputed": true,
+          "dependent": [
+            0,
+            1,
+            2
+          ],
+          "active_boundary_joints": [],
+          "constraint_rank": 3,
+          "nullity": 5,
+          "singular_values": [
+            2.021783368514276,
+            1.9507266852660585,
+            0.3271962869440313
+          ],
+          "tangent_basis": [
+            [
+              0.2944149234732142,
+              0.04973700576109901,
+              0.04430784776539653,
+              -0.48965277081215874,
+              -0.50145129504389
+            ],
+            [
+              0.04969948320188771,
+              -0.24708700332306738,
+              -0.7136270064804611,
+              -0.1704737361460869,
+              0.16556619675245463
+            ],
+            [
+              -0.49559431902736084,
+              -0.5088154642938241,
+              0.22927162690055164,
+              -0.08463512093857012,
+              0.12378715750813653
+            ],
+            [
+              0.7773828280415966,
+              -0.16661839887311256,
+              0.020403309782659862,
+              0.11384303998840438,
+              0.18951625724606105
+            ],
+            [
+              -0.16390866245300992,
+              0.8022374213776777,
+              -0.11262648103499547,
+              0.01526018238941479,
+              0.14936664730425242
+            ],
+            [
+              0.14779568764262588,
+              0.03831920103792698,
+              0.6393277757594933,
+              -0.027862324216363907,
+              0.053128555060158913
+            ],
+            [
+              0.05403305445176276,
+              -0.05619597328128964,
+              -0.055507272067086,
+              0.8264354451749436,
+              -0.11932017349509064
+            ],
+            [
+              0.09634748535018403,
+              0.04010170394441303,
+              0.10623441041482372,
+              -0.16447127576412524,
+              0.7940556772510614
+            ]
+          ],
+          "linearized_constraint_residual": 2.9592013501888455e-16,
+          "scope": "local chart/tangent diagnostics; whole-time proof is the analytic branch enclosure"
+        },
+        "contact_active_joints": [],
+        "contact_audit": {
+          "status": "UNCERTAIN",
+          "scope": "all finite goal material patches over the complete time interval",
+          "pairs": [
+            {
+              "status": "UNCERTAIN",
+              "reason": "SIGNED_GAP_NONNEGATIVITY_UNRESOLVED",
+              "state": null,
+              "panels": [
+                0,
+                1
+              ],
+              "time_interval": [
+                0.0,
+                1.0
+              ],
+              "patch_vertex_count": 3,
+              "signed_gap_lower_bound": -0.418446727903537,
+              "signed_gap_upper_bound": 0.6875854157959298,
+              "per_material_vertex_gap_bounds": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.14930804011750903,
+                  0.6875854157959298
+                ],
+                [
+                  -0.418446727903537,
+                  0.418446727903537
+                ]
+              ],
+              "material_coordinates": [
+                [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    5.7148629847493203e-11,
+                    -1.2709480043991293e-10,
+                    1.0000000000699463
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    0.0,
+                    1.0
+                  ],
+                  [
+                    -0.0,
+                    1.0,
+                    0.0
+                  ]
+                ]
+              ],
+              "layer_order": [
+                3,
+                5
+              ],
+              "mapping_scope": "finite affine material goal patch; global collision proof remains separate",
+              "endpoint_contact_exemption": false
+            },
+            {
+              "status": "UNCERTAIN",
+              "reason": "SIGNED_GAP_NONNEGATIVITY_UNRESOLVED",
+              "state": null,
+              "panels": [
+                0,
+                2
+              ],
+              "time_interval": [
+                0.0,
+                1.0
+              ],
+              "patch_vertex_count": 3,
+              "signed_gap_lower_bound": -0.22401727367322719,
+              "signed_gap_upper_bound": 0.6875854157712189,
+              "per_material_vertex_gap_bounds": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.1493080401422201,
+                  0.6875854157712189
+                ],
+                [
+                  -0.22401727367322719,
+                  0.6128761821397408
+                ]
+              ],
+              "material_coordinates": [
+                [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    5.714873019217739e-11,
+                    1.0000000000699463,
+                    -1.2709500119001405e-10
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    0.0,
+                    1.0
+                  ],
+                  [
+                    -7.042782151876391e-12,
+                    7.69897242440033e-11,
+                    0.9999999999300531
+                  ]
+                ]
+              ],
+              "layer_order": [
+                3,
+                7
+              ],
+              "mapping_scope": "finite affine material goal patch; global collision proof remains separate",
+              "endpoint_contact_exemption": false
+            },
+            {
+              "status": "UNCERTAIN",
+              "reason": "SIGNED_GAP_NONNEGATIVITY_UNRESOLVED",
+              "state": null,
+              "panels": [
+                0,
+                3
+              ],
+              "time_interval": [
+                0.0,
+                1.0
+              ],
+              "patch_vertex_count": 3,
+              "signed_gap_lower_bound": -0.2240172736759369,
+              "signed_gap_upper_bound": 0.6523889906359174,
+              "per_material_vertex_gap_bounds": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.1845044653838868,
+                  0.6523889906359174
+                ],
+                [
+                  -0.2240172736759369,
+                  0.6128761821370312
+                ]
+              ],
+              "material_coordinates": [
+                [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    1.1429791246575307e-10,
+                    -2.5419032673008535e-10,
+                    1.0000000001398923
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    0.0,
+                    1.0
+                  ],
+                  [
+                    -7.042810779817113e-12,
+                    0.9999999999300532,
+                    7.698963688795857e-11
+                  ]
+                ]
+              ],
+              "layer_order": [
+                3,
+                6
+              ],
+              "mapping_scope": "finite affine material goal patch; global collision proof remains separate",
+              "endpoint_contact_exemption": false
+            },
+            {
+              "status": "UNCERTAIN",
+              "reason": "SIGNED_GAP_NONNEGATIVITY_UNRESOLVED",
+              "state": null,
+              "panels": [
+                0,
+                4
+              ],
+              "time_interval": [
+                0.0,
+                1.0
+              ],
+              "patch_vertex_count": 3,
+              "signed_gap_lower_bound": -0.44792147201652155,
+              "signed_gap_upper_bound": 0.6523889906928317,
+              "per_material_vertex_gap_bounds": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.1845044653269725,
+                  0.6523889906928317
+                ],
+                [
+                  -0.44792147201652155,
+                  0.388971983802341
+                ]
+              ],
+              "material_coordinates": [
+                [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    1.1429787671718399e-10,
+                    1.0000000001398925,
+                    -2.5419044646923794e-10
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    0.0,
+                    1.0
+                  ],
+                  [
+                    -1.4086038202957918e-11,
+                    1.5397961146814699e-10,
+                    0.9999999998601065
+                  ]
+                ]
+              ],
+              "layer_order": [
+                3,
+                4
+              ],
+              "mapping_scope": "finite affine material goal patch; global collision proof remains separate",
+              "endpoint_contact_exemption": false
+            },
+            {
+              "status": "UNCERTAIN",
+              "reason": "SIGNED_GAP_NONNEGATIVITY_UNRESOLVED",
+              "state": null,
+              "panels": [
+                0,
+                5
+              ],
+              "time_interval": [
+                0.0,
+                1.0
+              ],
+              "patch_vertex_count": 3,
+              "signed_gap_lower_bound": -0.38897198376065867,
+              "signed_gap_upper_bound": 0.45520420868386674,
+              "per_material_vertex_gap_bounds": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.38168924744230237,
+                  0.45520420868386674
+                ],
+                [
+                  -0.38897198376065867,
+                  0.44792147205820376
+                ]
+              ],
+              "material_coordinates": [
+                [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    1.71446498064242e-10,
+                    -3.8128532485151037e-10,
+                    1.0000000002098388
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    0.0,
+                    1.0
+                  ],
+                  [
+                    -1.4085954627346645e-11,
+                    0.9999999998601063,
+                    1.5397960684282452e-10
+                  ]
+                ]
+              ],
+              "layer_order": [
+                3,
+                2
+              ],
+              "mapping_scope": "finite affine material goal patch; global collision proof remains separate",
+              "endpoint_contact_exemption": false
+            },
+            {
+              "status": "UNCERTAIN",
+              "reason": "SIGNED_GAP_NONNEGATIVITY_UNRESOLVED",
+              "state": null,
+              "panels": [
+                0,
+                6
+              ],
+              "time_interval": [
+                0.0,
+                1.0
+              ],
+              "patch_vertex_count": 3,
+              "signed_gap_lower_bound": -0.3816892474748401,
+              "signed_gap_upper_bound": 0.5332582435209918,
+              "per_material_vertex_gap_bounds": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.3816892474748401,
+                  0.45520420865132916
+                ],
+                [
+                  -0.303635212303765,
+                  0.5332582435209918
+                ]
+              ],
+              "material_coordinates": [
+                [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    1.7144635710757075e-10,
+                    1.000000000209839,
+                    -3.81285447659252e-10
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    0.0,
+                    1.0
+                  ],
+                  [
+                    -2.1128996420469894e-11,
+                    2.3096908452085148e-10,
+                    0.99999999979016
+                  ]
+                ]
+              ],
+              "layer_order": [
+                3,
+                1
+              ],
+              "mapping_scope": "finite affine material goal patch; global collision proof remains separate",
+              "endpoint_contact_exemption": false
+            },
+            {
+              "status": "UNCERTAIN",
+              "reason": "SIGNED_GAP_NONNEGATIVITY_UNRESOLVED",
+              "state": null,
+              "panels": [
+                0,
+                7
+              ],
+              "time_interval": [
+                0.0,
+                1.0
+              ],
+              "patch_vertex_count": 3,
+              "signed_gap_lower_bound": -0.418446727903537,
+              "signed_gap_upper_bound": 0.5332582435125017,
+              "per_material_vertex_gap_bounds": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.418446727903537,
+                  0.418446727903537
+                ],
+                [
+                  -0.3036352123122548,
+                  0.5332582435125017
+                ]
+              ],
+              "material_coordinates": [
+                [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    0.9999999994916199,
+                    5.083801157823586e-10
+                  ],
+                  [
+                    2.285953833396716e-10,
+                    -2.0491246626447128e-17,
+                    0.9999999997714046
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    0.0,
+                    1.0
+                  ],
+                  [
+                    -2.1128876431076206e-11,
+                    0.9999999997901599,
+                    2.3096902168617817e-10
+                  ]
+                ]
+              ],
+              "layer_order": [
+                3,
+                0
+              ],
+              "mapping_scope": "finite affine material goal patch; global collision proof remains separate",
+              "endpoint_contact_exemption": false
+            },
+            {
+              "status": "UNCERTAIN",
+              "reason": "SIGNED_GAP_NONNEGATIVITY_UNRESOLVED",
+              "state": null,
+              "panels": [
+                1,
+                2
+              ],
+              "time_interval": [
+                0.0,
+                1.0
+              ],
+              "patch_vertex_count": 3,
+              "signed_gap_lower_bound": -0.4184467279035371,
+              "signed_gap_upper_bound": 0.6128761821397408,
+              "per_material_vertex_gap_bounds": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.22401727367322719,
+                  0.6128761821397408
+                ],
+                [
+                  -0.4184467279035371,
+                  0.41844672790353704
+                ]
+              ],
+              "material_coordinates": [
+                [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    -7.042784918662282e-12,
+                    7.698973936588371e-11,
+                    0.9999999999300531
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    0.0,
+                    1.0
+                  ],
+                  [
+                    1.1102230246173365e-16,
+                    1.0,
+                    0.0
+                  ]
+                ]
+              ],
+              "layer_order": [
+                5,
+                7
+              ],
+              "mapping_scope": "finite affine material goal patch; global collision proof remains separate",
+              "endpoint_contact_exemption": false
+            },
+            {
+              "status": "UNCERTAIN",
+              "reason": "SIGNED_GAP_NONNEGATIVITY_UNRESOLVED",
+              "state": null,
+              "panels": [
+                1,
+                3
+              ],
+              "time_interval": [
+                0.0,
+                1.0
+              ],
+              "patch_vertex_count": 3,
+              "signed_gap_lower_bound": -0.45364315314274195,
+              "signed_gap_upper_bound": 0.6128761821370312,
+              "per_material_vertex_gap_bounds": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.2240172736759369,
+                  0.6128761821370312
+                ],
+                [
+                  -0.45364315314274195,
+                  0.3832503027706975
+                ]
+              ],
+              "material_coordinates": [
+                [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    -7.042810779817113e-12,
+                    0.9999999999300532,
+                    7.698963688795857e-11
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    0.0,
+                    1.0
+                  ],
+                  [
+                    5.714928261336737e-11,
+                    -1.2709552629017245e-10,
+                    1.0000000000699463
+                  ]
+                ]
+              ],
+              "layer_order": [
+                5,
+                6
+              ],
+              "mapping_scope": "finite affine material goal patch; global collision proof remains separate",
+              "endpoint_contact_exemption": false
+            },
+            {
+              "status": "UNCERTAIN",
+              "reason": "SIGNED_GAP_NONNEGATIVITY_UNRESOLVED",
+              "state": null,
+              "panels": [
+                1,
+                4
+              ],
+              "time_interval": [
+                0.0,
+                1.0
+              ],
+              "patch_vertex_count": 3,
+              "signed_gap_lower_bound": -0.388971983802341,
+              "signed_gap_upper_bound": 0.45364315311428477,
+              "per_material_vertex_gap_bounds": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.388971983802341,
+                  0.44792147201652155
+                ],
+                [
+                  -0.38325030279915484,
+                  0.45364315311428477
+                ]
+              ],
+              "material_coordinates": [
+                [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    -1.4086040969743807e-11,
+                    1.5397962659002739e-10,
+                    0.9999999998601065
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    0.0,
+                    1.0
+                  ],
+                  [
+                    5.7149229792135954e-11,
+                    1.0000000000699465,
+                    -1.2709566732382882e-10
+                  ]
+                ]
+              ],
+              "layer_order": [
+                5,
+                4
+              ],
+              "mapping_scope": "finite affine material goal patch; global collision proof remains separate",
+              "endpoint_contact_exemption": false
+            },
+            {
+              "status": "UNCERTAIN",
+              "reason": "SIGNED_GAP_NONNEGATIVITY_UNRESOLVED",
+              "state": null,
+              "panels": [
+                1,
+                5
+              ],
+              "time_interval": [
+                0.0,
+                1.0
+              ],
+              "patch_vertex_count": 3,
+              "signed_gap_lower_bound": -0.38897198376065867,
+              "signed_gap_upper_bound": 0.7243428964522446,
+              "per_material_vertex_gap_bounds": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  -0.38897198376065867,
+                  0.44792147205820376
+                ],
+                [
+                  -0.11255055956755987,
+                  0.7243428964522446
+                ]
+              ],
+              "material_coordinates": [
+                [
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.0,
+                    0.0
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    -1.4085954627346645e-11,
+                    0.9999999998601063,
+                    1.5397960684282452e-10
+                  ]
+                ],
+                [
+                  [
+                    -0.0,
+                    0.0,
+                    1.0
+                  ],
+                  [
+                    1.1429786820696383e-10,
+                    -2.541905244115975e-10,
+                    1.0000000001398928
+                  ]

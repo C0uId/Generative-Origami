@@ -1,0 +1,7 @@
+{
+  "source": "POC01-010A_六端点布局筛查.zip",
+  "file": "contact_failure_clusters.json",
+  "sha256": "061a5749074037ea76c0ad50b53cb3810721dce1c361da3944c55db98391ee87",
+  "size_bytes": 4918919,
+  "note": "Derived contact-cluster artifact; omitted from normal Git tree to avoid large generated payload. Recreate with failure_signatures.py from C3-C2 evidence."
+}

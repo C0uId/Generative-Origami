@@ -1,0 +1,193 @@
+{
+  "scope": "Regular spherical atlas construction diagnostic only; no collision certification or sampling proof",
+  "source_shared_nodes_sha256": "bc31cfe90ba77f290a33a5cc55177b9a9f1da8c0f4144ab5e54857753f8bed6b",
+  "max_depth": 9,
+  "join_tolerance": 2e-11,
+  "checks": "whole-time analytic domain/regularity/sector bounds, exact endpoint branch match within join tolerance",
+  "intervals": [
+    {
+      "source_interval": 160,
+      "charts": [
+        {
+          "dependent": [
+            0,
+            1,
+            2
+          ],
+          "endpoint_error": 0.0,
+          "proven_leaf_count_before_failure": 126,
+          "status": "PASS",
+          "reason": "WHOLE_INTERVAL_DOMAIN_BRANCH_AND_SECTOR_PROVEN",
+          "failed_interval": null
+        },
+        {
+          "dependent": [
+            1,
+            2,
+            3
+          ],
+          "endpoint_error": 2.4868995751603507e-14,
+          "proven_leaf_count_before_failure": 0,
+          "status": "UNCERTAIN",
+          "reason": "WHOLE_INTERVAL_SECTOR_NOT_PROVEN",
+          "failed_interval": [
+            0.998046875,
+            1.0
+          ]
+        },
+        {
+          "dependent": [
+            2,
+            3,
+            4
+          ],
+          "status": "UNCERTAIN",
+          "reason": "ALPHA_PROJECTION_SINGULARITY"
+        },
+        {
+          "dependent": [
+            3,
+            4,
+            5
+          ],
+          "endpoint_error": 2.5757174171303632e-14,
+          "proven_leaf_count_before_failure": 0,
+          "status": "UNCERTAIN",
+          "reason": "WHOLE_INTERVAL_SECTOR_NOT_PROVEN",
+          "failed_interval": [
+            0.998046875,
+            1.0
+          ]
+        },
+        {
+          "dependent": [
+            4,
+            5,
+            6
+          ],
+          "endpoint_error": 4.574118861455645e-14,
+          "proven_leaf_count_before_failure": 126,
+          "status": "PASS",
+          "reason": "WHOLE_INTERVAL_DOMAIN_BRANCH_AND_SECTOR_PROVEN",
+          "failed_interval": null
+        },
+        {
+          "dependent": [
+            5,
+            6,
+            7
+          ],
+          "endpoint_error": 3.1530333899354446e-14,
+          "proven_leaf_count_before_failure": 0,
+          "status": "UNCERTAIN",
+          "reason": "WHOLE_INTERVAL_SECTOR_NOT_PROVEN",
+          "failed_interval": [
+            0.998046875,
+            1.0
+          ]
+        },
+        {
+          "dependent": [
+            6,
+            7,
+            0
+          ],
+          "status": "UNCERTAIN",
+          "reason": "ALPHA_PROJECTION_SINGULARITY"
+        },
+        {
+          "dependent": [
+            7,
+            0,
+            1
+          ],
+          "endpoint_error": 2.4424906541753444e-14,
+          "proven_leaf_count_before_failure": 0,
+          "status": "UNCERTAIN",
+          "reason": "WHOLE_INTERVAL_SECTOR_NOT_PROVEN",
+          "failed_interval": [
+            0.998046875,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "source_interval": 161,
+      "charts": [
+        {
+          "dependent": [
+            0,
+            1,
+            2
+          ],
+          "status": "UNCERTAIN",
+          "reason": "ALPHA_PROJECTION_SINGULARITY"
+        },
+        {
+          "dependent": [
+            1,
+            2,
+            3
+          ],
+          "status": "UNCERTAIN",
+          "reason": "ALPHA_PROJECTION_SINGULARITY"
+        },
+        {
+          "dependent": [
+            2,
+            3,
+            4
+          ],
+          "status": "UNCERTAIN",
+          "reason": "ALPHA_PROJECTION_SINGULARITY"
+        },
+        {
+          "dependent": [
+            3,
+            4,
+            5
+          ],
+          "status": "UNCERTAIN",
+          "reason": "ALPHA_PROJECTION_SINGULARITY"
+        },
+        {
+          "dependent": [
+            4,
+            5,
+            6
+          ],
+          "status": "UNCERTAIN",
+          "reason": "ALPHA_PROJECTION_SINGULARITY"
+        },
+        {
+          "dependent": [
+            5,
+            6,
+            7
+          ],
+          "status": "UNCERTAIN",
+          "reason": "ALPHA_PROJECTION_SINGULARITY"
+        },
+        {
+          "dependent": [
+            6,
+            7,
+            0
+          ],
+          "status": "UNCERTAIN",
+          "reason": "ALPHA_PROJECTION_SINGULARITY"
+        },
+        {
+          "dependent": [
+            7,
+            0,
+            1
+          ],
+          "status": "UNCERTAIN",
+          "reason": "ALPHA_PROJECTION_SINGULARITY"
+        }
+      ]
+    }
+  ]
+}

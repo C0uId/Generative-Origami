@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="960" viewBox="0 0 900 960">
+<rect width="900" height="960" fill="white"/>
+<text x="25" y="28" font-family="sans-serif" font-size="20">Q4-B01 source-path candidates — NOT crease patterns</text>
+<g transform="translate(40,65)"><text font-family="sans-serif" y="0" font-size="14">leg: short | tail: short</text>
+<rect x="0" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="25.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FL</text>
+<rect x="50" y="25" width="100" height="50" fill="#ffe6af" stroke="#666"/>
+<text x="100.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HEAD</text>
+<rect x="150" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="175.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FR</text>
+<rect x="0" y="75" width="200" height="100" fill="#e7e7e7" stroke="#666"/>
+<text x="100.0" y="125.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_BODY</text>
+<rect x="0" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="25.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HL</text>
+<rect x="50" y="175" width="100" height="50" fill="#eddbfa" stroke="#666"/>
+<text x="100.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_TAIL</text>
+<rect x="150" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="175.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HR</text>
+<path d="M 0 25 L 12.5 37.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="12.5" cy="37.5" r="3" fill="#b22"/>
+<path d="M 200 25 L 187.5 37.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="187.5" cy="37.5" r="3" fill="#b22"/>
+<path d="M 0 225 L 12.5 212.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="12.5" cy="212.5" r="3" fill="#b22"/>
+<path d="M 200 225 L 187.5 212.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="187.5" cy="212.5" r="3" fill="#b22"/>
+<path d="M 100 225 L 100 212.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="100" cy="212.5" r="3" fill="#b22"/>
+</g>
+<g transform="translate(335,65)"><text font-family="sans-serif" y="0" font-size="14">leg: short | tail: medium</text>
+<rect x="0" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="25.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FL</text>
+<rect x="50" y="25" width="100" height="50" fill="#ffe6af" stroke="#666"/>
+<text x="100.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HEAD</text>
+<rect x="150" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="175.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FR</text>
+<rect x="0" y="75" width="200" height="100" fill="#e7e7e7" stroke="#666"/>
+<text x="100.0" y="125.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_BODY</text>
+<rect x="0" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="25.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HL</text>
+<rect x="50" y="175" width="100" height="50" fill="#eddbfa" stroke="#666"/>
+<text x="100.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_TAIL</text>
+<rect x="150" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="175.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HR</text>
+<path d="M 0 25 L 12.5 37.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="12.5" cy="37.5" r="3" fill="#b22"/>
+<path d="M 200 25 L 187.5 37.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="187.5" cy="37.5" r="3" fill="#b22"/>
+<path d="M 0 225 L 12.5 212.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="12.5" cy="212.5" r="3" fill="#b22"/>
+<path d="M 200 225 L 187.5 212.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="187.5" cy="212.5" r="3" fill="#b22"/>
+<path d="M 100 225 L 100 200" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="100" cy="200" r="3" fill="#b22"/>
+</g>
+<g transform="translate(630,65)"><text font-family="sans-serif" y="0" font-size="14">leg: short | tail: long</text>
+<rect x="0" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="25.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FL</text>
+<rect x="50" y="25" width="100" height="50" fill="#ffe6af" stroke="#666"/>
+<text x="100.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HEAD</text>
+<rect x="150" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="175.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FR</text>
+<rect x="0" y="75" width="200" height="100" fill="#e7e7e7" stroke="#666"/>
+<text x="100.0" y="125.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_BODY</text>
+<rect x="0" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="25.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HL</text>
+<rect x="50" y="175" width="100" height="50" fill="#eddbfa" stroke="#666"/>
+<text x="100.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_TAIL</text>
+<rect x="150" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="175.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HR</text>
+<path d="M 0 25 L 12.5 37.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="12.5" cy="37.5" r="3" fill="#b22"/>
+<path d="M 200 25 L 187.5 37.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="187.5" cy="37.5" r="3" fill="#b22"/>
+<path d="M 0 225 L 12.5 212.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="12.5" cy="212.5" r="3" fill="#b22"/>
+<path d="M 200 225 L 187.5 212.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="187.5" cy="212.5" r="3" fill="#b22"/>
+<path d="M 100 225 L 100 187.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="100" cy="187.5" r="3" fill="#b22"/>
+</g>
+<g transform="translate(40,355)"><text font-family="sans-serif" y="0" font-size="14">leg: medium | tail: short</text>
+<rect x="0" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="25.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FL</text>
+<rect x="50" y="25" width="100" height="50" fill="#ffe6af" stroke="#666"/>
+<text x="100.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HEAD</text>
+<rect x="150" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="175.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FR</text>
+<rect x="0" y="75" width="200" height="100" fill="#e7e7e7" stroke="#666"/>
+<text x="100.0" y="125.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_BODY</text>
+<rect x="0" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="25.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HL</text>
+<rect x="50" y="175" width="100" height="50" fill="#eddbfa" stroke="#666"/>
+<text x="100.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_TAIL</text>
+<rect x="150" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="175.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HR</text>
+<path d="M 0 25 L 25 50" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="25" cy="50" r="3" fill="#b22"/>
+<path d="M 200 25 L 175 50" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="175" cy="50" r="3" fill="#b22"/>
+<path d="M 0 225 L 25 200" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="25" cy="200" r="3" fill="#b22"/>
+<path d="M 200 225 L 175 200" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="175" cy="200" r="3" fill="#b22"/>
+<path d="M 100 225 L 100 212.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="100" cy="212.5" r="3" fill="#b22"/>
+</g>
+<g transform="translate(335,355)"><text font-family="sans-serif" y="0" font-size="14">leg: medium | tail: medium</text>
+<rect x="0" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="25.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FL</text>
+<rect x="50" y="25" width="100" height="50" fill="#ffe6af" stroke="#666"/>
+<text x="100.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HEAD</text>
+<rect x="150" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="175.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FR</text>
+<rect x="0" y="75" width="200" height="100" fill="#e7e7e7" stroke="#666"/>
+<text x="100.0" y="125.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_BODY</text>
+<rect x="0" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="25.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HL</text>
+<rect x="50" y="175" width="100" height="50" fill="#eddbfa" stroke="#666"/>
+<text x="100.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_TAIL</text>
+<rect x="150" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="175.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HR</text>
+<path d="M 0 25 L 25 50" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="25" cy="50" r="3" fill="#b22"/>
+<path d="M 200 25 L 175 50" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="175" cy="50" r="3" fill="#b22"/>
+<path d="M 0 225 L 25 200" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="25" cy="200" r="3" fill="#b22"/>
+<path d="M 200 225 L 175 200" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="175" cy="200" r="3" fill="#b22"/>
+<path d="M 100 225 L 100 200" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="100" cy="200" r="3" fill="#b22"/>
+</g>
+<g transform="translate(630,355)"><text font-family="sans-serif" y="0" font-size="14">leg: medium | tail: long</text>
+<rect x="0" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="25.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FL</text>
+<rect x="50" y="25" width="100" height="50" fill="#ffe6af" stroke="#666"/>
+<text x="100.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HEAD</text>
+<rect x="150" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="175.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FR</text>
+<rect x="0" y="75" width="200" height="100" fill="#e7e7e7" stroke="#666"/>
+<text x="100.0" y="125.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_BODY</text>
+<rect x="0" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="25.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HL</text>
+<rect x="50" y="175" width="100" height="50" fill="#eddbfa" stroke="#666"/>
+<text x="100.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_TAIL</text>
+<rect x="150" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="175.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HR</text>
+<path d="M 0 25 L 25 50" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="25" cy="50" r="3" fill="#b22"/>
+<path d="M 200 25 L 175 50" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="175" cy="50" r="3" fill="#b22"/>
+<path d="M 0 225 L 25 200" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="25" cy="200" r="3" fill="#b22"/>
+<path d="M 200 225 L 175 200" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="175" cy="200" r="3" fill="#b22"/>
+<path d="M 100 225 L 100 187.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="100" cy="187.5" r="3" fill="#b22"/>
+</g>
+<g transform="translate(40,645)"><text font-family="sans-serif" y="0" font-size="14">leg: long | tail: short</text>
+<rect x="0" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="25.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FL</text>
+<rect x="50" y="25" width="100" height="50" fill="#ffe6af" stroke="#666"/>
+<text x="100.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HEAD</text>
+<rect x="150" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="175.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FR</text>
+<rect x="0" y="75" width="200" height="100" fill="#e7e7e7" stroke="#666"/>
+<text x="100.0" y="125.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_BODY</text>
+<rect x="0" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="25.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HL</text>
+<rect x="50" y="175" width="100" height="50" fill="#eddbfa" stroke="#666"/>
+<text x="100.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_TAIL</text>
+<rect x="150" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="175.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HR</text>
+<path d="M 0 25 L 37.5 62.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="37.5" cy="62.5" r="3" fill="#b22"/>
+<path d="M 200 25 L 162.5 62.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="162.5" cy="62.5" r="3" fill="#b22"/>
+<path d="M 0 225 L 37.5 187.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="37.5" cy="187.5" r="3" fill="#b22"/>
+<path d="M 200 225 L 162.5 187.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="162.5" cy="187.5" r="3" fill="#b22"/>
+<path d="M 100 225 L 100 212.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="100" cy="212.5" r="3" fill="#b22"/>
+</g>
+<g transform="translate(335,645)"><text font-family="sans-serif" y="0" font-size="14">leg: long | tail: medium</text>
+<rect x="0" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="25.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FL</text>
+<rect x="50" y="25" width="100" height="50" fill="#ffe6af" stroke="#666"/>
+<text x="100.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HEAD</text>
+<rect x="150" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="175.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FR</text>
+<rect x="0" y="75" width="200" height="100" fill="#e7e7e7" stroke="#666"/>
+<text x="100.0" y="125.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_BODY</text>
+<rect x="0" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="25.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HL</text>
+<rect x="50" y="175" width="100" height="50" fill="#eddbfa" stroke="#666"/>
+<text x="100.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_TAIL</text>
+<rect x="150" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="175.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HR</text>
+<path d="M 0 25 L 37.5 62.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="37.5" cy="62.5" r="3" fill="#b22"/>
+<path d="M 200 25 L 162.5 62.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="162.5" cy="62.5" r="3" fill="#b22"/>
+<path d="M 0 225 L 37.5 187.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="37.5" cy="187.5" r="3" fill="#b22"/>
+<path d="M 200 225 L 162.5 187.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="162.5" cy="187.5" r="3" fill="#b22"/>
+<path d="M 100 225 L 100 200" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="100" cy="200" r="3" fill="#b22"/>
+</g>
+<g transform="translate(630,645)"><text font-family="sans-serif" y="0" font-size="14">leg: long | tail: long</text>
+<rect x="0" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="25.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FL</text>
+<rect x="50" y="25" width="100" height="50" fill="#ffe6af" stroke="#666"/>
+<text x="100.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HEAD</text>
+<rect x="150" y="25" width="50" height="50" fill="#cfe8fc" stroke="#666"/>
+<text x="175.0" y="50.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_FR</text>
+<rect x="0" y="75" width="200" height="100" fill="#e7e7e7" stroke="#666"/>
+<text x="100.0" y="125.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_BODY</text>
+<rect x="0" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="25.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HL</text>
+<rect x="50" y="175" width="100" height="50" fill="#eddbfa" stroke="#666"/>
+<text x="100.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_TAIL</text>
+<rect x="150" y="175" width="50" height="50" fill="#d5f1d9" stroke="#666"/>
+<text x="175.0" y="200.0" text-anchor="middle" font-family="sans-serif" font-size="9">MAT_HR</text>
+<path d="M 0 25 L 37.5 62.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="37.5" cy="62.5" r="3" fill="#b22"/>
+<path d="M 200 25 L 162.5 62.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="162.5" cy="62.5" r="3" fill="#b22"/>
+<path d="M 0 225 L 37.5 187.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="37.5" cy="187.5" r="3" fill="#b22"/>
+<path d="M 200 225 L 162.5 187.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="162.5" cy="187.5" r="3" fill="#b22"/>
+<path d="M 100 225 L 100 187.5" stroke="#b22" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+<circle cx="100" cy="187.5" r="3" fill="#b22"/>
+</g>
+<text x="25" y="940" font-family="sans-serif" font-size="15">Dashed red: material-source probes. Physical folding and CP remain unverified.</text></svg>

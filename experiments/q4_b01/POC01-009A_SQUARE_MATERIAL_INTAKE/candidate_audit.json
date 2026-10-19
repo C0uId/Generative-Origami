@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "scope": "PLANAR_SQUARE_CP_ONLY",
+  "physical_base_certified": false,
+  "continuous_motion_certified": false,
+  "geometry_sha256": "904f594c6755ee7133e33293010b08acb16d4eb5be9d9f3596348bd3fcc42572",
+  "topology_sha256": "d97e8aaa00bbf274bfa84d40215113bf93f598faaa865a9f762efa09f68894a6",
+  "exact_material_area": "1",
+  "errors": []
+}

@@ -1,0 +1,138 @@
+{
+  "passed": false,
+  "scope": "PLANAR_SQUARE_CP_ONLY",
+  "physical_base_certified": false,
+  "continuous_motion_certified": false,
+  "geometry_sha256": "e890f62e2f3b2b8d30c4e4f6cb027766812873a8477da1a7b9ea72cc66c08fa6",
+  "topology_sha256": "7f40f97b76ce1721ceb721c394a2d8c7e09347f5ea129b154f0ad4ac5f2dd27b",
+  "exact_material_area": "0",
+  "errors": [
+    {
+      "reason": "BOUNDARY_CHORD_NOT_ON_SQUARE",
+      "edge": 9
+    },
+    {
+      "reason": "BOUNDARY_CHORD_NOT_ON_SQUARE",
+      "edge": 11
+    },
+    {
+      "reason": "BOUNDARY_CHORD_NOT_ON_SQUARE",
+      "edge": 13
+    },
+    {
+      "reason": "BOUNDARY_CHORD_NOT_ON_SQUARE",
+      "edge": 15
+    },
+    {
+      "reason": "BOUNDARY_GAP_OR_OVERLAP",
+      "axis": 0,
+      "side": 0
+    },
+    {
+      "reason": "INCOMPLETE_SQUARE_BOUNDARY",
+      "axis": 0,
+      "side": 0
+    },
+    {
+      "reason": "BOUNDARY_GAP_OR_OVERLAP",
+      "axis": 0,
+      "side": 1
+    },
+    {
+      "reason": "INCOMPLETE_SQUARE_BOUNDARY",
+      "axis": 0,
+      "side": 1
+    },
+    {
+      "reason": "BOUNDARY_GAP_OR_OVERLAP",
+      "axis": 1,
+      "side": 0
+    },
+    {
+      "reason": "INCOMPLETE_SQUARE_BOUNDARY",
+      "axis": 1,
+      "side": 0
+    },
+    {
+      "reason": "BOUNDARY_GAP_OR_OVERLAP",
+      "axis": 1,
+      "side": 1
+    },
+    {
+      "reason": "INCOMPLETE_SQUARE_BOUNDARY",
+      "axis": 1,
+      "side": 1
+    },
+    {
+      "reason": "EXPLICIT_MATERIAL_FACES_REQUIRED"
+    },
+    {
+      "reason": "FACE_AREA_NOT_UNIT_SQUARE",
+      "exact_area": "0"
+    },
+    {
+      "reason": "INTERIOR_FACE_INCIDENCE",
+      "edge": 0
+    },
+    {
+      "reason": "INTERIOR_FACE_INCIDENCE",
+      "edge": 1
+    },
+    {
+      "reason": "INTERIOR_FACE_INCIDENCE",
+      "edge": 2
+    },
+    {
+      "reason": "INTERIOR_FACE_INCIDENCE",
+      "edge": 3
+    },
+    {
+      "reason": "INTERIOR_FACE_INCIDENCE",
+      "edge": 4
+    },
+    {
+      "reason": "INTERIOR_FACE_INCIDENCE",
+      "edge": 5
+    },
+    {
+      "reason": "INTERIOR_FACE_INCIDENCE",
+      "edge": 6
+    },
+    {
+      "reason": "INTERIOR_FACE_INCIDENCE",
+      "edge": 7
+    },
+    {
+      "reason": "BOUNDARY_FACE_INCIDENCE",
+      "edge": 8
+    },
+    {
+      "reason": "BOUNDARY_FACE_INCIDENCE",
+      "edge": 9
+    },
+    {
+      "reason": "BOUNDARY_FACE_INCIDENCE",
+      "edge": 10
+    },
+    {
+      "reason": "BOUNDARY_FACE_INCIDENCE",
+      "edge": 11
+    },
+    {
+      "reason": "BOUNDARY_FACE_INCIDENCE",
+      "edge": 12
+    },
+    {
+      "reason": "BOUNDARY_FACE_INCIDENCE",
+      "edge": 13
+    },
+    {
+      "reason": "BOUNDARY_FACE_INCIDENCE",
+      "edge": 14
+    },
+    {
+      "reason": "BOUNDARY_FACE_INCIDENCE",
+      "edge": 15
+    }
+  ]
+}
