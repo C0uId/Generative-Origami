@@ -1,0 +1,17 @@
+schema_version: audit-1.0
+task_id: Q4-B01-CP-MEDIUM-MEDIUM
+state: READY_FOR_REVIEW
+objective: Build the first real crease-pattern candidate from the medium/medium screened layout.
+baseline_refs:
+  - governance/PROJECT_STATUS.md
+  - governance/MASTER_PLAN.md
+commit_ref: REPLACE_WITH_COMMIT
+changed_files: []
+tests: []
+experiments: []
+evidence_paths: []
+known_failures: []
+unresolved_questions: []
+architecture_change: false
+baseline_change: false
+recommended_next_task: null
