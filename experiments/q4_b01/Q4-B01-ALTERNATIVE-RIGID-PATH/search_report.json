@@ -1,0 +1,3646 @@
+{
+  "angle_index_to_original_edge_id": [
+    "E_Q4_MM_10",
+    "E_Q4_MM_11",
+    "E_Q4_MM_16",
+    "E_Q4_MM_12",
+    "E_Q4_MM_13",
+    "E_Q4_MM_08",
+    "E_Q4_MM_15",
+    "E_Q4_MM_09"
+  ],
+  "angle_signs": [
+    1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    1.0,
+    -1.0,
+    1.0,
+    -1.0
+  ],
+  "baseline_commit": "8aa98005f5d328dd9ce96bcdd4504acdb4a14d21",
+  "claim": "Numerical configurations and explicitly tested interpolants only; no CP infeasibility or continuous-path certificate.",
+  "collision": "UNKNOWN",
+  "contact": "UNKNOWN",
+  "continuous_rigid_path": "UNKNOWN",
+  "cp_geometry_sha256": "4c0d5c62e02bdf8028905a91c9c84b8f97d5013d08132d1c3f9eaff304b225f0",
+  "cp_topology_sha256": "f9d696953f771b1aff9bb234132c70beecd465f5cc2fdfef21c2e59bccd6721f",
+  "experiment_count": 2,
+  "face_to_sector": {
+    "FACE_Q4_MM_00": 5,
+    "FACE_Q4_MM_01": 6,
+    "FACE_Q4_MM_02": 7,
+    "FACE_Q4_MM_03": 0,
+    "FACE_Q4_MM_04": 1,
+    "FACE_Q4_MM_05": 2,
+    "FACE_Q4_MM_06": 3,
+    "FACE_Q4_MM_07": 4
+  },
+  "final_semantic_material_flow": "UNKNOWN",
+  "global_foldability": "UNKNOWN",
+  "layer_order": "UNKNOWN",
+  "material_mapping_reference": "experiments/q4_b01/Q4-B01-GLOBAL-VALIDATION/stable_ids.json",
+  "physical_verified": false,
+  "prior_known_failed_formula": "q=sign*pi*t (Issue #8); never erased by this run",
+  "schema_version": "q4-rigid-search-1.0",
+  "settings": {
+    "acceptance": "independent quaternion closure + full original polygon seams/rigidity + M/V domain + progress; solver status alone is insufficient",
+    "directions": [
+      "forward",
+      "backward"
+    ],
+    "initial_guess": "previous accepted signed angles plus pi*delta_target; clipped strictly inside [0,pi]",
+    "max_residual_calls_per_solve": 300,
+    "progress_definition": "mean(sign_k*q_k)/pi",
+    "randomness": "none",
+    "residual_definition": "[existing solver closure rotvec (3), mean(signed angles)/pi-target]",
+    "solver": "scipy least_squares trf; ftol=xtol=gtol=1e-12",
+    "targets_per_sweep": 33,
+    "tolerance": 1e-08
+  },
+  "signed_gap": "UNKNOWN",
+  "sweeps": [
+    {
+      "accepted_count": 2,
+      "all_requested_knots_close": false,
+      "attempts": [
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 0.0,
+          "initial_signed_angles_rad": [
+            1e-10,
+            1e-10,
+            1e-10,
+            1e-10,
+            1e-10,
+            1e-10,
+            1e-10,
+            1e-10
+          ],
+          "progress": 0.0,
+          "progress_error": 0.0,
+          "q_rad": [
+            0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            0.0,
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "residual_calls": 0,
+          "rigid_distance_error_unit": 0.0,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.0,
+          "solver": {
+            "message": "Endpoint explicitly checked; not used as evidence for intermediate closure.",
+            "status": "EXACT_ENDPOINT"
+          },
+          "solver_closure_rad": 0.0,
+          "status": "PASS",
+          "strictly_active_creases": 0,
+          "target": 0.0
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 7.809068331858248e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 5.09020031880532e-09,
+          "initial_signed_angles_rad": [
+            0.09817477042468103,
+            0.09817477042468103,
+            0.09817477042468103,
+            0.09817477042468103,
+            0.09817477042468103,
+            0.09817477042468103,
+            0.09817477042468103,
+            0.09817477042468103
+          ],
+          "progress": 0.03125024920511068,
+          "progress_error": 2.4920511067921813e-07,
+          "q_rad": [
+            0.07105358218473248,
+            -0.08127970555849579,
+            -0.054049797597624835,
+            -0.07665548376594249,
+            0.06434566579325462,
+            -0.1743819849541142,
+            0.08442055715911621,
+            -0.1792176495917272
+          ],
+          "residual_calls": 170,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 3.895206730702826e-08,
+          "solver": {
+            "message": "`xtol` termination condition is satisfied.",
+            "nfev": 42,
+            "status": 3
+          },
+          "solver_closure_rad": 7.300048299977716e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.03125
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 8.349888906924183e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 7.948079525462561e-10,
+          "initial_signed_angles_rad": [
+            0.19634954084936207,
+            0.19634954084936207,
+            0.19634954084936207,
+            0.19634954084936207,
+            0.19634954084936207,
+            0.19634954084936207,
+            0.19634954084936207,
+            0.19634954084936207
+          ],
+          "progress": 0.06249919139423995,
+          "progress_error": 8.086057600512064e-07,
+          "q_rad": [
+            0.16580419000077243,
+            -0.13107761219609676,
+            -0.20725102206331555,
+            -0.13191904109254013,
+            0.1638451205548711,
+            -0.33923750020618293,
+            0.08884630999785117,
+            -0.34279520820394305
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 3.675481306911453e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 8.429369702178808e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.0625
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.00015673481514513675,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 5.204170427930421e-17,
+          "initial_signed_angles_rad": [
+            0.2945243112740431,
+            0.2945243112740431,
+            0.2945243112740431,
+            0.2945243112740431,
+            0.2945243112740431,
+            0.2945243112740431,
+            0.2945243112740431,
+            0.2945243112740431
+          ],
+          "progress": 0.09428272172667655,
+          "progress_error": 0.0005327217266765522,
+          "q_rad": [
+            0.16467119432254163,
+            -5.5694893443748384e-06,
+            -0.4063401107942361,
+            -0.4299863334083805,
+            0.36210574733310547,
+            -0.42434113591520306,
+            3.5683922248343026e-05,
+            -0.5820974723107631
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 7.835883415200971e-05,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0001567348151451888,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.09375
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 3.2493045743461494e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 2.690723355766181e-09,
+          "initial_signed_angles_rad": [
+            0.39269908169872414,
+            0.39269908169872414,
+            0.39269908169872414,
+            0.39269908169872414,
+            0.39269908169872414,
+            0.39269908169872414,
+            0.39269908169872414,
+            0.39269908169872414
+          ],
+          "progress": 0.12500010955100194,
+          "progress_error": 1.0955100193665857e-07,
+          "q_rad": [
+            0.09397440655535338,
+            -0.28645925486933527,
+            -0.07953478071992753,
+            -0.44917463744523456,
+            0.31003991728083696,
+            -0.8001140970264464,
+            0.45519938523710224,
+            -0.6670989277725397
+          ],
+          "residual_calls": 266,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 1.6159715336601006e-08,
+          "solver": {
+            "message": "`xtol` termination condition is satisfied.",
+            "nfev": 50,
+            "status": 3
+          },
+          "solver_closure_rad": 2.9802322387695312e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.125
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 4.7726339425392816e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 5.579490914498775e-09,
+          "initial_signed_angles_rad": [
+            0.4908738521234052,
+            0.4908738521234052,
+            0.4908738521234052,
+            0.4908738521234052,
+            0.4908738521234052,
+            0.4908738521234052,
+            0.4908738521234052,
+            0.4908738521234052
+          ],
+          "progress": 0.1562500766559658,
+          "progress_error": 7.665596579720102e-08,
+          "q_rad": [
+            0.46973974766488963,
+            -0.7399117717778007,
+            -0.037454966994749234,
+            -0.5900364696406999,
+            0.5076873271984451,
+            -0.8486666695446895,
+            0.08242350563445512,
+            -0.6510722851060646
+          ],
+          "residual_calls": 208,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 2.061305427537776e-08,
+          "solver": {
+            "message": "`xtol` termination condition is satisfied.",
+            "nfev": 48,
+            "status": 3
+          },
+          "solver_closure_rad": 4.214684851089404e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.15625
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 8.89759282100612e-09,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 5.798045840591276e-16,
+          "initial_signed_angles_rad": [
+            0.5890486225480862,
+            0.5890486225480862,
+            0.5890486225480862,
+            0.5890486225480862,
+            0.5890486225480862,
+            0.5890486225480862,
+            0.5890486225480862,
+            0.5890486225480862
+          ],
+          "progress": 0.18749994726462482,
+          "progress_error": 5.273537517780369e-08,
+          "q_rad": [
+            0.4795885464564451,
+            -0.4572472444181165,
+            -0.46300261599676507,
+            -0.47746555956701014,
+            0.5365893735649081,
+            -1.0270519672545588,
+            0.2936045563086236,
+            -0.9778377914337241
+          ],
+          "residual_calls": 169,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 4.21118103425465e-09,
+          "solver": {
+            "message": "`xtol` termination condition is satisfied.",
+            "nfev": 41,
+            "status": 3
+          },
+          "solver_closure_rad": 8.897592241201536e-09,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.1875
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 2.385082650840671e-07,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.2453576022389235e-16,
+          "initial_signed_angles_rad": [
+            0.6872233929727672,
+            0.6872233929727672,
+            0.6872233929727672,
+            0.6872233929727672,
+            0.6872233929727672,
+            0.6872233929727672,
+            0.6872233929727672,
+            0.6872233929727672
+          ],
+          "progress": 0.21874895798548527,
+          "progress_error": 1.0420145147294058e-06,
+          "q_rad": [
+            0.5528391162355712,
+            -0.5784224952270418,
+            -0.4860891330212439,
+            -0.4726807674056415,
+            0.5074902270119777,
+            -1.229597197056913,
+            0.4926430172135768,
+            -1.1779990019290172
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 1.0444304815815742e-07,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 2.3850826495953135e-07,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.21875
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 3.833458964618473e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 8.787019507687693e-09,
+          "initial_signed_angles_rad": [
+            0.7853981633974483,
+            0.7853981633974483,
+            0.7853981633974483,
+            0.7853981633974483,
+            0.7853981633974483,
+            0.7853981633974483,
+            0.7853981633974483,
+            0.7853981633974483
+          ],
+          "progress": 0.2500098979589213,
+          "progress_error": 9.897958921312178e-06,
+          "q_rad": [
+            0.6600408320563503,
+            -0.6455913960876394,
+            -0.5267867486590501,
+            -0.645506107788307,
+            0.6602836329433049,
+            -1.3390401454756191,
+            0.4674971064826765,
+            -1.3386881005269005
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 1.804900707553241e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 4.712160915387242e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.25
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 1.1351376256598711e-07,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 6.2669089178814e-16,
+          "initial_signed_angles_rad": [
+            0.8835729338221293,
+            0.8835729338221293,
+            0.8835729338221293,
+            0.8835729338221293,
+            0.8835729338221293,
+            0.8835729338221293,
+            0.8835729338221293,
+            0.8835729338221293
+          ],
+          "progress": 0.2812482972770221,
+          "progress_error": 1.7027229778920905e-06,
+          "q_rad": [
+            0.08952348913770863,
+            -0.5488099858592904,
+            -0.6486754955186557,
+            -1.1417508815184543,
+            1.6637584151508062,
+            -1.8518887928096277,
+            0.10677788429346592,
+            -1.017355732193037
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 1.6653345369377348e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 5.6668057012549676e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 1.1351376193929622e-07,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.28125
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 6.131131808779973e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.7066733124090923e-09,
+          "initial_signed_angles_rad": [
+            0.9817477042468103,
+            0.9817477042468103,
+            0.9817477042468103,
+            0.9817477042468103,
+            0.9817477042468103,
+            0.9817477042468103,
+            0.9817477042468103,
+            0.9817477042468103
+          ],
+          "progress": 0.3124973250698364,
+          "progress_error": 2.6749301635931033e-06,
+          "q_rad": [
+            0.8450553026761747,
+            -0.8093539429874615,
+            -0.6504179154352383,
+            -0.8094056716635958,
+            0.8450452893668587,
+            -1.659226186320433,
+            0.5761233316852554,
+            -1.6592867655118586
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 2.9452422513907062e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 5.960464477539064e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.3125
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.00025434198691169266,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 2.5083017260452145e-16,
+          "initial_signed_angles_rad": [
+            1.0799224746714913,
+            1.0799224746714913,
+            1.0799224746714913,
+            1.0799224746714913,
+            1.0799224746714913,
+            1.0799224746714913,
+            1.0799224746714913,
+            1.0799224746714913
+          ],
+          "progress": 0.34140914397063465,
+          "progress_error": 0.0023408560293653458,
+          "q_rad": [
+            0.9377410613204433,
+            -0.893800536364466,
+            -0.6940209987506737,
+            -0.8938005023505503,
+            0.9377410484987623,
+            -1.8015363647357083,
+            0.6203708234934867,
+            -1.8015363330181153
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 8.867049368339022e-05,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0002543419869119435,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.34375
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 6.828834438465267e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.253330453218337e-08,
+          "initial_signed_angles_rad": [
+            1.1780972450961724,
+            1.1780972450961724,
+            1.1780972450961724,
+            1.1780972450961724,
+            1.1780972450961724,
+            1.1780972450961724,
+            1.1780972450961724,
+            1.1780972450961724
+          ],
+          "progress": 0.37499943159742627,
+          "progress_error": 5.684025737306975e-07,
+          "q_rad": [
+            1.0929949565177854,
+            -0.9964570970146241,
+            -0.7795095789301002,
+            -0.9960333966704942,
+            1.0965340794497072,
+            -1.9484074593600325,
+            0.5693745868455908,
+            -1.945452520466245
+          ],
+          "residual_calls": 212,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 2.9021280361479803e-08,
+          "solver": {
+            "message": "`xtol` termination condition is satisfied.",
+            "nfev": 44,
+            "status": 3
+          },
+          "solver_closure_rad": 5.57550398524693e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.375
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0013887624297905985,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.0625181290357943e-17,
+          "initial_signed_angles_rad": [
+            1.2762720155208536,
+            1.2762720155208536,
+            1.2762720155208536,
+            1.2762720155208536,
+            1.2762720155208536,
+            1.2762720155208536,
+            1.2762720155208536,
+            1.2762720155208536
+          ],
+          "progress": 0.39260007071020675,
+          "progress_error": 0.01364992928979325,
+          "q_rad": [
+            1.1074812812330708,
+            -1.049129940107424,
+            -0.7565044715839175,
+            -1.0491299276406716,
+            1.1074812265129486,
+            -2.0473310691797604,
+            0.7027269889564882,
+            -2.0473310783218692
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 5.551115123125783e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.0006511838633744185,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0013887624297906091,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.40625
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0014158368448159702,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 7.546047120499111e-17,
+          "initial_signed_angles_rad": [
+            1.3744467859455345,
+            1.3744467859455345,
+            1.3744467859455345,
+            1.3744467859455345,
+            1.3744467859455345,
+            1.3744467859455345,
+            1.3744467859455345,
+            1.3744467859455345
+          ],
+          "progress": 0.4167983073711653,
+          "progress_error": 0.0207016926288347,
+          "q_rad": [
+            1.1915278138528858,
+            -1.1265100863903934,
+            -0.7781275042194978,
+            -1.126510046378995,
+            1.1915278396402047,
+            -2.1601563716353613,
+            0.7407680095685585,
+            -2.1601563320414106
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 4.440892098500626e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.0005840778733641269,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0014158368448158947,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.4375
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.001531319639314839,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.4354836763708079e-16,
+          "initial_signed_angles_rad": [
+            1.4726215563702154,
+            1.4726215563702154,
+            1.4726215563702154,
+            1.4726215563702154,
+            1.4726215563702154,
+            1.4726215563702154,
+            1.4726215563702154,
+            1.4726215563702154
+          ],
+          "progress": 0.4421314250653075,
+          "progress_error": 0.026618574934692496,
+          "q_rad": [
+            1.2779797316745247,
+            -1.2106651907201065,
+            -0.7925582666099626,
+            -1.2106651277376015,
+            1.2779797033257152,
+            -2.2766600920074342,
+            0.7888065216948185,
+            -2.276660061480686
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.0006500701943437415,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0015313196393149826,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.46875
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0035268152552098172,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 5.650861722994449e-16,
+          "initial_signed_angles_rad": [
+            1.5707963267948966,
+            1.5707963267948966,
+            1.5707963267948966,
+            1.5707963267948966,
+            1.5707963267948966,
+            1.5707963267948966,
+            1.5707963267948966,
+            1.5707963267948966
+          ],
+          "progress": 0.466898926314575,
+          "progress_error": 0.033101073685424975,
+          "q_rad": [
+            1.3599084359868685,
+            -1.2982221819361148,
+            -0.7976169434016287,
+            -1.2982222311874192,
+            1.3599085035695646,
+            -2.38836114254122,
+            0.8438493076844213,
+            -2.3883611487234115
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 4.440892098500626e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.001242811493425389,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0035268152552103823,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.5
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0007154057073679843,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 7.412690253283394e-16,
+          "initial_signed_angles_rad": [
+            1.6689710972195777,
+            1.6689710972195777,
+            1.6689710972195777,
+            1.6689710972195777,
+            1.6689710972195777,
+            1.6689710972195777,
+            1.6689710972195777,
+            1.6689710972195777
+          ],
+          "progress": 0.5221712504982335,
+          "progress_error": 0.009078749501766459,
+          "q_rad": [
+            1.5640814039393691,
+            -1.5638194526326594,
+            -0.7372007177795569,
+            -1.5232033505972213,
+            1.567388864976757,
+            -2.6322434987340824,
+            0.9462116467101649,
+            -2.5894459804785566
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.00028659052655000806,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0007154057073687256,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.53125
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 1.3646918553270083e-07,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 3.721989825177484e-17,
+          "initial_signed_angles_rad": [
+            1.7671458676442586,
+            1.7671458676442586,
+            1.7671458676442586,
+            1.7671458676442586,
+            1.7671458676442586,
+            1.7671458676442586,
+            1.7671458676442586,
+            1.7671458676442586
+          ],
+          "progress": 0.5625053067080686,
+          "progress_error": 5.306708068641974e-06,
+          "q_rad": [
+            1.671892453555266,
+            -1.7594728862913809,
+            -0.6330464246765298,
+            -1.7592987330378809,
+            1.6718085508469889,
+            -2.7609876257292747,
+            1.1199777675419775,
+            -2.760815871595435
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 6.75967295345359e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 1.3646918549548093e-07,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.5625
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 9.507659308141794e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.6227059551403446e-08,
+          "initial_signed_angles_rad": [
+            1.8653206380689396,
+            1.8653206380689396,
+            1.8653206380689396,
+            1.8653206380689396,
+            1.8653206380689396,
+            1.8653206380689396,
+            1.8653206380689396,
+            1.8653206380689396
+          ],
+          "progress": 0.5937492466511363,
+          "progress_error": 7.533488637356811e-07,
+          "q_rad": [
+            1.8632100303319183,
+            -1.843221663448794,
+            -0.7103191462620125,
+            -1.8428620642878344,
+            1.8637609017793082,
+            -2.8796757909898507,
+            1.0403043756558028,
+            -2.8791921980739485
+          ],
+          "residual_calls": 258,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 4.2143433621444507e-08,
+          "solver": {
+            "message": "`xtol` termination condition is satisfied.",
+            "nfev": 50,
+            "status": 3
+          },
+          "solver_closure_rad": 7.884953353001449e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.59375
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 1.4498568256568277e-09,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 7.981678541348307e-16,
+          "initial_signed_angles_rad": [
+            1.9634954084936207,
+            1.9634954084936207,
+            1.9634954084936207,
+            1.9634954084936207,
+            1.9634954084936207,
+            1.9634954084936207,
+            1.9634954084936207,
+            1.9634954084936207
+          ],
+          "progress": 0.6249999868796439,
+          "progress_error": 1.3120356134876943e-08,
+          "q_rad": [
+            1.9203389541925573,
+            -1.9450278081944776,
+            -0.8343170746756643,
+            -1.7938173318367996,
+            1.9038526847315163,
+            -3.1132302637892244,
+            1.2534984610169018,
+            -2.943880359761307
+          ],
+          "residual_calls": 242,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 7.076619931100117e-10,
+          "solver": {
+            "message": "`xtol` termination condition is satisfied.",
+            "nfev": 50,
+            "status": 3
+          },
+          "solver_closure_rad": 1.4498576238246819e-09,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.625
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 7.914639597826099e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 2.3391356125791694e-08,
+          "initial_signed_angles_rad": [
+            2.061670178918302,
+            2.061670178918302,
+            2.061670178918302,
+            2.061670178918302,
+            2.061670178918302,
+            2.061670178918302,
+            2.061670178918302,
+            2.061670178918302
+          ],
+          "progress": 0.6562517850495119,
+          "progress_error": 1.785049511870973e-06,
+          "q_rad": [
+            1.970339199102084,
+            -2.476733063575752,
+            -0.18283144974062823,
+            -2.473857528844865,
+            1.9449868648945146,
+            -3.0056593794108935,
+            1.4339702878258092,
+            -3.005028521139333
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 2.7942935435012253e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 5.575503985246929e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.65625
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0009614738936697554,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 8.280051991271797e-16,
+          "initial_signed_angles_rad": [
+            2.1598449493429825,
+            2.1598449493429825,
+            2.1598449493429825,
+            2.1598449493429825,
+            2.1598449493429825,
+            2.1598449493429825,
+            2.1598449493429825,
+            2.1598449493429825
+          ],
+          "progress": 0.6912272496722914,
+          "progress_error": 0.0037272496722914328,
+          "q_rad": [
+            2.064001535713047,
+            -2.4049389761141513,
+            -0.5309308166007641,
+            -2.4048954335281407,
+            2.0639148891579437,
+            -3.1415925917445624,
+            1.6205688291593532,
+            -3.1415925242344245
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.00047097926812239056,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0009614738936705834,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.6875
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 6.141190133920471e-05,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 2.407741974547184e-16,
+          "initial_signed_angles_rad": [
+            2.2580197197676637,
+            2.2580197197676637,
+            2.2580197197676637,
+            2.2580197197676637,
+            2.2580197197676637,
+            2.2580197197676637,
+            2.2580197197676637,
+            2.2580197197676637
+          ],
+          "progress": 0.7189004586026796,
+          "progress_error": 0.00015045860267959288,
+          "q_rad": [
+            2.0921984870769457,
+            -2.7512063127812962,
+            -0.2774146881168324,
+            -2.7512250367519075,
+            1.9046888816602199,
+            -3.1415103473286528,
+            2.0081031565005687,
+            -3.1415922850516695
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 3.3306690738754696e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 2.684233466307613e-05,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 6.141190133944549e-05,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.71875
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 9.008445109338057e-05,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.10500530167007e-15,
+          "initial_signed_angles_rad": [
+            2.356194490192345,
+            2.356194490192345,
+            2.356194490192345,
+            2.356194490192345,
+            2.356194490192345,
+            2.356194490192345,
+            2.356194490192345,
+            2.356194490192345
+          ],
+          "progress": 0.749867974208308,
+          "progress_error": 0.00013202579169202533,
+          "q_rad": [
+            3.141524485496295,
+            -3.129508275036247,
+            -0.01896333500648824,
+            -3.141586502296075,
+            3.1415909335082235,
+            -3.129528571924487,
+            0.0019482284311860545,
+            -3.1415874197816462
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 3.3306690738754696e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 4.503987395572986e-05,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 9.008445109227557e-05,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.75
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 2.880909402338807e-05,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.4153310684897336e-15,
+          "initial_signed_angles_rad": [
+            2.454369260617026,
+            2.454369260617026,
+            2.454369260617026,
+            2.454369260617026,
+            2.454369260617026,
+            2.454369260617026,
+            2.454369260617026,
+            2.454369260617026
+          ],
+          "progress": 0.7812499254046082,
+          "progress_error": 7.459539175247443e-08,
+          "q_rad": [
+            0.6297082882438344,
+            -3.141487069165366,
+            -0.39286884760595064,
+            -3.14150000393108,
+            3.0637054882294317,
+            -3.1415915061791404,
+            2.982498768690738,
+            -3.1415922381039865
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 3.3306690738754696e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 1.4403596974209631e-05,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 2.8809094021972738e-05,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.78125
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.02186539176377209,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 9.54097911787244e-16,
+          "initial_signed_angles_rad": [
+            2.552544031041707,
+            2.552544031041707,
+            2.552544031041707,
+            2.552544031041707,
+            2.552544031041707,
+            2.552544031041707,
+            2.552544031041707,
+            2.552544031041707
+          ],
+          "progress": 0.8168839403439091,
+          "progress_error": 0.0043839403439090985,
+          "q_rad": [
+            2.619655602765619,
+            -3.1107752811003992,
+            -0.8941410559334286,
+            -3.1098028785349,
+            1.3800399061986854,
+            -3.1403875149607936,
+            3.1367797907913024,
+            -3.1389506562741305
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.010466916874589484,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.021865391763771135,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.8125
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0004125798287746786,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 5.234528088760015e-16,
+          "initial_signed_angles_rad": [
+            2.650718801466388,
+            2.650718801466388,
+            2.650718801466388,
+            2.650718801466388,
+            2.650718801466388,
+            2.650718801466388,
+            2.650718801466388,
+            2.650718801466388
+          ],
+          "progress": 0.8440693335792931,
+          "progress_error": 0.0003193335792931462,
+          "q_rad": [
+            1.6843422266019472,
+            -3.1414383510814483,
+            -1.1824873282640633,
+            -3.1413450975231183,
+            3.117450964526348,
+            -3.14159264509766,
+            2.663727384814502,
+            -3.1413921420360307
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 4.440892098500626e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.00015427452368858166,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.00041257982877415515,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.84375
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.045843592185945886,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 5.134781488891349e-16,
+          "initial_signed_angles_rad": [
+            2.748893571891069,
+            2.748893571891069,
+            2.748893571891069,
+            2.748893571891069,
+            2.748893571891069,
+            2.748893571891069,
+            2.748893571891069,
+            2.748893571891069
+          ],
+          "progress": 0.9419834700434636,
+          "progress_error": 0.06698347004346361,
+          "q_rad": [
+            3.0808959435490357,
+            -3.124898790687023,
+            -2.465532667649201,
+            -3.1318712068647523,
+            2.6486483724708583,
+            -3.128494685553168,
+            2.979057609381679,
+            -3.1152275181768103
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 5.551115123125783e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.022692270434309478,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.04584359218594537,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.875
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 1.1216589034714719e-07,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.3322769105953143e-08,
+          "initial_signed_angles_rad": [
+            2.84706834231575,
+            2.84706834231575,
+            2.84706834231575,
+            2.84706834231575,
+            2.84706834231575,
+            2.84706834231575,
+            2.84706834231575,
+            2.84706834231575
+          ],
+          "progress": 0.906248268094625,
+          "progress_error": 1.7319053750020075e-06,
+          "q_rad": [
+            2.75534960396558,
+            -3.141592565083982,
+            -1.9634738165920087,
+            -3.1415925583319853,
+            2.755347497927658,
+            -3.1415926535897927,
+            2.7359618619155803,
+            -3.1415926535897913
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 3.3306690738754696e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 5.403667783846455e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 9.884312124119404e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.90625
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0007389745228691141,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 4.0950316054777502e-16,
+          "initial_signed_angles_rad": [
+            2.945243112740431,
+            2.945243112740431,
+            2.945243112740431,
+            2.945243112740431,
+            2.945243112740431,
+            2.945243112740431,
+            2.945243112740431,
+            2.945243112740431
+          ],
+          "progress": 0.9362112365863838,
+          "progress_error": 0.0012887634136161674,
+          "q_rad": [
+            2.87639251657669,
+            -3.1413501125072165,
+            -2.340751543993168,
+            -3.1413458796560927,
+            2.8763908521158714,
+            -3.14159163117211,
+            2.870140124854404,
+            -3.1415920836684417
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 3.3306690738754696e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.00015986738520181059,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0007389745228695236,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.9375
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.002429656503213191,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.6258695778592624e-15,
+          "initial_signed_angles_rad": [
+            3.043417883165112,
+            3.043417883165112,
+            3.043417883165112,
+            3.043417883165112,
+            3.043417883165112,
+            3.043417883165112,
+            3.043417883165112,
+            3.043417883165112
+          ],
+          "progress": 0.9663234419723198,
+          "progress_error": 0.0024265580276802146,
+          "q_rad": [
+            3.000992490709088,
+            -3.140633599505701,
+            -2.7213295027919733,
+            -3.140621644746232,
+            3.0009970706323976,
+            -3.1408168920271056,
+            3.000147784331511,
+            -3.1408180255907334
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 5.551115123125783e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.0012141075687503906,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.002429656503211565,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.96875
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 3.6093421358607945e-16,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 3.9669878841675033e-16,
+          "initial_signed_angles_rad": [
+            3.141592653489793,
+            3.141592653489793,
+            3.141592653489793,
+            3.141592653489793,
+            3.141592653489793,
+            3.141592653489793,
+            3.141592653489793,
+            3.141592653489793
+          ],
+          "progress": 1.0,
+          "progress_error": 0.0,
+          "q_rad": [
+            3.141592653589793,
+            -3.141592653589793,
+            -3.141592653589793,
+            -3.141592653589793,
+            3.141592653589793,
+            -3.141592653589793,
+            3.141592653589793,
+            -3.141592653589793
+          ],
+          "residual_calls": 0,
+          "rigid_distance_error_unit": 5.551115123125783e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 4.766659437787538e-16,
+          "solver": {
+            "message": "Endpoint explicitly checked; not used as evidence for intermediate closure.",
+            "status": "EXACT_ENDPOINT"
+          },
+          "solver_closure_rad": 7.576330020028298e-16,
+          "status": "PASS",
+          "strictly_active_creases": 8,
+          "target": 1.0
+        }
+      ],
+      "direction": "forward",
+      "endpoint_coverage": [
+        0.0,
+        1.0
+      ],
+      "interpolation": {
+        "continuous_certificate": false,
+        "continuous_closure": "FAIL",
+        "definition": "piecewise linear interpolation in signed crease-angle coordinates",
+        "failed_knot_targets": [],
+        "reason": "Any failing interior sample refutes this interpolant; finite passing samples cannot certify it.",
+        "samples": [
+          {
+            "angle_domain_valid": true,
+            "closure_rad": 1.5555732012480108,
+            "face_ids": [
+              "FACE_Q4_MM_00",
+              "FACE_Q4_MM_01",
+              "FACE_Q4_MM_02",
+              "FACE_Q4_MM_03",
+              "FACE_Q4_MM_04",
+              "FACE_Q4_MM_05",
+              "FACE_Q4_MM_06",
+              "FACE_Q4_MM_07"
+            ],
+            "fraction": 0.25,
+            "from_target": 0.0,
+            "independent_agreement_rad": 2.220446049250313e-16,
+            "progress": 0.25,
+            "progress_error": 0.0,
+            "q_rad": [
+              0.7853981633974483,
+              -0.7853981633974483,
+              -0.7853981633974483,
+              -0.7853981633974483,
+              0.7853981633974483,
+              -0.7853981633974483,
+              0.7853981633974483,
+              -0.7853981633974483
+            ],
+            "rigid_distance_error_unit": 2.220446049250313e-16,
+            "scope": "SAMPLED_CONFIGURATION_ONLY",
+            "shared_vertex_gap_unit": 0.6949826669324117,
+            "solver_closure_rad": 1.555573201248011,
+            "status": "FAIL",
+            "strictly_active_creases": 8,
+            "target": 0.25,
+            "to_target": 1.0
+          },
+          {
+            "angle_domain_valid": true,
+            "closure_rad": 2.6804096878968,
+            "face_ids": [
+              "FACE_Q4_MM_00",
+              "FACE_Q4_MM_01",
+              "FACE_Q4_MM_02",
+              "FACE_Q4_MM_03",
+              "FACE_Q4_MM_04",
+              "FACE_Q4_MM_05",
+              "FACE_Q4_MM_06",
+              "FACE_Q4_MM_07"
+            ],
+            "fraction": 0.5,
+            "from_target": 0.0,
+            "independent_agreement_rad": 3.1086244689504383e-15,
+            "progress": 0.5,
+            "progress_error": 0.0,
+            "q_rad": [
+              1.5707963267948966,
+              -1.5707963267948966,
+              -1.5707963267948966,
+              -1.5707963267948966,
+              1.5707963267948966,
+              -1.5707963267948966,
+              1.5707963267948966,
+              -1.5707963267948966
+            ],
+            "rigid_distance_error_unit": 7.771561172376096e-16,
+            "scope": "SAMPLED_CONFIGURATION_ONLY",
+            "shared_vertex_gap_unit": 0.898408786493275,
+            "solver_closure_rad": 2.680409687896803,
+            "status": "FAIL",
+            "strictly_active_creases": 8,
+            "target": 0.5,
+            "to_target": 1.0
+          },
+          {
+            "angle_domain_valid": true,
+            "closure_rad": 2.0819906077852486,
+            "face_ids": [
+              "FACE_Q4_MM_00",
+              "FACE_Q4_MM_01",
+              "FACE_Q4_MM_02",
+              "FACE_Q4_MM_03",
+              "FACE_Q4_MM_04",
+              "FACE_Q4_MM_05",
+              "FACE_Q4_MM_06",
+              "FACE_Q4_MM_07"
+            ],
+            "fraction": 0.75,
+            "from_target": 0.0,
+            "independent_agreement_rad": 0.0,
+            "progress": 0.75,
+            "progress_error": 0.0,
+            "q_rad": [
+              2.356194490192345,
+              -2.356194490192345,
+              -2.356194490192345,
+              -2.356194490192345,
+              2.356194490192345,
+              -2.356194490192345,
+              2.356194490192345,
+              -2.356194490192345
+            ],
+            "rigid_distance_error_unit": 3.3306690738754696e-16,
+            "scope": "SAMPLED_CONFIGURATION_ONLY",
+            "shared_vertex_gap_unit": 0.8034677186248549,
+            "solver_closure_rad": 2.0819906077852486,
+            "status": "FAIL",
+            "strictly_active_creases": 8,
+            "target": 0.75,
+            "to_target": 1.0
+          }
+        ],
+        "status": "FAIL"
+      },
+      "max_knot_jump_rad_l2": 8.885765876316732,
+      "rejected_targets": [
+        0.03125,
+        0.0625,
+        0.09375,
+        0.125,
+        0.15625,
+        0.1875,
+        0.21875,
+        0.25,
+        0.28125,
+        0.3125,
+        0.34375,
+        0.375,
+        0.40625,
+        0.4375,
+        0.46875,
+        0.5,
+        0.53125,
+        0.5625,
+        0.59375,
+        0.625,
+        0.65625,
+        0.6875,
+        0.71875,
+        0.75,
+        0.78125,
+        0.8125,
+        0.84375,
+        0.875,
+        0.90625,
+        0.9375,
+        0.96875
+      ]
+    },
+    {
+      "accepted_count": 2,
+      "all_requested_knots_close": false,
+      "attempts": [
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 3.6093421358607945e-16,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 3.9669878841675033e-16,
+          "initial_signed_angles_rad": [
+            3.141592653489793,
+            3.141592653489793,
+            3.141592653489793,
+            3.141592653489793,
+            3.141592653489793,
+            3.141592653489793,
+            3.141592653489793,
+            3.141592653489793
+          ],
+          "progress": 1.0,
+          "progress_error": 0.0,
+          "q_rad": [
+            3.141592653589793,
+            -3.141592653589793,
+            -3.141592653589793,
+            -3.141592653589793,
+            3.141592653589793,
+            -3.141592653589793,
+            3.141592653589793,
+            -3.141592653589793
+          ],
+          "residual_calls": 0,
+          "rigid_distance_error_unit": 5.551115123125783e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 4.766659437787538e-16,
+          "solver": {
+            "message": "Endpoint explicitly checked; not used as evidence for intermediate closure.",
+            "status": "EXACT_ENDPOINT"
+          },
+          "solver_closure_rad": 7.576330020028298e-16,
+          "status": "PASS",
+          "strictly_active_creases": 8,
+          "target": 1.0
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.002429656503213191,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.6258695778592624e-15,
+          "initial_signed_angles_rad": [
+            3.043417883165112,
+            3.043417883165112,
+            3.043417883165112,
+            3.043417883165112,
+            3.043417883165112,
+            3.043417883165112,
+            3.043417883165112,
+            3.043417883165112
+          ],
+          "progress": 0.9663234419723198,
+          "progress_error": 0.0024265580276802146,
+          "q_rad": [
+            3.000992490709088,
+            -3.140633599505701,
+            -2.7213295027919733,
+            -3.140621644746232,
+            3.0009970706323976,
+            -3.1408168920271056,
+            3.000147784331511,
+            -3.1408180255907334
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 5.551115123125783e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.0012141075687503906,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.002429656503211565,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.96875
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0007389745228691141,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 4.0950316054777502e-16,
+          "initial_signed_angles_rad": [
+            2.945243112740431,
+            2.945243112740431,
+            2.945243112740431,
+            2.945243112740431,
+            2.945243112740431,
+            2.945243112740431,
+            2.945243112740431,
+            2.945243112740431
+          ],
+          "progress": 0.9362112365863838,
+          "progress_error": 0.0012887634136161674,
+          "q_rad": [
+            2.87639251657669,
+            -3.1413501125072165,
+            -2.340751543993168,
+            -3.1413458796560927,
+            2.8763908521158714,
+            -3.14159163117211,
+            2.870140124854404,
+            -3.1415920836684417
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 3.3306690738754696e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.00015986738520181059,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0007389745228695236,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.9375
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 1.1216589034714719e-07,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.3322769105953143e-08,
+          "initial_signed_angles_rad": [
+            2.84706834231575,
+            2.84706834231575,
+            2.84706834231575,
+            2.84706834231575,
+            2.84706834231575,
+            2.84706834231575,
+            2.84706834231575,
+            2.84706834231575
+          ],
+          "progress": 0.906248268094625,
+          "progress_error": 1.7319053750020075e-06,
+          "q_rad": [
+            2.75534960396558,
+            -3.141592565083982,
+            -1.9634738165920087,
+            -3.1415925583319853,
+            2.755347497927658,
+            -3.1415926535897927,
+            2.7359618619155803,
+            -3.1415926535897913
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 3.3306690738754696e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 5.403667783846455e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 9.884312124119404e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.90625
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.045843592185945886,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 5.134781488891349e-16,
+          "initial_signed_angles_rad": [
+            2.748893571891069,
+            2.748893571891069,
+            2.748893571891069,
+            2.748893571891069,
+            2.748893571891069,
+            2.748893571891069,
+            2.748893571891069,
+            2.748893571891069
+          ],
+          "progress": 0.9419834700434636,
+          "progress_error": 0.06698347004346361,
+          "q_rad": [
+            3.0808959435490357,
+            -3.124898790687023,
+            -2.465532667649201,
+            -3.1318712068647523,
+            2.6486483724708583,
+            -3.128494685553168,
+            2.979057609381679,
+            -3.1152275181768103
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 5.551115123125783e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.022692270434309478,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.04584359218594537,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.875
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0004125798287746786,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 5.234528088760015e-16,
+          "initial_signed_angles_rad": [
+            2.650718801466388,
+            2.650718801466388,
+            2.650718801466388,
+            2.650718801466388,
+            2.650718801466388,
+            2.650718801466388,
+            2.650718801466388,
+            2.650718801466388
+          ],
+          "progress": 0.8440693335792931,
+          "progress_error": 0.0003193335792931462,
+          "q_rad": [
+            1.6843422266019472,
+            -3.1414383510814483,
+            -1.1824873282640633,
+            -3.1413450975231183,
+            3.117450964526348,
+            -3.14159264509766,
+            2.663727384814502,
+            -3.1413921420360307
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 4.440892098500626e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.00015427452368858166,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.00041257982877415515,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.84375
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.02186539176377209,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 9.54097911787244e-16,
+          "initial_signed_angles_rad": [
+            2.552544031041707,
+            2.552544031041707,
+            2.552544031041707,
+            2.552544031041707,
+            2.552544031041707,
+            2.552544031041707,
+            2.552544031041707,
+            2.552544031041707
+          ],
+          "progress": 0.8168839403439091,
+          "progress_error": 0.0043839403439090985,
+          "q_rad": [
+            2.619655602765619,
+            -3.1107752811003992,
+            -0.8941410559334286,
+            -3.1098028785349,
+            1.3800399061986854,
+            -3.1403875149607936,
+            3.1367797907913024,
+            -3.1389506562741305
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.010466916874589484,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.021865391763771135,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.8125
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 2.880909402338807e-05,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.4153310684897336e-15,
+          "initial_signed_angles_rad": [
+            2.454369260617026,
+            2.454369260617026,
+            2.454369260617026,
+            2.454369260617026,
+            2.454369260617026,
+            2.454369260617026,
+            2.454369260617026,
+            2.454369260617026
+          ],
+          "progress": 0.7812499254046082,
+          "progress_error": 7.459539175247443e-08,
+          "q_rad": [
+            0.6297082882438344,
+            -3.141487069165366,
+            -0.39286884760595064,
+            -3.14150000393108,
+            3.0637054882294317,
+            -3.1415915061791404,
+            2.982498768690738,
+            -3.1415922381039865
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 3.3306690738754696e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 1.4403596974209631e-05,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 2.8809094021972738e-05,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.78125
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 9.008445109338057e-05,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.10500530167007e-15,
+          "initial_signed_angles_rad": [
+            2.356194490192345,
+            2.356194490192345,
+            2.356194490192345,
+            2.356194490192345,
+            2.356194490192345,
+            2.356194490192345,
+            2.356194490192345,
+            2.356194490192345
+          ],
+          "progress": 0.749867974208308,
+          "progress_error": 0.00013202579169202533,
+          "q_rad": [
+            3.141524485496295,
+            -3.129508275036247,
+            -0.01896333500648824,
+            -3.141586502296075,
+            3.1415909335082235,
+            -3.129528571924487,
+            0.0019482284311860545,
+            -3.1415874197816462
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 3.3306690738754696e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 4.503987395572986e-05,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 9.008445109227557e-05,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.75
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 6.141190133920471e-05,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 2.407741974547184e-16,
+          "initial_signed_angles_rad": [
+            2.2580197197676637,
+            2.2580197197676637,
+            2.2580197197676637,
+            2.2580197197676637,
+            2.2580197197676637,
+            2.2580197197676637,
+            2.2580197197676637,
+            2.2580197197676637
+          ],
+          "progress": 0.7189004586026796,
+          "progress_error": 0.00015045860267959288,
+          "q_rad": [
+            2.0921984870769457,
+            -2.7512063127812962,
+            -0.2774146881168324,
+            -2.7512250367519075,
+            1.9046888816602199,
+            -3.1415103473286528,
+            2.0081031565005687,
+            -3.1415922850516695
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 3.3306690738754696e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 2.684233466307613e-05,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 6.141190133944549e-05,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.71875
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0009614738936697554,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 8.280051991271797e-16,
+          "initial_signed_angles_rad": [
+            2.1598449493429825,
+            2.1598449493429825,
+            2.1598449493429825,
+            2.1598449493429825,
+            2.1598449493429825,
+            2.1598449493429825,
+            2.1598449493429825,
+            2.1598449493429825
+          ],
+          "progress": 0.6912272496722914,
+          "progress_error": 0.0037272496722914328,
+          "q_rad": [
+            2.064001535713047,
+            -2.4049389761141513,
+            -0.5309308166007641,
+            -2.4048954335281407,
+            2.0639148891579437,
+            -3.1415925917445624,
+            1.6205688291593532,
+            -3.1415925242344245
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.00047097926812239056,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0009614738936705834,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.6875
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 7.914639597826099e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 2.3391356125791694e-08,
+          "initial_signed_angles_rad": [
+            2.061670178918302,
+            2.061670178918302,
+            2.061670178918302,
+            2.061670178918302,
+            2.061670178918302,
+            2.061670178918302,
+            2.061670178918302,
+            2.061670178918302
+          ],
+          "progress": 0.6562517850495119,
+          "progress_error": 1.785049511870973e-06,
+          "q_rad": [
+            1.970339199102084,
+            -2.476733063575752,
+            -0.18283144974062823,
+            -2.473857528844865,
+            1.9449868648945146,
+            -3.0056593794108935,
+            1.4339702878258092,
+            -3.005028521139333
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 2.7942935435012253e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 5.575503985246929e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.65625
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 1.4498568256568277e-09,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 7.981678541348307e-16,
+          "initial_signed_angles_rad": [
+            1.9634954084936207,
+            1.9634954084936207,
+            1.9634954084936207,
+            1.9634954084936207,
+            1.9634954084936207,
+            1.9634954084936207,
+            1.9634954084936207,
+            1.9634954084936207
+          ],
+          "progress": 0.6249999868796439,
+          "progress_error": 1.3120356134876943e-08,
+          "q_rad": [
+            1.9203389541925573,
+            -1.9450278081944776,
+            -0.8343170746756643,
+            -1.7938173318367996,
+            1.9038526847315163,
+            -3.1132302637892244,
+            1.2534984610169018,
+            -2.943880359761307
+          ],
+          "residual_calls": 242,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 7.076619931100117e-10,
+          "solver": {
+            "message": "`xtol` termination condition is satisfied.",
+            "nfev": 50,
+            "status": 3
+          },
+          "solver_closure_rad": 1.4498576238246819e-09,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.625
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 9.507659308141794e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.6227059551403446e-08,
+          "initial_signed_angles_rad": [
+            1.8653206380689396,
+            1.8653206380689396,
+            1.8653206380689396,
+            1.8653206380689396,
+            1.8653206380689396,
+            1.8653206380689396,
+            1.8653206380689396,
+            1.8653206380689396
+          ],
+          "progress": 0.5937492466511363,
+          "progress_error": 7.533488637356811e-07,
+          "q_rad": [
+            1.8632100303319183,
+            -1.843221663448794,
+            -0.7103191462620125,
+            -1.8428620642878344,
+            1.8637609017793082,
+            -2.8796757909898507,
+            1.0403043756558028,
+            -2.8791921980739485
+          ],
+          "residual_calls": 258,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 4.2143433621444507e-08,
+          "solver": {
+            "message": "`xtol` termination condition is satisfied.",
+            "nfev": 50,
+            "status": 3
+          },
+          "solver_closure_rad": 7.884953353001449e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.59375
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 1.3646918553270083e-07,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 3.721989825177484e-17,
+          "initial_signed_angles_rad": [
+            1.7671458676442586,
+            1.7671458676442586,
+            1.7671458676442586,
+            1.7671458676442586,
+            1.7671458676442586,
+            1.7671458676442586,
+            1.7671458676442586,
+            1.7671458676442586
+          ],
+          "progress": 0.5625053067080686,
+          "progress_error": 5.306708068641974e-06,
+          "q_rad": [
+            1.671892453555266,
+            -1.7594728862913809,
+            -0.6330464246765298,
+            -1.7592987330378809,
+            1.6718085508469889,
+            -2.7609876257292747,
+            1.1199777675419775,
+            -2.760815871595435
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 6.75967295345359e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 1.3646918549548093e-07,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.5625
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0007154057073679843,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 7.412690253283394e-16,
+          "initial_signed_angles_rad": [
+            1.6689710972195777,
+            1.6689710972195777,
+            1.6689710972195777,
+            1.6689710972195777,
+            1.6689710972195777,
+            1.6689710972195777,
+            1.6689710972195777,
+            1.6689710972195777
+          ],
+          "progress": 0.5221712504982335,
+          "progress_error": 0.009078749501766459,
+          "q_rad": [
+            1.5640814039393691,
+            -1.5638194526326594,
+            -0.7372007177795569,
+            -1.5232033505972213,
+            1.567388864976757,
+            -2.6322434987340824,
+            0.9462116467101649,
+            -2.5894459804785566
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.00028659052655000806,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0007154057073687256,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.53125
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0035268152552098172,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 5.650861722994449e-16,
+          "initial_signed_angles_rad": [
+            1.5707963267948966,
+            1.5707963267948966,
+            1.5707963267948966,
+            1.5707963267948966,
+            1.5707963267948966,
+            1.5707963267948966,
+            1.5707963267948966,
+            1.5707963267948966
+          ],
+          "progress": 0.466898926314575,
+          "progress_error": 0.033101073685424975,
+          "q_rad": [
+            1.3599084359868685,
+            -1.2982221819361148,
+            -0.7976169434016287,
+            -1.2982222311874192,
+            1.3599085035695646,
+            -2.38836114254122,
+            0.8438493076844213,
+            -2.3883611487234115
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 4.440892098500626e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.001242811493425389,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0035268152552103823,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.5
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.001531319639314839,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.4354836763708079e-16,
+          "initial_signed_angles_rad": [
+            1.4726215563702154,
+            1.4726215563702154,
+            1.4726215563702154,
+            1.4726215563702154,
+            1.4726215563702154,
+            1.4726215563702154,
+            1.4726215563702154,
+            1.4726215563702154
+          ],
+          "progress": 0.4421314250653075,
+          "progress_error": 0.026618574934692496,
+          "q_rad": [
+            1.2779797316745247,
+            -1.2106651907201065,
+            -0.7925582666099626,
+            -1.2106651277376015,
+            1.2779797033257152,
+            -2.2766600920074342,
+            0.7888065216948185,
+            -2.276660061480686
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.0006500701943437415,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0015313196393149826,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.46875
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0014158368448159702,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 7.546047120499111e-17,
+          "initial_signed_angles_rad": [
+            1.3744467859455345,
+            1.3744467859455345,
+            1.3744467859455345,
+            1.3744467859455345,
+            1.3744467859455345,
+            1.3744467859455345,
+            1.3744467859455345,
+            1.3744467859455345
+          ],
+          "progress": 0.4167983073711653,
+          "progress_error": 0.0207016926288347,
+          "q_rad": [
+            1.1915278138528858,
+            -1.1265100863903934,
+            -0.7781275042194978,
+            -1.126510046378995,
+            1.1915278396402047,
+            -2.1601563716353613,
+            0.7407680095685585,
+            -2.1601563320414106
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 4.440892098500626e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.0005840778733641269,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0014158368448158947,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.4375
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0013887624297905985,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.0625181290357943e-17,
+          "initial_signed_angles_rad": [
+            1.2762720155208536,
+            1.2762720155208536,
+            1.2762720155208536,
+            1.2762720155208536,
+            1.2762720155208536,
+            1.2762720155208536,
+            1.2762720155208536,
+            1.2762720155208536
+          ],
+          "progress": 0.39260007071020675,
+          "progress_error": 0.01364992928979325,
+          "q_rad": [
+            1.1074812812330708,
+            -1.049129940107424,
+            -0.7565044715839175,
+            -1.0491299276406716,
+            1.1074812265129486,
+            -2.0473310691797604,
+            0.7027269889564882,
+            -2.0473310783218692
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 5.551115123125783e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.0006511838633744185,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0013887624297906091,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.40625
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 6.828834438465267e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.253330453218337e-08,
+          "initial_signed_angles_rad": [
+            1.1780972450961724,
+            1.1780972450961724,
+            1.1780972450961724,
+            1.1780972450961724,
+            1.1780972450961724,
+            1.1780972450961724,
+            1.1780972450961724,
+            1.1780972450961724
+          ],
+          "progress": 0.37499943159742627,
+          "progress_error": 5.684025737306975e-07,
+          "q_rad": [
+            1.0929949565177854,
+            -0.9964570970146241,
+            -0.7795095789301002,
+            -0.9960333966704942,
+            1.0965340794497072,
+            -1.9484074593600325,
+            0.5693745868455908,
+            -1.945452520466245
+          ],
+          "residual_calls": 212,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 2.9021280361479803e-08,
+          "solver": {
+            "message": "`xtol` termination condition is satisfied.",
+            "nfev": 44,
+            "status": 3
+          },
+          "solver_closure_rad": 5.57550398524693e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.375
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.00025434198691169266,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 2.5083017260452145e-16,
+          "initial_signed_angles_rad": [
+            1.0799224746714913,
+            1.0799224746714913,
+            1.0799224746714913,
+            1.0799224746714913,
+            1.0799224746714913,
+            1.0799224746714913,
+            1.0799224746714913,
+            1.0799224746714913
+          ],
+          "progress": 0.34140914397063465,
+          "progress_error": 0.0023408560293653458,
+          "q_rad": [
+            0.9377410613204433,
+            -0.893800536364466,
+            -0.6940209987506737,
+            -0.8938005023505503,
+            0.9377410484987623,
+            -1.8015363647357083,
+            0.6203708234934867,
+            -1.8015363330181153
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 8.867049368339022e-05,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.0002543419869119435,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.34375
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 8.770226565842028e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 8.143115597590098e-10,
+          "initial_signed_angles_rad": [
+            0.9817477042468106,
+            0.9817477042468106,
+            0.9817477042468106,
+            0.9817477042468106,
+            0.9817477042468106,
+            0.9817477042468106,
+            0.9817477042468106,
+            0.9817477042468106
+          ],
+          "progress": 0.31249734413594205,
+          "progress_error": 2.6558640579543713e-06,
+          "q_rad": [
+            0.8450552444933631,
+            -0.8093541117079646,
+            -0.6504178916984088,
+            -0.8094055955866926,
+            0.8450452958799388,
+            -1.6592264672007382,
+            0.5761235568305314,
+            -1.6592867214327383
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 4.102092704539836e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 8.688795409866127e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.3125
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 3.118723331672422e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.0113809061277201e-08,
+          "initial_signed_angles_rad": [
+            0.8835729338221294,
+            0.8835729338221294,
+            0.8835729338221294,
+            0.8835729338221294,
+            0.8835729338221294,
+            0.8835729338221294,
+            0.8835729338221294,
+            0.8835729338221294
+          ],
+          "progress": 0.2812498130824423,
+          "progress_error": 1.8691755770960938e-07,
+          "q_rad": [
+            0.09001297731848362,
+            -0.5496624890524257,
+            -0.647846864146922,
+            -1.1414234349595274,
+            1.6630833600540886,
+            -1.8520935754612278,
+            0.10724019603011184,
+            -1.0172158758036391
+          ],
+          "residual_calls": 232,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 5.244515505454164e-09,
+          "solver": {
+            "message": "`xtol` termination condition is satisfied.",
+            "nfev": 48,
+            "status": 3
+          },
+          "solver_closure_rad": 2.1073424255447017e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.28125
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 3.833458964618473e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 8.787019507687693e-09,
+          "initial_signed_angles_rad": [
+            0.7853981633974483,
+            0.7853981633974483,
+            0.7853981633974483,
+            0.7853981633974483,
+            0.7853981633974483,
+            0.7853981633974483,
+            0.7853981633974483,
+            0.7853981633974483
+          ],
+          "progress": 0.2500098979589213,
+          "progress_error": 9.897958921312178e-06,
+          "q_rad": [
+            0.6600408320563503,
+            -0.6455913960876394,
+            -0.5267867486590501,
+            -0.645506107788307,
+            0.6602836329433049,
+            -1.3390401454756191,
+            0.4674971064826765,
+            -1.3386881005269005
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 1.804900707553241e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 4.712160915387242e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.25
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 1.3137549951456977e-07,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 3.0194808157572644e-16,
+          "initial_signed_angles_rad": [
+            0.6872233929727671,
+            0.6872233929727671,
+            0.6872233929727671,
+            0.6872233929727671,
+            0.6872233929727671,
+            0.6872233929727671,
+            0.6872233929727671,
+            0.6872233929727671
+          ],
+          "progress": 0.21874893740835652,
+          "progress_error": 1.0625916434803262e-06,
+          "q_rad": [
+            0.5528390942356435,
+            -0.5784226542564401,
+            -0.48608895609460495,
+            -0.4726806916182769,
+            0.507490059203212,
+            -1.2295971214452637,
+            0.49264295299169886,
+            -1.1779989080961908
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 6.29847388999749e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 1.313754992126217e-07,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.21875
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 7.157699350005259e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.4234894997245698e-09,
+          "initial_signed_angles_rad": [
+            0.589048622548086,
+            0.589048622548086,
+            0.589048622548086,
+            0.589048622548086,
+            0.589048622548086,
+            0.589048622548086,
+            0.589048622548086,
+            0.589048622548086
+          ],
+          "progress": 0.18749851578310378,
+          "progress_error": 1.4842168962192481e-06,
+          "q_rad": [
+            0.46755179544378783,
+            -0.4535320323511081,
+            -0.4683530505778828,
+            -0.48088542718187854,
+            0.5539571498734733,
+            -1.0399638500657766,
+            0.2857973543520117,
+            -0.9623110180995904
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 2.7371298301283978e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 7.300048299977716e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.1875
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 5.8950617667591046e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 7.331481108555351e-09,
+          "initial_signed_angles_rad": [
+            0.4908738521234053,
+            0.4908738521234053,
+            0.4908738521234053,
+            0.4908738521234053,
+            0.4908738521234053,
+            0.4908738521234053,
+            0.4908738521234053,
+            0.4908738521234053
+          ],
+          "progress": 0.15625128002896743,
+          "progress_error": 1.2800289674319565e-06,
+          "q_rad": [
+            0.4674313070885887,
+            -0.737269074985526,
+            -0.036517300424901436,
+            -0.592100619252592,
+            0.5088210141945594,
+            -0.848890521381984,
+            0.08433068524176705,
+            -0.6516624650541266
+          ],
+          "residual_calls": 227,
+          "rigid_distance_error_unit": 1.1102230246251565e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 2.9321647474463093e-08,
+          "solver": {
+            "message": "`xtol` termination condition is satisfied.",
+            "nfev": 51,
+            "status": 3
+          },
+          "solver_closure_rad": 5.1619136559035694e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.15625
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 3.2493045743461494e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 2.690723355766181e-09,
+          "initial_signed_angles_rad": [
+            0.39269908169872414,
+            0.39269908169872414,
+            0.39269908169872414,
+            0.39269908169872414,
+            0.39269908169872414,
+            0.39269908169872414,
+            0.39269908169872414,
+            0.39269908169872414
+          ],
+          "progress": 0.12500010955100194,
+          "progress_error": 1.0955100193665857e-07,
+          "q_rad": [
+            0.09397440655535338,
+            -0.28645925486933527,
+            -0.07953478071992753,
+            -0.44917463744523456,
+            0.31003991728083696,
+            -0.8001140970264464,
+            0.45519938523710224,
+            -0.6670989277725397
+          ],
+          "residual_calls": 266,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 1.6159715336601006e-08,
+          "solver": {
+            "message": "`xtol` termination condition is satisfied.",
+            "nfev": 50,
+            "status": 3
+          },
+          "solver_closure_rad": 2.9802322387695312e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.125
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0002435451086635702,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 1.6032639625629397e-16,
+          "initial_signed_angles_rad": [
+            0.294524311274043,
+            0.294524311274043,
+            0.294524311274043,
+            0.294524311274043,
+            0.294524311274043,
+            0.294524311274043,
+            0.294524311274043,
+            0.294524311274043
+          ],
+          "progress": 0.0959890545312098,
+          "progress_error": 0.0022390545312098026,
+          "q_rad": [
+            0.14786361450423616,
+            -7.528565754072794e-08,
+            -0.39759791746289463,
+            -0.4560642943962312,
+            0.3916001306230262,
+            -0.4482076518388438,
+            0.0002728522011689709,
+            -0.5708615320101715
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 1.6653345369377348e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.00011885347659678307,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 0.00024354510866340988,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.09375
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 4.325228921003256e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 3.869319943839865e-09,
+          "initial_signed_angles_rad": [
+            0.1963495408493623,
+            0.1963495408493623,
+            0.1963495408493623,
+            0.1963495408493623,
+            0.1963495408493623,
+            0.1963495408493623,
+            0.1963495408493623,
+            0.1963495408493623
+          ],
+          "progress": 0.062499164616789865,
+          "progress_error": 8.353832101348768e-07,
+          "q_rad": [
+            0.16580435661703544,
+            -0.13107746593291383,
+            -0.20725086254161418,
+            -0.13191906658478894,
+            0.16384477818980883,
+            -0.33923697852121887,
+            0.08884631836733844,
+            -0.34279550457013075
+          ],
+          "residual_calls": 300,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 2.161458854744202e-08,
+          "solver": {
+            "message": "Strict residual-call cap, including finite-difference calls, reached.",
+            "status": "BUDGET_EXHAUSTED"
+          },
+          "solver_closure_rad": 4.712160915387242e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.0625
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 1.544162403431005e-08,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 4.423464130913073e-18,
+          "initial_signed_angles_rad": [
+            0.09817477042468115,
+            0.09817477042468115,
+            0.09817477042468115,
+            0.09817477042468115,
+            0.09817477042468115,
+            0.09817477042468115,
+            0.09817477042468115,
+            0.09817477042468115
+          ],
+          "progress": 0.031249993228685005,
+          "progress_error": 6.771314994824529e-09,
+          "q_rad": [
+            0.07120898902593148,
+            -0.08135276318552837,
+            -0.054029670421079125,
+            -0.07662896527150406,
+            0.06422512161867205,
+            -0.17422111929330814,
+            0.08438495266340532,
+            -0.17934641173631224
+          ],
+          "residual_calls": 126,
+          "rigid_distance_error_unit": 2.220446049250313e-16,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 7.55317600387664e-09,
+          "solver": {
+            "message": "`xtol` termination condition is satisfied.",
+            "nfev": 38,
+            "status": 3
+          },
+          "solver_closure_rad": 1.5441624038733513e-08,
+          "status": "FAIL",
+          "strictly_active_creases": 8,
+          "target": 0.03125
+        },
+        {
+          "angle_domain_valid": true,
+          "closure_rad": 0.0,
+          "face_ids": [
+            "FACE_Q4_MM_00",
+            "FACE_Q4_MM_01",
+            "FACE_Q4_MM_02",
+            "FACE_Q4_MM_03",
+            "FACE_Q4_MM_04",
+            "FACE_Q4_MM_05",
+            "FACE_Q4_MM_06",
+            "FACE_Q4_MM_07"
+          ],
+          "independent_agreement_rad": 0.0,
+          "initial_signed_angles_rad": [
+            1e-10,
+            1e-10,
+            1e-10,
+            1e-10,
+            1e-10,
+            1e-10,
+            1e-10,
+            1e-10
+          ],
+          "progress": 0.0,
+          "progress_error": 0.0,
+          "q_rad": [
+            0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            0.0,
+            -0.0,
+            0.0,
+            -0.0
+          ],
+          "residual_calls": 0,
+          "rigid_distance_error_unit": 0.0,
+          "scope": "SAMPLED_CONFIGURATION_ONLY",
+          "shared_vertex_gap_unit": 0.0,
+          "solver": {
+            "message": "Endpoint explicitly checked; not used as evidence for intermediate closure.",
+            "status": "EXACT_ENDPOINT"
+          },
+          "solver_closure_rad": 0.0,
+          "status": "PASS",
+          "strictly_active_creases": 0,
+          "target": 0.0
+        }
+      ],
+      "direction": "backward",
+      "endpoint_coverage": [
+        0.0,
+        1.0
+      ],
+      "interpolation": {
+        "continuous_certificate": false,
+        "continuous_closure": "FAIL",
+        "definition": "piecewise linear interpolation in signed crease-angle coordinates",
+        "failed_knot_targets": [],
+        "reason": "Any failing interior sample refutes this interpolant; finite passing samples cannot certify it.",
+        "samples": [
+          {
+            "angle_domain_valid": true,
+            "closure_rad": 1.5555732012480108,
+            "face_ids": [
+              "FACE_Q4_MM_00",
+              "FACE_Q4_MM_01",
+              "FACE_Q4_MM_02",
+              "FACE_Q4_MM_03",
+              "FACE_Q4_MM_04",
+              "FACE_Q4_MM_05",
+              "FACE_Q4_MM_06",
+              "FACE_Q4_MM_07"
+            ],
+            "fraction": 0.25,
+            "from_target": 0.0,
+            "independent_agreement_rad": 2.220446049250313e-16,
+            "progress": 0.25,
+            "progress_error": 0.0,
+            "q_rad": [
+              0.7853981633974483,
+              -0.7853981633974483,
+              -0.7853981633974483,
+              -0.7853981633974483,
+              0.7853981633974483,
+              -0.7853981633974483,
+              0.7853981633974483,
+              -0.7853981633974483
+            ],
+            "rigid_distance_error_unit": 2.220446049250313e-16,
+            "scope": "SAMPLED_CONFIGURATION_ONLY",
+            "shared_vertex_gap_unit": 0.6949826669324117,
+            "solver_closure_rad": 1.555573201248011,
+            "status": "FAIL",
+            "strictly_active_creases": 8,
+            "target": 0.25,
+            "to_target": 1.0
+          },
+          {
+            "angle_domain_valid": true,
+            "closure_rad": 2.6804096878968,
+            "face_ids": [
+              "FACE_Q4_MM_00",
+              "FACE_Q4_MM_01",
+              "FACE_Q4_MM_02",
+              "FACE_Q4_MM_03",
+              "FACE_Q4_MM_04",
+              "FACE_Q4_MM_05",
+              "FACE_Q4_MM_06",
+              "FACE_Q4_MM_07"
+            ],
+            "fraction": 0.5,
+            "from_target": 0.0,
+            "independent_agreement_rad": 3.1086244689504383e-15,
+            "progress": 0.5,
+            "progress_error": 0.0,
+            "q_rad": [
+              1.5707963267948966,
+              -1.5707963267948966,
+              -1.5707963267948966,
+              -1.5707963267948966,
+              1.5707963267948966,
+              -1.5707963267948966,
+              1.5707963267948966,
+              -1.5707963267948966
+            ],
+            "rigid_distance_error_unit": 7.771561172376096e-16,
+            "scope": "SAMPLED_CONFIGURATION_ONLY",
+            "shared_vertex_gap_unit": 0.898408786493275,
+            "solver_closure_rad": 2.680409687896803,
+            "status": "FAIL",
+            "strictly_active_creases": 8,
+            "target": 0.5,
+            "to_target": 1.0
+          },
+          {
+            "angle_domain_valid": true,
+            "closure_rad": 2.0819906077852486,
+            "face_ids": [
+              "FACE_Q4_MM_00",
+              "FACE_Q4_MM_01",
+              "FACE_Q4_MM_02",
+              "FACE_Q4_MM_03",
+              "FACE_Q4_MM_04",
+              "FACE_Q4_MM_05",
+              "FACE_Q4_MM_06",
+              "FACE_Q4_MM_07"
+            ],
+            "fraction": 0.75,
+            "from_target": 0.0,
+            "independent_agreement_rad": 0.0,
+            "progress": 0.75,
+            "progress_error": 0.0,
+            "q_rad": [
+              2.356194490192345,
+              -2.356194490192345,
+              -2.356194490192345,
+              -2.356194490192345,
+              2.356194490192345,
+              -2.356194490192345,
+              2.356194490192345,
+              -2.356194490192345
+            ],
+            "rigid_distance_error_unit": 3.3306690738754696e-16,
+            "scope": "SAMPLED_CONFIGURATION_ONLY",
+            "shared_vertex_gap_unit": 0.8034677186248549,
+            "solver_closure_rad": 2.0819906077852486,
+            "status": "FAIL",
+            "strictly_active_creases": 8,
+            "target": 0.75,
+            "to_target": 1.0
+          }
+        ],
+        "status": "FAIL"
+      },
+      "max_knot_jump_rad_l2": 8.885765876316732,
+      "rejected_targets": [
+        0.96875,
+        0.9375,
+        0.90625,
+        0.875,
+        0.84375,
+        0.8125,
+        0.78125,
+        0.75,
+        0.71875,
+        0.6875,
+        0.65625,
+        0.625,
+        0.59375,
+        0.5625,
+        0.53125,
+        0.5,
+        0.46875,
+        0.4375,
+        0.40625,
+        0.375,
+        0.34375,
+        0.3125,
+        0.28125,
+        0.25,
+        0.21875,
+        0.1875,
+        0.15625,
+        0.125,
+        0.09375,
+        0.0625,
+        0.03125
+      ]
+    }
+  ],
+  "task_id": "Q4-B01-ALTERNATIVE-RIGID-PATH"
+}
