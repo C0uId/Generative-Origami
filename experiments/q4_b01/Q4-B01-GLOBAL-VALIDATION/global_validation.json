@@ -1,0 +1,2487 @@
+{
+  "claim_boundary": "SCOPED_GLOBAL_ASSESSMENT_NOT_PHYSICAL_BASE",
+  "continuous_motion_verified": false,
+  "cp_geometry_sha256": "4c0d5c62e02bdf8028905a91c9c84b8f97d5013d08132d1c3f9eaff304b225f0",
+  "cp_topology_sha256": "f9d696953f771b1aff9bb234132c70beecd465f5cc2fdfef21c2e59bccd6721f",
+  "global_foldability": "UNKNOWN",
+  "local_scope": "ALL_INTERIOR_VERTICES; boundary vertices excluded from interior theorems",
+  "local_vertices": [
+    {
+      "alternating_sums_deg": [
+        180.0,
+        180.0
+      ],
+      "degree": 8,
+      "incident_edges": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16
+      ],
+      "kawasaki": "PASS",
+      "maekawa": "PASS",
+      "maekawa_difference": 2,
+      "mountain_count": 5,
+      "scope": "NECESSARY_LOCAL_ALL_ACTIVE_FLAT_FOLD_ONLY",
+      "sector_angles_deg": [
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0
+      ],
+      "valley_count": 3,
+      "vertex_id": "V_Q4_MM_08",
+      "vertex_index": 8
+    },
+    {
+      "alternating_sums_deg": [
+        180.0,
+        180.0
+      ],
+      "degree": 2,
+      "incident_edges": [
+        14,
+        15
+      ],
+      "kawasaki": "PASS",
+      "maekawa": "PASS",
+      "maekawa_difference": 2,
+      "mountain_count": 0,
+      "scope": "NECESSARY_LOCAL_ALL_ACTIVE_FLAT_FOLD_ONLY",
+      "sector_angles_deg": [
+        180.0,
+        180.0
+      ],
+      "valley_count": 2,
+      "vertex_id": "V_Q4_MM_09",
+      "vertex_index": 9
+    },
+    {
+      "alternating_sums_deg": [
+        180.0,
+        180.0
+      ],
+      "degree": 2,
+      "incident_edges": [
+        16,
+        17
+      ],
+      "kawasaki": "PASS",
+      "maekawa": "PASS",
+      "maekawa_difference": 2,
+      "mountain_count": 2,
+      "scope": "NECESSARY_LOCAL_ALL_ACTIVE_FLAT_FOLD_ONLY",
+      "sector_angles_deg": [
+        180.0,
+        180.0
+      ],
+      "valley_count": 0,
+      "vertex_id": "V_Q4_MM_10",
+      "vertex_index": 10
+    }
+  ],
+  "material_traceability": {
+    "assembled_folded_material_flow": "UNKNOWN",
+    "face_material_map": [
+      {
+        "face_id": "FACE_Q4_MM_00",
+        "material_parts": [
+          {
+            "area_mm2_exact": "1250",
+            "face_fraction_exact": "1/4",
+            "material_id": "MAT_BODY"
+          },
+          {
+            "area_mm2_exact": "1250",
+            "face_fraction_exact": "1/4",
+            "material_id": "MAT_HL"
+          },
+          {
+            "area_mm2_exact": "2500",
+            "face_fraction_exact": "1/2",
+            "material_id": "MAT_TAIL"
+          }
+        ]
+      },
+      {
+        "face_id": "FACE_Q4_MM_01",
+        "material_parts": [
+          {
+            "area_mm2_exact": "1250",
+            "face_fraction_exact": "1/4",
+            "material_id": "MAT_BODY"
+          },
+          {
+            "area_mm2_exact": "2500",
+            "face_fraction_exact": "1/2",
+            "material_id": "MAT_TAIL"
+          },
+          {
+            "area_mm2_exact": "1250",
+            "face_fraction_exact": "1/4",
+            "material_id": "MAT_HR"
+          }
+        ]
+      },
+      {
+        "face_id": "FACE_Q4_MM_02",
+        "material_parts": [
+          {
+            "area_mm2_exact": "3750",
+            "face_fraction_exact": "3/4",
+            "material_id": "MAT_BODY"
+          },
+          {
+            "area_mm2_exact": "1250",
+            "face_fraction_exact": "1/4",
+            "material_id": "MAT_HR"
+          }
+        ]
+      },
+      {
+        "face_id": "FACE_Q4_MM_03",
+        "material_parts": [
+          {
+            "area_mm2_exact": "1250",
+            "face_fraction_exact": "1/4",
+            "material_id": "MAT_FR"
+          },
+          {
+            "area_mm2_exact": "3750",
+            "face_fraction_exact": "3/4",
+            "material_id": "MAT_BODY"
+          }
+        ]
+      },
+      {
+        "face_id": "FACE_Q4_MM_04",
+        "material_parts": [
+          {
+            "area_mm2_exact": "2500",
+            "face_fraction_exact": "1/2",
+            "material_id": "MAT_HEAD"
+          },
+          {
+            "area_mm2_exact": "1250",
+            "face_fraction_exact": "1/4",
+            "material_id": "MAT_FR"
+          },
+          {
+            "area_mm2_exact": "1250",
+            "face_fraction_exact": "1/4",
+            "material_id": "MAT_BODY"
+          }
+        ]
+      },
+      {
+        "face_id": "FACE_Q4_MM_05",
+        "material_parts": [
+          {
+            "area_mm2_exact": "1250",
+            "face_fraction_exact": "1/4",
+            "material_id": "MAT_FL"
+          },
+          {
+            "area_mm2_exact": "2500",
+            "face_fraction_exact": "1/2",
+            "material_id": "MAT_HEAD"
+          },
+          {
+            "area_mm2_exact": "1250",
+            "face_fraction_exact": "1/4",
+            "material_id": "MAT_BODY"
+          }
+        ]
+      },
+      {
+        "face_id": "FACE_Q4_MM_06",
+        "material_parts": [
+          {
+            "area_mm2_exact": "1250",
+            "face_fraction_exact": "1/4",
+            "material_id": "MAT_FL"
+          },
+          {
+            "area_mm2_exact": "3750",
+            "face_fraction_exact": "3/4",
+            "material_id": "MAT_BODY"
+          }
+        ]
+      },
+      {
+        "face_id": "FACE_Q4_MM_07",
+        "material_parts": [
+          {
+            "area_mm2_exact": "3750",
+            "face_fraction_exact": "3/4",
+            "material_id": "MAT_BODY"
+          },
+          {
+            "area_mm2_exact": "1250",
+            "face_fraction_exact": "1/4",
+            "material_id": "MAT_HL"
+          }
+        ]
+      }
+    ],
+    "planar_ownership": "PASS",
+    "probe_rigid_face_ids_preserved": true,
+    "scope": "Full original polygons retain face/material IDs under per-face rigid rotations; nonclosing trial is not an assembled physical folded model.",
+    "total_area_mm2_exact": {
+      "MAT_BODY": "20000",
+      "MAT_FL": "2500",
+      "MAT_FR": "2500",
+      "MAT_HEAD": "5000",
+      "MAT_HL": "2500",
+      "MAT_HR": "2500",
+      "MAT_TAIL": "5000"
+    }
+  },
+  "motion_probe": {
+    "adapter": {
+      "center_original_index": 8,
+      "degree": 8,
+      "face_to_sector": {
+        "FACE_Q4_MM_00": 5,
+        "FACE_Q4_MM_01": 6,
+        "FACE_Q4_MM_02": 7,
+        "FACE_Q4_MM_03": 0,
+        "FACE_Q4_MM_04": 1,
+        "FACE_Q4_MM_05": 2,
+        "FACE_Q4_MM_06": 3,
+        "FACE_Q4_MM_07": 4
+      },
+      "solver_center_index": 0
+    },
+    "closure_tolerance_rad": 1e-08,
+    "collision": "UNKNOWN",
+    "contact": "UNKNOWN",
+    "continuous_motion_certified": false,
+    "definition": "q_k(t) = sign_k * pi * t, t in [0,1]; V=+1, M=-1",
+    "failed_sample_times": [
+      0.125,
+      0.25,
+      0.375,
+      0.5,
+      0.625,
+      0.75,
+      0.875
+    ],
+    "global_foldability": "UNKNOWN",
+    "layer_order": "UNKNOWN",
+    "reason": "Nonzero closure/seam counterexample to the tested path.",
+    "samples": [
+      {
+        "closure_residual_rad": 0.0,
+        "fold_angles_rad": [
+          0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "full_faces": [
+          {
+            "face_id": "FACE_Q4_MM_00",
+            "vertex_indices": [
+              0,
+              1,
+              9,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.25,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_01",
+            "vertex_indices": [
+              1,
+              2,
+              8,
+              9
+            ],
+            "vertices_coords": [
+              [
+                0.5,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.5,
+                0.25,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_02",
+            "vertex_indices": [
+              2,
+              3,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.5,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_03",
+            "vertex_indices": [
+              3,
+              4,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                0.5,
+                0.0
+              ],
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_04",
+            "vertex_indices": [
+              4,
+              5,
+              10,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.5,
+                1.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.75,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_05",
+            "vertex_indices": [
+              5,
+              6,
+              8,
+              10
+            ],
+            "vertices_coords": [
+              [
+                0.5,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.5,
+                0.75,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_06",
+            "vertex_indices": [
+              6,
+              7,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.5,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_07",
+            "vertex_indices": [
+              7,
+              0,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.0,
+                0.5,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          }
+        ],
+        "max_shared_vertex_gap_unit": 0.0,
+        "status": "PASS",
+        "t": 0.0
+      },
+      {
+        "closure_residual_rad": 0.784916853163,
+        "fold_angles_rad": [
+          0.392699081699,
+          -0.392699081699,
+          -0.392699081699,
+          -0.392699081699,
+          0.392699081699,
+          -0.392699081699,
+          0.392699081699,
+          -0.392699081699
+        ],
+        "full_faces": [
+          {
+            "face_id": "FACE_Q4_MM_00",
+            "vertex_indices": [
+              0,
+              1,
+              9,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.128979402054,
+                -0.050072038472,
+                -0.244467724639
+              ],
+              [
+                0.521600836085,
+                0.004125186405,
+                0.06034544823
+              ],
+              [
+                0.510800418043,
+                0.252062593202,
+                0.030172724115
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_01",
+            "vertex_indices": [
+              1,
+              2,
+              8,
+              9
+            ],
+            "vertices_coords": [
+              [
+                0.521600836085,
+                0.004125186405,
+                0.06034544823
+              ],
+              [
+                0.766147997564,
+                0.067291322998,
+                0.49186222079
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.510800418043,
+                0.252062593202,
+                0.030172724115
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_02",
+            "vertex_indices": [
+              2,
+              3,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.766147997564,
+                0.067291322998,
+                0.49186222079
+              ],
+              [
+                0.853928918488,
+                0.538946865235,
+                0.351023449853
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_03",
+            "vertex_indices": [
+              3,
+              4,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                0.5,
+                0.0
+              ],
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_04",
+            "vertex_indices": [
+              4,
+              5,
+              10,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.519030116872,
+                0.980969883128,
+                -0.135299025037
+              ],
+              [
+                0.509515058436,
+                0.740484941564,
+                -0.067649512518
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_05",
+            "vertex_indices": [
+              5,
+              6,
+              8,
+              10
+            ],
+            "vertices_coords": [
+              [
+                0.519030116872,
+                0.980969883128,
+                -0.135299025037
+              ],
+              [
+                0.126448581393,
+                0.911611652352,
+                -0.437075720333
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.509515058436,
+                0.740484941564,
+                -0.067649512518
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_06",
+            "vertex_indices": [
+              6,
+              7,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.126448581393,
+                0.911611652352,
+                -0.437075720333
+              ],
+              [
+                0.206715318651,
+                0.419733262741,
+                -0.396914785031
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_07",
+            "vertex_indices": [
+              7,
+              0,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.206715318651,
+                0.419733262741,
+                -0.396914785031
+              ],
+              [
+                0.128979402054,
+                -0.050072038472,
+                -0.244467724639
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          }
+        ],
+        "max_shared_vertex_gap_unit": 0.382192466582,
+        "status": "FAIL",
+        "t": 0.125
+      },
+      {
+        "closure_residual_rad": 1.555573201248,
+        "fold_angles_rad": [
+          0.785398163397,
+          -0.785398163397,
+          -0.785398163397,
+          -0.785398163397,
+          0.785398163397,
+          -0.785398163397,
+          0.785398163397,
+          -0.785398163397
+        ],
+        "full_faces": [
+          {
+            "face_id": "FACE_Q4_MM_00",
+            "vertex_indices": [
+              0,
+              1,
+              9,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.471890783231,
+                -0.142385912066,
+                -0.294194173824
+              ],
+              [
+                0.598326456544,
+                0.035175979039,
+                0.155790042945
+              ],
+              [
+                0.549163228272,
+                0.267587989519,
+                0.077895021472
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_01",
+            "vertex_indices": [
+              1,
+              2,
+              8,
+              9
+            ],
+            "vertices_coords": [
+              [
+                0.598326456544,
+                0.035175979039,
+                0.155790042945
+              ],
+              [
+                0.352807652863,
+                0.126015174335,
+                0.581781542434
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.549163228272,
+                0.267587989519,
+                0.077895021472
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_02",
+            "vertex_indices": [
+              2,
+              3,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.352807652863,
+                0.126015174335,
+                0.581781542434
+              ],
+              [
+                0.516999092664,
+                0.589599820935,
+                0.491612553681
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_03",
+            "vertex_indices": [
+              3,
+              4,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                0.5,
+                0.0
+              ],
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_04",
+            "vertex_indices": [
+              4,
+              5,
+              10,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.573223304703,
+                0.926776695297,
+                -0.25
+              ],
+              [
+                0.536611652352,
+                0.713388347648,
+                -0.125
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_05",
+            "vertex_indices": [
+              5,
+              6,
+              8,
+              10
+            ],
+            "vertices_coords": [
+              [
+                0.573223304703,
+                0.926776695297,
+                -0.25
+              ],
+              [
+                0.448223304703,
+                0.698223304703,
+                -0.676776695297
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.536611652352,
+                0.713388347648,
+                -0.125
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_06",
+            "vertex_indices": [
+              6,
+              7,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.448223304703,
+                0.698223304703,
+                -0.676776695297
+              ],
+              [
+                0.643305826176,
+                0.304917478528,
+                -0.4375
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_07",
+            "vertex_indices": [
+              7,
+              0,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.643305826176,
+                0.304917478528,
+                -0.4375
+              ],
+              [
+                0.471890783231,
+                -0.142385912066,
+                -0.294194173824
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          }
+        ],
+        "max_shared_vertex_gap_unit": 0.694982666932,
+        "status": "FAIL",
+        "t": 0.25
+      },
+      {
+        "closure_residual_rad": 2.242583978682,
+        "fold_angles_rad": [
+          1.178097245096,
+          -1.178097245096,
+          -1.178097245096,
+          -1.178097245096,
+          1.178097245096,
+          -1.178097245096,
+          1.178097245096,
+          -1.178097245096
+        ],
+        "full_faces": [
+          {
+            "face_id": "FACE_Q4_MM_00",
+            "vertex_indices": [
+              0,
+              1,
+              9,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.85739200759,
+                -0.108347277612,
+                -0.046739092131
+              ],
+              [
+                0.692189593595,
+                0.176650009394,
+                0.329405439677
+              ],
+              [
+                0.596094796798,
+                0.338325004697,
+                0.164702719839
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_01",
+            "vertex_indices": [
+              1,
+              2,
+              8,
+              9
+            ],
+            "vertices_coords": [
+              [
+                0.692189593595,
+                0.176650009394,
+                0.329405439677
+              ],
+              [
+                0.230766224878,
+                0.051584866201,
+                0.475854013447
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.596094796798,
+                0.338325004697,
+                0.164702719839
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_02",
+            "vertex_indices": [
+              2,
+              3,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.230766224878,
+                0.051584866201,
+                0.475854013447
+              ],
+              [
+                0.24836420314,
+                0.549098494239,
+                0.429265376663
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_03",
+            "vertex_indices": [
+              3,
+              4,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                0.5,
+                0.0
+              ],
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_04",
+            "vertex_indices": [
+              4,
+              5,
+              10,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.654329141909,
+                0.845670858091,
+                -0.326640741219
+              ],
+              [
+                0.577164570954,
+                0.672835429046,
+                -0.16332037061
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_05",
+            "vertex_indices": [
+              5,
+              6,
+              8,
+              10
+            ],
+            "vertices_coords": [
+              [
+                0.654329141909,
+                0.845670858091,
+                -0.326640741219
+              ],
+              [
+                0.823823326762,
+                0.484834957055,
+                -0.628417436516
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.577164570954,
+                0.672835429046,
+                -0.16332037061
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_06",
+            "vertex_indices": [
+              6,
+              7,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.823823326762,
+                0.484834957055,
+                -0.628417436516
+              ],
+              [
+                0.955104372459,
+                0.368718954303,
+                -0.160141491217
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_07",
+            "vertex_indices": [
+              7,
+              0,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.955104372459,
+                0.368718954303,
+                -0.160141491217
+              ],
+              [
+                0.85739200759,
+                -0.108347277612,
+                -0.046739092131
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          }
+        ],
+        "max_shared_vertex_gap_unit": 0.866969317139,
+        "status": "FAIL",
+        "t": 0.375
+      },
+      {
+        "closure_residual_rad": 2.680409687897,
+        "fold_angles_rad": [
+          1.570796326795,
+          -1.570796326795,
+          -1.570796326795,
+          -1.570796326795,
+          1.570796326795,
+          -1.570796326795,
+          1.570796326795,
+          -1.570796326795
+        ],
+        "full_faces": [
+          {
+            "face_id": "FACE_Q4_MM_00",
+            "vertex_indices": [
+              0,
+              1,
+              9,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.051776695297,
+                0.198223304703,
+                0.323223304703
+              ],
+              [
+                0.6875,
+                0.510723304703,
+                0.463388347648
+              ],
+              [
+                0.59375,
+                0.505361652352,
+                0.231694173824
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_01",
+            "vertex_indices": [
+              1,
+              2,
+              8,
+              9
+            ],
+            "vertices_coords": [
+              [
+                0.6875,
+                0.510723304703,
+                0.463388347648
+              ],
+              [
+                0.400888347648,
+                0.120558261758,
+                0.588388347648
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.59375,
+                0.505361652352,
+                0.231694173824
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_02",
+            "vertex_indices": [
+              2,
+              3,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.400888347648,
+                0.120558261758,
+                0.588388347648
+              ],
+              [
+                0.192861652352,
+                0.53125,
+                0.393305826176
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_03",
+            "vertex_indices": [
+              3,
+              4,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                0.5,
+                0.0
+              ],
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_04",
+            "vertex_indices": [
+              4,
+              5,
+              10,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.75,
+                0.75,
+                -0.353553390593
+              ],
+              [
+                0.625,
+                0.625,
+                -0.176776695297
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_05",
+            "vertex_indices": [
+              5,
+              6,
+              8,
+              10
+            ],
+            "vertices_coords": [
+              [
+                0.75,
+                0.75,
+                -0.353553390593
+              ],
+              [
+                1.103553390593,
+                0.396446609407,
+                -0.353553390593
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.625,
+                0.625,
+                -0.176776695297
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_06",
+            "vertex_indices": [
+              6,
+              7,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.103553390593,
+                0.396446609407,
+                -0.353553390593
+              ],
+              [
+                0.978553390593,
+                0.625,
+                0.073223304703
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_07",
+            "vertex_indices": [
+              7,
+              0,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.978553390593,
+                0.625,
+                0.073223304703
+              ],
+              [
+                1.051776695297,
+                0.198223304703,
+                0.323223304703
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          }
+        ],
+        "max_shared_vertex_gap_unit": 0.898408786493,
+        "status": "FAIL",
+        "t": 0.5
+      },
+      {
+        "closure_residual_rad": 2.650312068726,
+        "fold_angles_rad": [
+          1.963495408494,
+          -1.963495408494,
+          -1.963495408494,
+          -1.963495408494,
+          1.963495408494,
+          -1.963495408494,
+          1.963495408494,
+          -1.963495408494
+        ],
+        "full_faces": [
+          {
+            "face_id": "FACE_Q4_MM_00",
+            "vertex_indices": [
+              0,
+              1,
+              9,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.009105556827,
+                0.668626408491,
+                0.460843429341
+              ],
+              [
+                0.59174123258,
+                0.890751685902,
+                0.298155439677
+              ],
+              [
+                0.54587061629,
+                0.695375842951,
+                0.149077719839
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_01",
+            "vertex_indices": [
+              1,
+              2,
+              8,
+              9
+            ],
+            "vertices_coords": [
+              [
+                0.59174123258,
+                0.890751685902,
+                0.298155439677
+              ],
+              [
+                0.511623352576,
+                0.603392079862,
+                0.699410448518
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.54587061629,
+                0.695375842951,
+                0.149077719839
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_02",
+            "vertex_indices": [
+              2,
+              3,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.511623352576,
+                0.603392079862,
+                0.699410448518
+              ],
+              [
+                0.221894607826,
+                0.76075435916,
+                0.323519018023
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_03",
+            "vertex_indices": [
+              3,
+              4,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                0.5,
+                0.0
+              ],
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_04",
+            "vertex_indices": [
+              4,
+              5,
+              10,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.845670858091,
+                0.654329141909,
+                -0.326640741219
+              ],
+              [
+                0.672835429046,
+                0.577164570954,
+                -0.16332037061
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_05",
+            "vertex_indices": [
+              5,
+              6,
+              8,
+              10
+            ],
+            "vertices_coords": [
+              [
+                0.845670858091,
+                0.654329141909,
+                -0.326640741219
+              ],
+              [
+                1.206506759128,
+                0.484834957055,
+                -0.024864045922
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.672835429046,
+                0.577164570954,
+                -0.16332037061
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_06",
+            "vertex_indices": [
+              6,
+              7,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.206506759128,
+                0.484834957055,
+                -0.024864045922
+              ],
+              [
+                0.861837365782,
+                0.844669393345,
+                0.01663520408
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_07",
+            "vertex_indices": [
+              7,
+              0,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.861837365782,
+                0.844669393345,
+                0.01663520408
+              ],
+              [
+                1.009105556827,
+                0.668626408491,
+                0.460843429341
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          }
+        ],
+        "max_shared_vertex_gap_unit": 0.882102824037,
+        "status": "FAIL",
+        "t": 0.625
+      },
+      {
+        "closure_residual_rad": 2.081990607785,
+        "fold_angles_rad": [
+          2.356194490192,
+          -2.356194490192,
+          -2.356194490192,
+          -2.356194490192,
+          2.356194490192,
+          -2.356194490192,
+          2.356194490192,
+          -2.356194490192
+        ],
+        "full_faces": [
+          {
+            "face_id": "FACE_Q4_MM_00",
+            "vertex_indices": [
+              0,
+              1,
+              9,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.928997564417,
+                0.991497564417,
+                0.272747564417
+              ],
+              [
+                0.620423543456,
+                0.970185673313,
+                -0.120098304703
+              ],
+              [
+                0.560211771728,
+                0.735092836657,
+                -0.060049152352
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_01",
+            "vertex_indices": [
+              1,
+              2,
+              8,
+              9
+            ],
+            "vertices_coords": [
+              [
+                0.620423543456,
+                0.970185673313,
+                -0.120098304703
+              ],
+              [
+                0.573778521984,
+                1.104568564929,
+                0.359240281698
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.560211771728,
+                0.735092836657,
+                -0.060049152352
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_02",
+            "vertex_indices": [
+              2,
+              3,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.573778521984,
+                1.104568564929,
+                0.359240281698
+              ],
+              [
+                0.354439625128,
+                0.973130157592,
+                -0.070427489264
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_03",
+            "vertex_indices": [
+              3,
+              4,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                0.5,
+                0.0
+              ],
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_04",
+            "vertex_indices": [
+              4,
+              5,
+              10,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.926776695297,
+                0.573223304703,
+                -0.25
+              ],
+              [
+                0.713388347648,
+                0.536611652352,
+                -0.125
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_05",
+            "vertex_indices": [
+              5,
+              6,
+              8,
+              10
+            ],
+            "vertices_coords": [
+              [
+                0.926776695297,
+                0.573223304703,
+                -0.25
+              ],
+              [
+                1.15533008589,
+                0.698223304703,
+                0.176776695297
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.713388347648,
+                0.536611652352,
+                -0.125
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_06",
+            "vertex_indices": [
+              6,
+              7,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.15533008589,
+                0.698223304703,
+                0.176776695297
+              ],
+              [
+                0.835247564417,
+                0.820082521472,
+                -0.1875
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_07",
+            "vertex_indices": [
+              7,
+              0,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.835247564417,
+                0.820082521472,
+                -0.1875
+              ],
+              [
+                0.928997564417,
+                0.991497564417,
+                0.272747564417
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          }
+        ],
+        "max_shared_vertex_gap_unit": 0.803467718625,
+        "status": "FAIL",
+        "t": 0.75
+      },
+      {
+        "closure_residual_rad": 1.12952676103,
+        "fold_angles_rad": [
+          2.748893571891,
+          -2.748893571891,
+          -2.748893571891,
+          -2.748893571891,
+          2.748893571891,
+          -2.748893571891,
+          2.748893571891,
+          -2.748893571891
+        ],
+        "full_faces": [
+          {
+            "face_id": "FACE_Q4_MM_00",
+            "vertex_indices": [
+              0,
+              1,
+              9,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.957188076474,
+                1.037127864648,
+                0.049726449185
+              ],
+              [
+                0.850718337739,
+                0.694558075354,
+                -0.298569594715
+              ],
+              [
+                0.675359168869,
+                0.597279037677,
+                -0.149284797358
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_01",
+            "vertex_indices": [
+              1,
+              2,
+              8,
+              9
+            ],
+            "vertices_coords": [
+              [
+                0.850718337739,
+                0.694558075354,
+                -0.298569594715
+              ],
+              [
+                0.818936947477,
+                1.12887373196,
+                -0.052887170314
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.675359168869,
+                0.597279037677,
+                -0.149284797358
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_02",
+            "vertex_indices": [
+              2,
+              3,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.818936947477,
+                1.12887373196,
+                -0.052887170314
+              ],
+              [
+                0.740112640689,
+                0.745180259893,
+                -0.363637951732
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_03",
+            "vertex_indices": [
+              3,
+              4,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                0.5,
+                0.0
+              ],
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_04",
+            "vertex_indices": [
+              4,
+              5,
+              10,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.980969883128,
+                0.519030116872,
+                -0.135299025037
+              ],
+              [
+                0.740484941564,
+                0.509515058436,
+                -0.067649512518
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_05",
+            "vertex_indices": [
+              5,
+              6,
+              8,
+              10
+            ],
+            "vertices_coords": [
+              [
+                0.980969883128,
+                0.519030116872,
+                -0.135299025037
+              ],
+              [
+                1.050328113904,
+                0.911611652352,
+                0.16647767026
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.740484941564,
+                0.509515058436,
+                -0.067649512518
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_06",
+            "vertex_indices": [
+              6,
+              7,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.050328113904,
+                0.911611652352,
+                0.16647767026
+              ],
+              [
+                0.933449724294,
+                0.61687838961,
+                -0.220138089734
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_07",
+            "vertex_indices": [
+              7,
+              0,
+              8
+            ],
+            "vertices_coords": [
+              [
+                0.933449724294,
+                0.61687838961,
+                -0.220138089734
+              ],
+              [
+                0.957188076474,
+                1.037127864648,
+                0.049726449185
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          }
+        ],
+        "max_shared_vertex_gap_unit": 0.50979148611,
+        "status": "FAIL",
+        "t": 0.875
+      },
+      {
+        "closure_residual_rad": 0.0,
+        "fold_angles_rad": [
+          3.14159265359,
+          -3.14159265359,
+          -3.14159265359,
+          -3.14159265359,
+          3.14159265359,
+          -3.14159265359,
+          3.14159265359,
+          -3.14159265359
+        ],
+        "full_faces": [
+          {
+            "face_id": "FACE_Q4_MM_00",
+            "vertex_indices": [
+              0,
+              1,
+              9,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                1.0,
+                -0.0
+              ],
+              [
+                1.0,
+                0.5,
+                -0.0
+              ],
+              [
+                0.75,
+                0.5,
+                -0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_01",
+            "vertex_indices": [
+              1,
+              2,
+              8,
+              9
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                0.5,
+                -0.0
+              ],
+              [
+                1.0,
+                1.0,
+                -0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.75,
+                0.5,
+                -0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_02",
+            "vertex_indices": [
+              2,
+              3,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                1.0,
+                -0.0
+              ],
+              [
+                1.0,
+                0.5,
+                -0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_03",
+            "vertex_indices": [
+              3,
+              4,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                0.5,
+                0.0
+              ],
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_04",
+            "vertex_indices": [
+              4,
+              5,
+              10,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.5,
+                -0.0
+              ],
+              [
+                0.75,
+                0.5,
+                -0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_05",
+            "vertex_indices": [
+              5,
+              6,
+              8,
+              10
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                0.5,
+                -0.0
+              ],
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ],
+              [
+                0.75,
+                0.5,
+                -0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_06",
+            "vertex_indices": [
+              6,
+              7,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                1.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.5,
+                -0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          },
+          {
+            "face_id": "FACE_Q4_MM_07",
+            "vertex_indices": [
+              7,
+              0,
+              8
+            ],
+            "vertices_coords": [
+              [
+                1.0,
+                0.5,
+                -0.0
+              ],
+              [
+                1.0,
+                1.0,
+                -0.0
+              ],
+              [
+                0.5,
+                0.5,
+                0.0
+              ]
+            ]
+          }
+        ],
+        "max_shared_vertex_gap_unit": 0.0,
+        "status": "PASS",
+        "t": 1.0
+      }
+    ],
+    "scope": "ONE_DEFINED_UNIFORM_ANGLE_PATH_ONLY_NOT_CP_INFEASIBILITY",
+    "seam_tolerance_unit": 1e-08,
+    "solver": "generative_origami.simulation.single_vertex.SingleVertexMechanism",
+    "status": "FAIL"
+  },
+  "physical_verified": false,
+  "planar": {
+    "continuous_motion_certified": false,
+    "errors": [],
+    "exact_material_area": "1",
+    "geometry_sha256": "4c0d5c62e02bdf8028905a91c9c84b8f97d5013d08132d1c3f9eaff304b225f0",
+    "passed": true,
+    "physical_base_certified": false,
+    "scope": "PLANAR_SQUARE_CP_ONLY",
+    "topology_sha256": "f9d696953f771b1aff9bb234132c70beecd465f5cc2fdfef21c2e59bccd6721f"
+  },
+  "schema_version": "q4-global-validation-1.0",
+  "seed": 0,
+  "task_id": "Q4-B01-GLOBAL-VALIDATION",
+  "unresolved": [
+    "Alternative globally closing rigid path has not been established.",
+    "Collision, contact, signed gaps and layer order are UNKNOWN.",
+    "Final semantic material flow is UNKNOWN.",
+    "No validated human folding sequence or physical refolds exist.",
+    "At least two independent successful refolds are needed before physical certification."
+  ]
+}

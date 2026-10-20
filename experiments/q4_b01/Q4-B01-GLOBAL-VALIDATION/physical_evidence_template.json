@@ -1,0 +1,61 @@
+{
+  "design_specimen": {
+    "complete_sequence_media": [],
+    "date": null,
+    "evidence_files_and_sha256": [],
+    "failure_edge_vertex_ids": [],
+    "final_face_material_correspondence": [],
+    "front_back_crosscheck": null,
+    "independent_of_design_specimen": null,
+    "independent_of_other_refolds": null,
+    "macro_actions": [],
+    "mv_crosscheck": null,
+    "notes": null,
+    "operator": null,
+    "paper": null,
+    "result": "UNKNOWN",
+    "status": "NOT_RUN"
+  },
+  "geometry_sha256": "4c0d5c62e02bdf8028905a91c9c84b8f97d5013d08132d1c3f9eaff304b225f0",
+  "independent_refold_1": {
+    "complete_sequence_media": [],
+    "date": null,
+    "evidence_files_and_sha256": [],
+    "failure_edge_vertex_ids": [],
+    "final_face_material_correspondence": [],
+    "front_back_crosscheck": null,
+    "independent_of_design_specimen": null,
+    "independent_of_other_refolds": null,
+    "macro_actions": [],
+    "mv_crosscheck": null,
+    "notes": null,
+    "operator": null,
+    "paper": null,
+    "result": "UNKNOWN",
+    "status": "NOT_RUN"
+  },
+  "independent_refold_2": {
+    "complete_sequence_media": [],
+    "date": null,
+    "evidence_files_and_sha256": [],
+    "failure_edge_vertex_ids": [],
+    "final_face_material_correspondence": [],
+    "front_back_crosscheck": null,
+    "independent_of_design_specimen": null,
+    "independent_of_other_refolds": null,
+    "macro_actions": [],
+    "mv_crosscheck": null,
+    "notes": null,
+    "operator": null,
+    "paper": null,
+    "result": "UNKNOWN",
+    "status": "NOT_RUN"
+  },
+  "physical_base_certified": false,
+  "provenance_license": {
+    "cp_source": "Project baseline merged PR #7",
+    "media_rights_and_release_permission": null
+  },
+  "task_id": "Q4-B01-GLOBAL-VALIDATION",
+  "validated_folding_sequence_available": false
+}

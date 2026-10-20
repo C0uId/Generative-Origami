@@ -1,0 +1,8 @@
+{
+  "baseline_commit": "fede5447080749890fb1e509ea42319a35ad1552",
+  "command": "python experiments/q4_b01/run_q4_global_validation.py",
+  "numpy": "2.3.5",
+  "python": "3.12.14",
+  "scipy": "1.18.1",
+  "seed": 0
+}

@@ -1,0 +1,26 @@
+{
+  "cp_geometry_sha256": "4c0d5c62e02bdf8028905a91c9c84b8f97d5013d08132d1c3f9eaff304b225f0",
+  "files": {
+    ".gitattributes": "916768aac988894c0000e0feafe0e5f5fe26dec5890a721bd5499389112adbc5",
+    "assets/bases/q4_b01/manifest.json": "3462d335f809fff803b1bac81815c5a4833a51cb9d8a44c70c1e147134b18f0c",
+    "experiments/q4_b01/Q4-B01-CP-MEDIUM-MEDIUM/candidate.fold": "48c2670862756558d300a6ab90d7f02c248b87e8165ef0e3ae2184e2cf009387",
+    "experiments/q4_b01/Q4-B01-GLOBAL-VALIDATION/REFOLD_CHECKLIST.md": "fb021fc329a21f2a287060f1781163a771f74d5573ee5300c9a568fb491967be",
+    "experiments/q4_b01/Q4-B01-GLOBAL-VALIDATION/RESULTS.md": "10f9c703178b85c9b9756c7b296c87b924aee882143b037a429c4d5379d6b7ca",
+    "experiments/q4_b01/Q4-B01-GLOBAL-VALIDATION/candidate.fold": "48c2670862756558d300a6ab90d7f02c248b87e8165ef0e3ae2184e2cf009387",
+    "experiments/q4_b01/Q4-B01-GLOBAL-VALIDATION/environment.json": "8d7e84dd600cd80b725284b3bdefaed13448a8d24bbe45b9041da6bddb476718",
+    "experiments/q4_b01/Q4-B01-GLOBAL-VALIDATION/global_validation.json": "9aa0fe97c8471f0133f01976996211f2e7d86338c07571c06e08e9512c4798c0",
+    "experiments/q4_b01/Q4-B01-GLOBAL-VALIDATION/physical_evidence_template.json": "99c72f2e835f4a7e1010ed9e48a93d2aedcc4aa21b277436a1f4e5bd70270aca",
+    "experiments/q4_b01/Q4-B01-GLOBAL-VALIDATION/printable_cp.svg": "8335e70a3b1c2db2a037a511a36f5821e077cfae3388d8970a3c6425b9794a2a",
+    "experiments/q4_b01/Q4-B01-GLOBAL-VALIDATION/stable_ids.json": "af6cf005d81e583f738d97d725ee7f4b54dca16db6d78bd63c06b0bd61cd84b9",
+    "experiments/q4_b01/run_q4_global_validation.py": "66bb59d39baa34c0b9f45531261e37ca10e75be38895185eefb458d3a718ffdd",
+    "research/q4_b01/base_intake.py": "b0fda91c675d47892e29dc252645757ea0369447cbe6a0ac18082e387ca12631",
+    "research/q4_b01/q4_base.py": "3e691bcab48d0fcd7e508bfca0c925e7e60c038bfabc52805c4658f5f1b9a013",
+    "research/q4_b01/q4_cp_candidate.py": "27f04fdb759c757d5b820cfaf8a701a6a2b8a0cf25751770e2ba9f29333c559e",
+    "research/q4_b01/q4_global_validation.py": "c4687e4493ef4c702ae53d042895fe984197f4879e930f292ffa76d461206d34",
+    "src/generative_origami/simulation/single_vertex.py": "0b188942e94be7f818a26a09f14191bdac9e2ade998d3fad24668e5858e72f33",
+    "tests/q4_b01/test_q4_global_validation.py": "c8b55f94d921c7a5691f512923c9a753238ebf60afac3fd2cc38c9f9a5e7a9ab"
+  },
+  "hash_algorithm": "sha256-exact-file-bytes",
+  "schema_version": "q4-evidence-manifest-1.0",
+  "task_id": "Q4-B01-GLOBAL-VALIDATION"
+}

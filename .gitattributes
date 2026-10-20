@@ -1,0 +1,12 @@
+# Exact-file Q4 evidence checksums must survive Windows/Linux checkouts.
+/.gitattributes text eol=lf
+/research/q4_b01/base_intake.py text eol=lf
+/research/q4_b01/q4_base.py text eol=lf
+/research/q4_b01/q4_cp_candidate.py text eol=lf
+/research/q4_b01/q4_global_validation.py text eol=lf
+/src/generative_origami/simulation/single_vertex.py text eol=lf
+/tests/q4_b01/test_q4_global_validation.py text eol=lf
+/experiments/q4_b01/run_q4_global_validation.py text eol=lf
+/experiments/q4_b01/Q4-B01-GLOBAL-VALIDATION/** text eol=lf
+/experiments/q4_b01/Q4-B01-CP-MEDIUM-MEDIUM/candidate.fold text eol=lf
+/assets/bases/q4_b01/manifest.json text eol=lf
