@@ -1,0 +1,22 @@
+{
+  "files": {
+    "experiments/q4_b01/.gitattributes": "2a5bb5320776d9cc6d3d0be8d56050ff23b9d964d86e8989caf4d9f18af88e54",
+    "experiments/q4_b01/Q4-B01-ALTERNATIVE-RIGID-PATH/FAILURE_HISTORY.md": "a7fa4aacb95d73e2bbcb56a2370ed2480f67e7e72d5d3093696e8f64fc9c060b",
+    "experiments/q4_b01/Q4-B01-ALTERNATIVE-RIGID-PATH/RESULTS.md": "cc6016d84995bd5ad4cce1c59d11f5c4cf0f2004438b832883134ce5d75c845a",
+    "experiments/q4_b01/Q4-B01-ALTERNATIVE-RIGID-PATH/environment.json": "ac99618bdc78f2735563b9bfd9ba128c84ec4ce7ef3b592388e359e24d7cd159",
+    "experiments/q4_b01/Q4-B01-ALTERNATIVE-RIGID-PATH/search_report.json": "f1ef073b34894f82ef8d01271c5a9ae2ebc2daad4c8258332a3017335f16d42a",
+    "experiments/q4_b01/Q4-B01-CP-MEDIUM-MEDIUM/candidate.fold": "48c2670862756558d300a6ab90d7f02c248b87e8165ef0e3ae2184e2cf009387",
+    "experiments/q4_b01/Q4-B01-GLOBAL-VALIDATION/stable_ids.json": "af6cf005d81e583f738d97d725ee7f4b54dca16db6d78bd63c06b0bd61cd84b9",
+    "experiments/q4_b01/run_q4_rigid_path_search.py": "170c1974c8e21912cfc0888249e5e34dcbf11daa8796fb8643f063577a4d5754",
+    "research/q4_b01/.gitattributes": "b0901750b95fbadcb4a6a56c347d1203e87850d3e3fc1c430b0b7521d25828c9",
+    "research/q4_b01/base_intake.py": "b0fda91c675d47892e29dc252645757ea0369447cbe6a0ac18082e387ca12631",
+    "research/q4_b01/q4_cp_candidate.py": "27f04fdb759c757d5b820cfaf8a701a6a2b8a0cf25751770e2ba9f29333c559e",
+    "research/q4_b01/q4_global_validation.py": "c4687e4493ef4c702ae53d042895fe984197f4879e930f292ffa76d461206d34",
+    "research/q4_b01/q4_rigid_path_search.py": "0c2bcadf25ebfbc39dccd462d7c9ccae4c5ea18911e4ed45b1a7a253fcdc2fad",
+    "src/generative_origami/simulation/single_vertex.py": "0b188942e94be7f818a26a09f14191bdac9e2ade998d3fad24668e5858e72f33",
+    "tests/q4_b01/.gitattributes": "626968091aeaa5f35e35e02dbde3fd317178dc3f449739b5da632e3890275866",
+    "tests/q4_b01/test_q4_rigid_path_search.py": "53351a78cc95cc8641e8020b3796989a96dfa6a5a91e4fd11749be9b8be0f30b"
+  },
+  "hash_algorithm": "sha256-exact-file-bytes",
+  "task_id": "Q4-B01-ALTERNATIVE-RIGID-PATH"
+}

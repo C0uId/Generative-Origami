@@ -1,0 +1,8 @@
+{
+  "actual_residual_calls": 17488,
+  "command": "python experiments/q4_b01/run_q4_rigid_path_search.py",
+  "numpy": "2.3.5",
+  "python": "3.12.14",
+  "randomness": "none",
+  "scipy": "1.18.1"
+}

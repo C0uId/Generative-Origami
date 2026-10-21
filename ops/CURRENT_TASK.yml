@@ -1,12 +1,12 @@
 schema_version: task-1.0
-task_id: Q4-B01-GLOBAL-VALIDATION
+task_id: Q4-B01-ALTERNATIVE-RIGID-PATH
 state: READY_FOR_REVIEW
 priority: P0
-title: Global fold/path validation and physical refold package
+title: Bounded alternative rigid-path investigation
 objective: >
-  Take the accepted Q4-B01 medium/medium planar CP candidate and validate the
-  next global software gates, while preparing a traceable physical-refold
-  package without claiming physical certification prematurely.
+  Investigate non-uniform closure configurations on the unchanged medium/medium
+  CP with two bounded direction sweeps. Preserve rejected trials and distinguish
+  sampled configurations from continuous-path and physical certification.
 baseline_refs:
   - governance/PROJECT_CHARTER.md
   - governance/MASTER_PLAN.md
@@ -14,12 +14,14 @@ baseline_refs:
   - governance/PROJECT_STATUS.md
   - docs/engineering/Q4-B01_CURRENT.md
   - PR #7 / commit 15346c22d2d57fa77711c93cf9b260f0939cce8a
+  - PR #9 / merge 8aa98005f5d328dd9ce96bcdd4504acdb4a14d21
+  - Issue 10 / Owner release 2026-10-20
 evidence_required:
-  - all applicable interior-vertex local checks
-  - global foldability or rigid-fold consistency assessment
-  - global motion/path result with PASS/FAIL/UNKNOWN semantics
-  - material-region traceability assessment
-  - physical-refold package
+  - two deterministic sweeps of 33 targets with 300 residual calls per solve
+  - independent quaternion closure and full-polygon seam and rigidity checks
+  - accepted and rejected trials plus interpolation counterexamples
+  - unchanged stable face and crease IDs and material ownership
+  - evidence hashes and regression tests
   - explicit unresolved gates
 not_yet_required:
   - Sequence Planner
@@ -30,3 +32,8 @@ owner_decision_required_for:
   - acceptance-gate change
   - materially better route replacing baseline
   - physical evidence becomes the only remaining blocking gate
+issue: 10
+prior_task: Q4-B01-GLOBAL-VALIDATION
+prior_outcome: PASS
+prior_review: TD-PR9-20261020-01
+no_improvement_investigations_conservative: 3
